@@ -88,48 +88,45 @@ function updateGrid() {
 
     const features = [];
 
+    // Dynamic grid parameters
+    const rootSize = GRID_LEVELS[0].size;
+    const gridWidth = Math.ceil((LISBON_BBOX[2] - LISBON_BBOX[0]) / rootSize);
+    const epsilon = 0.000001;
+
     for (let col = startCol; col < endCol; col++) {
         for (let row = startRow; row < endRow; row++) {
-            // Calculate cell coordinates
             const x1 = ORIGIN[0] + col * size;
             const x2 = ORIGIN[0] + (col + 1) * size;
-
             const y1 = ORIGIN[1] - row * size;
             const y2 = ORIGIN[1] - (row + 1) * size;
 
-            // Construct polygon geometry
             const geometry = {
                 type: 'Polygon',
-                coordinates: [[
-                    [x1, y1],
-                    [x2, y1],
-                    [x2, y2],
-                    [x1, y2],
-                    [x1, y1] // Close ring
-                ]]
+                coordinates: [[[x1, y1], [x2, y1], [x2, y2], [x1, y2], [x1, y1]]]
             };
 
-            // Calculate cell centroid for ID generation
-            const rootSize = GRID_LEVELS[0].size;
             const cx = x1 + size / 2;
             const cy = y1 - size / 2;
 
-            const dx = cx - ORIGIN[0];
-            const dy = ORIGIN[1] - cy;
+            // Base 26 Root ID
+            const rootCol = Math.floor((cx - ORIGIN[0] + epsilon) / rootSize);
+            const rootRow = Math.floor((ORIGIN[1] - cy + epsilon) / rootSize);
+            let id = toBase26(rootRow * gridWidth + rootCol);
 
-            const rootCol = Math.floor(dx / rootSize);
-            const rootRow = Math.floor(dy / rootSize);
-
-            let id = indexToChar(rootRow * 20 + rootCol);
-
+            // Alternating subdivision IDs
             let currentSize = rootSize;
-            // Refine ID based on subdivision logic
+            let depth = 0;
             while (currentSize > level.size * 1.01) {
                 const half = currentSize / 2;
-                const xBit = (dx % currentSize) >= half ? 1 : 0;
-                const yBit = (dy % currentSize) >= half ? 1 : 0;
-                id += (yBit * 2 + xBit).toString();
+                const xBit = ((cx - ORIGIN[0]) % currentSize) >= (half - epsilon) ? 1 : 0;
+                const yBit = ((ORIGIN[1] - cy) % currentSize) >= (half - epsilon) ? 1 : 0;
+
+                id += (depth % 2 === 0)
+                    ? (yBit * 2 + xBit).toString()
+                    : ['A', 'B', 'C', 'D'][yBit * 2 + xBit];
+
                 currentSize = half;
+                depth++;
             }
 
             features.push({
@@ -147,8 +144,12 @@ function setGrid(data: any) {
     (map.getSource('grid') as mapboxgl.GeoJSONSource)?.setData(data);
 }
 
-// Convert value to base36 string
-function indexToChar(i: number) {
-    if (i < 0) return '?';
-    return i.toString(36).toUpperCase();
+// Convert index to Base 26 (A-Z, AA-ZZ)
+function toBase26(n: number): string {
+    let s = "";
+    while (n >= 0) {
+        s = String.fromCharCode((n % 26) + 65) + s;
+        n = Math.floor(n / 26) - 1;
+    }
+    return s;
 }
