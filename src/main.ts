@@ -1,6 +1,8 @@
 import './style.css'
 import mapboxgl from 'mapbox-gl';
 import Alpine from 'alpinejs'
+import { generateGridFeatures, LISBON_BBOX } from './grid-logic';
+import type { FeatureCollection } from 'geojson';
 
 window.Alpine = Alpine
 Alpine.start()
@@ -14,18 +16,7 @@ const map = new mapboxgl.Map({
     zoom: 10
 });
 
-// Grid configuration with decreasing cell sizes
-const GRID_LEVELS = [
-    { min: 8, max: 11, size: 0.04 },
-    { min: 11, max: 13, size: 0.02 },
-    { min: 13, max: 15, size: 0.01 },
-    { min: 15, max: 22, size: 0.005 }
-];
 
-// Grid boundaries (Lisbon)
-const LISBON_BBOX = [-9.3, 38.6, -9.0, 38.8];
-// Grid origin point (Top-Left)
-const ORIGIN = [LISBON_BBOX[0], LISBON_BBOX[3]];
 
 let selectedSquare: string | null = null;
 
@@ -60,9 +51,6 @@ map.on('click', 'grid-fill', (e) => {
 
 function updateGrid() {
     const zoom = map.getZoom();
-    const level = GRID_LEVELS.find(l => zoom >= l.min && zoom < l.max);
-    if (!level) return setGrid({ type: 'FeatureCollection', features: [] });
-
     const bounds = map.getBounds()!;
 
     // Intersect viewport with grid bounds
@@ -75,81 +63,11 @@ function updateGrid() {
         return setGrid({ type: 'FeatureCollection', features: [] });
     }
 
-    // Snap grid to origin
-    const size = level.size;
-
-    // Calculate horizontal grid indices
-    const startCol = Math.floor((viewWest - ORIGIN[0]) / size);
-    const endCol = Math.ceil((viewEast - ORIGIN[0]) / size);
-
-    // Calculate vertical grid indices
-    const startRow = Math.floor((ORIGIN[1] - viewNorth) / size);
-    const endRow = Math.ceil((ORIGIN[1] - viewSouth) / size);
-
-    const features = [];
-
-    // Dynamic grid parameters
-    const rootSize = GRID_LEVELS[0].size;
-    const gridWidth = Math.ceil((LISBON_BBOX[2] - LISBON_BBOX[0]) / rootSize);
-    const epsilon = 0.000001;
-
-    for (let col = startCol; col < endCol; col++) {
-        for (let row = startRow; row < endRow; row++) {
-            const x1 = ORIGIN[0] + col * size;
-            const x2 = ORIGIN[0] + (col + 1) * size;
-            const y1 = ORIGIN[1] - row * size;
-            const y2 = ORIGIN[1] - (row + 1) * size;
-
-            const geometry = {
-                type: 'Polygon',
-                coordinates: [[[x1, y1], [x2, y1], [x2, y2], [x1, y2], [x1, y1]]]
-            };
-
-            const cx = x1 + size / 2;
-            const cy = y1 - size / 2;
-
-            // Base 26 Root ID
-            const rootCol = Math.floor((cx - ORIGIN[0] + epsilon) / rootSize);
-            const rootRow = Math.floor((ORIGIN[1] - cy + epsilon) / rootSize);
-            let id = toBase26(rootRow * gridWidth + rootCol);
-
-            // Alternating subdivision IDs
-            let currentSize = rootSize;
-            let depth = 0;
-            while (currentSize > level.size * 1.01) {
-                const half = currentSize / 2;
-                const xBit = ((cx - ORIGIN[0]) % currentSize) >= (half - epsilon) ? 1 : 0;
-                const yBit = ((ORIGIN[1] - cy) % currentSize) >= (half - epsilon) ? 1 : 0;
-
-                id += (depth % 2 === 0)
-                    ? (yBit * 2 + xBit).toString()
-                    : ['A', 'B', 'C', 'D'][yBit * 2 + xBit];
-
-                currentSize = half;
-                depth++;
-            }
-
-            features.push({
-                type: 'Feature',
-                properties: { id, zoom: Math.round(zoom) },
-                geometry
-            });
-        }
-    }
-
+    const features = generateGridFeatures([viewWest, viewSouth, viewEast, viewNorth], zoom);
     setGrid({ type: 'FeatureCollection', features });
 }
 
-function setGrid(data: any) {
+function setGrid(data: FeatureCollection) {
     (map.getSource('grid') as mapboxgl.GeoJSONSource)?.setData(data);
 }
 
-// Convert index to Base 26 (A-Z, AA-ZZ)
-function toBase26(n: number): string {
-    let s = "";
-    while (n >= 0) {
-        s = String.fromCharCode((n % 26) + 65) + s;
-        n = Math.floor(n / 26) - 1;
-    }
-    return s;
-}
