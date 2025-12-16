@@ -3,6 +3,7 @@ export default () => ({
     userSelectedDate: null as Date | null,
     isUserInteraction: false,
     intervalId: null as number | null,
+    lastDispatchedMinute: null as number | null,
 
     // UI Visibility State
     showDatePicker: false,
@@ -18,6 +19,9 @@ export default () => ({
 
         // Init viewDate
         this.viewDate = new Date();
+
+        // Initial dispatch
+        this.dispatchTime(this.now);
     },
 
     destroy() {
@@ -31,8 +35,17 @@ export default () => ({
         this.now = new Date();
 
         // If we are NOT interacting, viewDate follows real time to keep calendar fresh
-        if (!this.userSelectedDate && !this.showDatePicker) {
-            this.viewDate = new Date(this.now);
+        if (!this.userSelectedDate) {
+            if (!this.showDatePicker) {
+                this.viewDate = new Date(this.now);
+            }
+
+            // Dispatch time update if minute changed
+            const currentMinute = this.now.getMinutes();
+            if (this.lastDispatchedMinute !== currentMinute) {
+                this.dispatchTime(this.now);
+                this.lastDispatchedMinute = currentMinute;
+            }
         }
 
         // Revert if selected time is passed
@@ -153,6 +166,7 @@ export default () => ({
 
         this.userSelectedDate = target;
         this.showDatePicker = false;
+        this.dispatchTime(target);
     },
 
     // --- Time Logic ---
@@ -170,6 +184,7 @@ export default () => ({
         let target = this.userSelectedDate ? new Date(this.userSelectedDate) : new Date(this.now);
         target.setHours(h);
         this.userSelectedDate = target;
+        this.dispatchTime(target);
     },
 
     selectMinute(m: number) {
@@ -178,6 +193,7 @@ export default () => ({
         target.setMinutes(m);
         this.userSelectedDate = target;
         this.showTimePicker = false;
+        this.dispatchTime(target);
     },
 
     isSelectedHour(h: number): boolean {
@@ -196,5 +212,13 @@ export default () => ({
         this.userSelectedDate = null;
         this.showDatePicker = false;
         this.showTimePicker = false;
+        this.lastDispatchedMinute = null; // Force update on next tick or immediate
+        this.dispatchTime(new Date());
+    },
+
+    dispatchTime(date: Date) {
+        window.dispatchEvent(new CustomEvent('calendar-time-update', {
+            detail: { date }
+        }));
     }
 })

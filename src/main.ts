@@ -49,6 +49,12 @@ let secondSelectionCentroid: { lat: number; lng: number } | null = null;
 // Animation state
 let animationFrameId: number | null = null;
 
+// Time state
+let latestCalendarTime: Date = new Date();
+window.addEventListener('calendar-time-update', (e: Event) => {
+    latestCalendarTime = (e as CustomEvent).detail.date;
+});
+
 // GeoJSON validation
 const cmet = cmetData as unknown as FeatureCollection;
 if (!cmet.type || cmet.type !== 'FeatureCollection' || !Array.isArray(cmet.features)) {
@@ -278,7 +284,7 @@ async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
         refreshVisuals();
 
         if (firstSelectionCentroid) {
-            const results = await fetchRouteData(firstSelectionCentroid, clickedCentroid);
+            const results = await fetchRouteData(firstSelectionCentroid, clickedCentroid, latestCalendarTime);
 
             const driveSeconds = parseDurationSeconds(results.drive?.duration);
             const transitSeconds = parseDurationSeconds(results.transit?.duration);

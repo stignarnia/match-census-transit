@@ -19,9 +19,9 @@ interface Coord {
     lng: number;
 }
 
-export async function fetchRouteData(origin: Coord, destination: Coord): Promise<RouteResult> {
-    // Set departure time to 1 hour from now
-    const departureTime = new Date(Date.now() + 60 * 60 * 1000).toISOString();
+export async function fetchRouteData(origin: Coord, destination: Coord, baseTime: Date): Promise<RouteResult> {
+    // Set departure time to baseTime + 1 minute (for safety buffer)
+    const departureTime = new Date(baseTime.getTime() + 60 * 1000).toISOString();
 
     const cacheKey = generateCacheKey(origin, destination, departureTime);
     const cached = getFromCache(cacheKey);
