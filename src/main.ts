@@ -153,11 +153,19 @@ map.on('load', () => {
     });
 
     map.addLayer({
+        id: 'connection-line-border',
+        type: 'line',
+        source: 'connection-line',
+        layout: { 'line-cap': 'round', 'line-join': 'round' },
+        paint: { 'line-color': '#ffffff', 'line-width': 18, 'line-opacity': 1 }
+    });
+
+    map.addLayer({
         id: 'connection-line-layer',
         type: 'line',
         source: 'connection-line',
         layout: { 'line-cap': 'round', 'line-join': 'round' },
-        paint: { 'line-color': '#ef4444', 'line-width': 4, 'line-opacity': 0.8 }
+        paint: { 'line-color': '#ef4444', 'line-width': 12, 'line-opacity': 1 }
     });
 
     // Initial visuals + grid
