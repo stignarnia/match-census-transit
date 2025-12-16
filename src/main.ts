@@ -1,9 +1,10 @@
 import './style.css'
 import mapboxgl from 'mapbox-gl';
 import Alpine from 'alpinejs'
-import { generateGridFeatures, LISBON_BBOX } from './grid-logic';
+import { generateGridFeatures, configureGrid } from './grid-logic';
 import type { FeatureCollection } from 'geojson';
 import cmetData from './assets/cmet_service_areas.json';
+import { bbox } from '@turf/turf';
 
 window.Alpine = Alpine
 Alpine.start()
@@ -17,11 +18,16 @@ const map = new mapboxgl.Map({
     zoom: 10
 });
 
-
-
 let selectedSquare: string | null = null;
 
 map.on('load', () => {
+    // Fit map to cmetData bounds
+    const bounds = bbox(cmetData as FeatureCollection);
+    map.fitBounds([bounds[0], bounds[1], bounds[2], bounds[3]], { padding: 20 });
+
+    // Initialize grid system with data bounds
+    configureGrid(cmetData as FeatureCollection, [bounds[0], bounds[1], bounds[2], bounds[3]]);
+
     map.addSource('grid', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
 
     map.addLayer({
@@ -67,23 +73,31 @@ map.on('click', 'grid-fill', (e) => {
 
 function updateGrid() {
     const zoom = map.getZoom();
-    const bounds = map.getBounds()!;
+    const bounds = map.getBounds();
+    if (!bounds) return;
 
     // Intersect viewport with grid bounds
-    const viewWest = Math.max(bounds.getWest(), LISBON_BBOX[0]);
-    const viewSouth = Math.max(bounds.getSouth(), LISBON_BBOX[1]);
-    const viewEast = Math.min(bounds.getEast(), LISBON_BBOX[2]);
-    const viewNorth = Math.min(bounds.getNorth(), LISBON_BBOX[3]);
+    const cmetBounds = bbox(cmetData as FeatureCollection);
+    const viewWest = Math.max(bounds.getWest(), cmetBounds[0]);
+    const viewSouth = Math.max(bounds.getSouth(), cmetBounds[1]);
+    const viewEast = Math.min(bounds.getEast(), cmetBounds[2]);
+    const viewNorth = Math.min(bounds.getNorth(), cmetBounds[3]);
 
     if (viewWest >= viewEast || viewSouth >= viewNorth) {
         return setGrid({ type: 'FeatureCollection', features: [] });
     }
 
-    const features = generateGridFeatures([viewWest, viewSouth, viewEast, viewNorth], zoom);
+    const features = generateGridFeatures(
+        [viewWest, viewSouth, viewEast, viewNorth],
+        zoom,
+        cmetData as FeatureCollection
+    );
     setGrid({ type: 'FeatureCollection', features });
 }
 
 function setGrid(data: FeatureCollection) {
-    (map.getSource('grid') as mapboxgl.GeoJSONSource)?.setData(data);
+    const source = map.getSource('grid');
+    if (source && source.type === 'geojson') {
+        (source as mapboxgl.GeoJSONSource).setData(data);
+    }
 }
-
