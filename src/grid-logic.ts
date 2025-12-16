@@ -23,6 +23,7 @@ interface IndexItem {
 let rootCellIdMap: Map<string, string> | null = null;
 let cachedOrigin: [number, number] | null = null;
 let spatialIndex: RBush<IndexItem> | null = null;
+let validityCache: Map<string, boolean> | null = null;
 
 // Reusable objects to reduce GC pressure
 const tempPolygon: Feature<Polygon> = {
@@ -40,6 +41,7 @@ const tempPolygon: Feature<Polygon> = {
  */
 export function configureGrid(mask: FeatureCollection, gridBBox: [number, number, number, number]) {
     rootCellIdMap = new Map();
+    validityCache = new Map();
     cachedOrigin = [gridBBox[0], gridBBox[3]];
 
     // 1. Initialize Spatial Index
@@ -156,29 +158,7 @@ export function generateGridFeatures(
             const rootId = rootCellIdMap.get(`${rootCol},${rootRow}`);
             if (!rootId) continue;
 
-            // Update reusable coordinates
-            cellCoords[0][0][0] = x1; cellCoords[0][0][1] = y1;
-            cellCoords[0][1][0] = x2; cellCoords[0][1][1] = y1;
-            cellCoords[0][2][0] = x2; cellCoords[0][2][1] = y2;
-            cellCoords[0][3][0] = x1; cellCoords[0][3][1] = y2;
-            cellCoords[0][4][0] = x1; cellCoords[0][4][1] = y1;
-
-            // Broad Phase Check: Query Index
-            const candidates = spatialIndex.search({ minX: x1, minY: y2, maxX: x2, maxY: y1 });
-            if (candidates.length === 0) continue;
-
-            // Precise Phase Check
-            let intersects = false;
-            for (const item of candidates) {
-                if (booleanIntersects(tempPolygon as Feature<Polygon>, item.feature)) {
-                    intersects = true;
-                    break;
-                }
-            }
-
-            if (!intersects) continue;
-
-            // Grid ID Generation Logic
+            // Grid ID Generation Logic - Computed *before* expensive checks
             let id = rootId;
             let currentSize = rootSize;
             let depth = 0;
@@ -195,6 +175,36 @@ export function generateGridFeatures(
 
                 currentSize = half;
                 depth++;
+            }
+
+            // Check Cache
+            const cached = validityCache?.get(id);
+            if (cached === false) continue;
+
+            // If not in cache, or true, verify intersection (if not explicitly true in cache)
+            if (cached === undefined) {
+                // Update reusable coordinates potentially needed for check
+                cellCoords[0][0][0] = x1; cellCoords[0][0][1] = y1;
+                cellCoords[0][1][0] = x2; cellCoords[0][1][1] = y1;
+                cellCoords[0][2][0] = x2; cellCoords[0][2][1] = y2;
+                cellCoords[0][3][0] = x1; cellCoords[0][3][1] = y2;
+                cellCoords[0][4][0] = x1; cellCoords[0][4][1] = y1;
+
+                // Broad Phase Check: Query Index
+                const candidates = spatialIndex.search({ minX: x1, minY: y2, maxX: x2, maxY: y1 });
+                let intersects = false;
+                if (candidates.length > 0) {
+                    // Precise Phase Check
+                    for (const item of candidates) {
+                        if (booleanIntersects(tempPolygon as Feature<Polygon>, item.feature)) {
+                            intersects = true;
+                            break;
+                        }
+                    }
+                }
+
+                validityCache?.set(id, intersects);
+                if (!intersects) continue;
             }
 
             // Create new object only when pushing to result
