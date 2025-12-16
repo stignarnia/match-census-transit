@@ -6,6 +6,26 @@ import cmetData from './assets/cmet_service_areas.json';
 import { bbox, centroid } from '@turf/turf';
 import { fetchRouteData } from './google-routes';
 
+// Color Palette
+const COLOR_BEST = '#10b981';
+const COLOR_WORST = '#ef4444';
+const COLOR_GRID_FILL = 'rgba(0, 100, 200, 0.3)';
+const COLOR_GRID_OUTLINE = 'rgba(0, 100, 200, 0.5)';
+const COLOR_TEXT_LABEL = 'white';
+const COLOR_TEXT_HALO = 'rgba(0,0,0,0.7)';
+const COLOR_CMET_BORDER = '#00ff00';
+const COLOR_CENTROID_STROKE = 'white';
+const COLOR_CONNECTION_BORDER = '#ffffff';
+const COLOR_CONNECTION_LABEL_TEXT = '#ffffff';
+const COLOR_CONNECTION_LABEL_HALO = '#000000';
+const COLOR_GRAY = '#9ca3af';
+const COLOR_SELECTION_FIRST = 'rgba(0, 255, 0, 0.8)';
+const COLOR_SELECTION_SECOND = 'rgba(255, 100, 100, 0.8)';
+
+// Color thresholds
+const THRESHOLD_BEST = 100;
+const THRESHOLD_WORST = 300;
+
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
 const map = new mapboxgl.Map({
@@ -42,6 +62,30 @@ function parseDurationSeconds(duration?: string | null): number {
     if (!duration) return 0;
     const seconds = parseInt(duration.replace('s', ''), 10);
     return Number.isFinite(seconds) ? seconds : 0;
+}
+
+function interpolateColor(color1: string, color2: string, factor: number): string {
+    const r1 = parseInt(color1.substring(1, 3), 16);
+    const g1 = parseInt(color1.substring(3, 5), 16);
+    const b1 = parseInt(color1.substring(5, 7), 16);
+
+    const r2 = parseInt(color2.substring(1, 3), 16);
+    const g2 = parseInt(color2.substring(3, 5), 16);
+    const b2 = parseInt(color2.substring(5, 7), 16);
+
+    const r = Math.round(r1 + factor * (r2 - r1));
+    const g = Math.round(g1 + factor * (g2 - g1));
+    const b = Math.round(b1 + factor * (b2 - b1));
+
+    return `#${(1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1)}`;
+}
+
+function getLineColor(percentage: number): string {
+    if (percentage <= THRESHOLD_BEST) return COLOR_BEST;
+    if (percentage >= THRESHOLD_WORST) return COLOR_WORST;
+
+    const factor = (percentage - THRESHOLD_BEST) / (THRESHOLD_WORST - THRESHOLD_BEST);
+    return interpolateColor(COLOR_BEST, COLOR_WORST, factor);
 }
 
 // Convenience source getter
@@ -82,8 +126,8 @@ map.on('load', () => {
         type: 'fill',
         source: 'grid',
         paint: {
-            'fill-color': 'rgba(0, 100, 200, 0.3)',
-            'fill-outline-color': 'rgba(0, 100, 200, 0.5)'
+            'fill-color': COLOR_GRID_FILL,
+            'fill-outline-color': COLOR_GRID_OUTLINE
         }
     });
 
@@ -97,8 +141,8 @@ map.on('load', () => {
             'text-allow-overlap': false
         },
         paint: {
-            'text-color': 'white',
-            'text-halo-color': 'rgba(0,0,0,0.7)',
+            'text-color': COLOR_TEXT_LABEL,
+            'text-halo-color': COLOR_TEXT_HALO,
             'text-halo-width': 1
         }
     });
@@ -109,7 +153,7 @@ map.on('load', () => {
         id: 'cmet-border',
         type: 'line',
         source: 'cmet',
-        paint: { 'line-color': '#00ff00', 'line-width': 2 }
+        paint: { 'line-color': COLOR_CMET_BORDER, 'line-width': 2 }
     });
 
     // Centroids
@@ -125,8 +169,8 @@ map.on('load', () => {
         filter: ['==', ['get', 'type'], 'first'],
         paint: {
             'circle-radius': 8,
-            'circle-color': '#10b981',
-            'circle-stroke-color': 'white',
+            'circle-color': COLOR_BEST,
+            'circle-stroke-color': COLOR_CENTROID_STROKE,
             'circle-stroke-width': 3,
             'circle-opacity': 1
         }
@@ -139,8 +183,8 @@ map.on('load', () => {
         filter: ['==', ['get', 'type'], 'second'],
         paint: {
             'circle-radius': 8,
-            'circle-color': '#ef4444',
-            'circle-stroke-color': 'white',
+            'circle-color': COLOR_WORST,
+            'circle-stroke-color': COLOR_CENTROID_STROKE,
             'circle-stroke-width': 3,
             'circle-opacity': 1
         }
@@ -157,7 +201,7 @@ map.on('load', () => {
         type: 'line',
         source: 'connection-line',
         layout: { 'line-cap': 'round', 'line-join': 'round' },
-        paint: { 'line-color': '#ffffff', 'line-width': 18, 'line-opacity': 1 }
+        paint: { 'line-color': COLOR_CONNECTION_BORDER, 'line-width': 18, 'line-opacity': 1 }
     });
 
     map.addLayer({
@@ -165,7 +209,7 @@ map.on('load', () => {
         type: 'line',
         source: 'connection-line',
         layout: { 'line-cap': 'round', 'line-join': 'round' },
-        paint: { 'line-color': '#ef4444', 'line-width': 12, 'line-opacity': 1 }
+        paint: { 'line-color': COLOR_WORST, 'line-width': 12, 'line-opacity': 1 }
     });
 
     // Connection Label
@@ -186,8 +230,8 @@ map.on('load', () => {
             'text-ignore-placement': true
         },
         paint: {
-            'text-color': '#ffffff',
-            'text-halo-color': '#000000',
+            'text-color': COLOR_CONNECTION_LABEL_TEXT,
+            'text-halo-color': COLOR_CONNECTION_LABEL_HALO,
             'text-halo-width': 2
         }
     });
@@ -229,28 +273,40 @@ async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
         refreshVisuals();
 
         if (firstSelectionCentroid) {
-            animateLineDraw(
-                [firstSelectionCentroid.lng, firstSelectionCentroid.lat],
-                [clickedCentroid.lng, clickedCentroid.lat]
-            );
-
             const results = await fetchRouteData(firstSelectionCentroid, clickedCentroid);
 
             const driveSeconds = parseDurationSeconds(results.drive?.duration);
             const transitSeconds = parseDurationSeconds(results.transit?.duration);
 
             let labelText = '';
+            let lineColor = COLOR_GRAY; // Default gray if indeterminable
+
             if (driveSeconds > 0 && transitSeconds > 0) {
                 const percentage = Math.round((transitSeconds / driveSeconds) * 100);
                 labelText = `${percentage}%`;
+                lineColor = getLineColor(percentage);
             } else if (driveSeconds > 0) {
                 labelText = 'No Transit';
+                lineColor = COLOR_WORST;
             } else if (transitSeconds > 0) {
                 labelText = 'No Drive';
+                lineColor = COLOR_BEST; // Or another color for "Transit Only"? Sticking to best for now as it beats "No Drive".
             } else {
                 labelText = 'N/A';
             }
 
+            // Update line color
+            if (map.getLayer('connection-line-layer')) {
+                map.setPaintProperty('connection-line-layer', 'line-color', lineColor);
+            }
+
+            // Animate line
+            animateLineDraw(
+                [firstSelectionCentroid.lng, firstSelectionCentroid.lat],
+                [clickedCentroid.lng, clickedCentroid.lat]
+            );
+
+            // Update label
             const midLng = (firstSelectionCentroid.lng + clickedCentroid.lng) / 2;
             const midLat = (firstSelectionCentroid.lat + clickedCentroid.lat) / 2;
 
@@ -382,10 +438,10 @@ function updateSelectionVisuals() {
     map.setPaintProperty('grid-fill', 'fill-color', [
         'case',
         ['==', ['get', 'id'], firstSelection || ''],
-        'rgba(0, 255, 0, 0.8)',
+        COLOR_SELECTION_FIRST,
         ['==', ['get', 'id'], secondSelection || ''],
-        'rgba(255, 100, 100, 0.8)',
-        'rgba(0, 100, 200, 0.3)'
+        COLOR_SELECTION_SECOND,
+        COLOR_GRID_FILL
     ]);
 }
 
