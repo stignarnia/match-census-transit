@@ -168,6 +168,30 @@ map.on('load', () => {
         paint: { 'line-color': '#ef4444', 'line-width': 12, 'line-opacity': 1 }
     });
 
+    // Connection Label
+    map.addSource('connection-label', {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] }
+    });
+
+    map.addLayer({
+        id: 'connection-label-layer',
+        type: 'symbol',
+        source: 'connection-label',
+        layout: {
+            'text-field': ['get', 'label'],
+            'text-size': 14,
+            'text-anchor': 'center',
+            'text-allow-overlap': true,
+            'text-ignore-placement': true
+        },
+        paint: {
+            'text-color': '#ffffff',
+            'text-halo-color': '#000000',
+            'text-halo-width': 2
+        }
+    });
+
     // Initial visuals + grid
     refreshVisuals();
     updateGrid();
@@ -210,30 +234,39 @@ async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
                 [clickedCentroid.lng, clickedCentroid.lat]
             );
 
-            console.log(`Calculating route from ${firstSelection} to ${secondSelection}...`);
             const results = await fetchRouteData(firstSelectionCentroid, clickedCentroid);
 
-            console.log('--- Route Results ---');
-            console.log(`Origin: ${firstSelection}, Destination: ${secondSelection}`);
+            const driveSeconds = parseDurationSeconds(results.drive?.duration);
+            const transitSeconds = parseDurationSeconds(results.transit?.duration);
 
-            if (results.drive?.duration || results.drive?.distanceMeters) {
-                const minutes = parseDurationSeconds(results.drive?.duration) / 60;
-                console.log(
-                    `DRIVE (Traffic Aware): ${minutes.toFixed(1)} mins, ${(results.drive?.distanceMeters || 0) / 1000
-                    } km`
-                );
+            let labelText = '';
+            if (driveSeconds > 0 && transitSeconds > 0) {
+                const percentage = Math.round((transitSeconds / driveSeconds) * 100);
+                labelText = `${percentage}%`;
+            } else if (driveSeconds > 0) {
+                labelText = 'No Transit';
+            } else if (transitSeconds > 0) {
+                labelText = 'No Drive';
             } else {
-                console.log('DRIVE: No route found or error.');
+                labelText = 'N/A';
             }
 
-            if (results.transit?.duration || results.transit?.distanceMeters) {
-                const minutes = parseDurationSeconds(results.transit?.duration) / 60;
-                console.log(
-                    `TRANSIT: ${minutes.toFixed(1)} mins, ${(results.transit?.distanceMeters || 0) / 1000
-                    } km`
-                );
-            } else {
-                console.log('TRANSIT: No route found or error.');
+            const midLng = (firstSelectionCentroid.lng + clickedCentroid.lng) / 2;
+            const midLat = (firstSelectionCentroid.lat + clickedCentroid.lat) / 2;
+
+            const labelSource = getGeoJSONSource('connection-label');
+            if (labelSource) {
+                labelSource.setData({
+                    type: 'FeatureCollection',
+                    features: [{
+                        type: 'Feature',
+                        properties: { label: labelText },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [midLng, midLat]
+                        }
+                    }]
+                });
             }
         }
         return;
@@ -335,6 +368,11 @@ function resetConnectionLine() {
     if (!source) return;
 
     source.setData({ type: 'FeatureCollection', features: [] });
+
+    const labelSource = getGeoJSONSource('connection-label');
+    if (labelSource) {
+        labelSource.setData({ type: 'FeatureCollection', features: [] });
+    }
 }
 
 // Selection visuals
