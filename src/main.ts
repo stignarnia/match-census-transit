@@ -18,21 +18,21 @@ const map = new mapboxgl.Map({
     zoom: 10
 });
 
-let selectedSquare: string | null = null;
+let firstSelection: string | null = null;
+let secondSelection: string | null = null;
 
-// Validate GeoJSON data at runtime to ensure type safety
+// Runtime validation of GeoJSON
 const cmet = cmetData as unknown as FeatureCollection;
 if (!cmet.type || cmet.type !== 'FeatureCollection' || !Array.isArray(cmet.features)) {
     throw new Error('Invalid GeoJSON: cmetData must be a FeatureCollection');
 }
 
 map.on('load', () => {
-    // Fit map to cmetData bounds
+    // Fit map to data bounds
     const bounds = bbox(cmet);
     map.fitBounds([bounds[0], bounds[1], bounds[2], bounds[3]], { padding: 20 });
 
-
-    // Initialize grid system with data bounds
+    // Initialize grid
     configureGrid(cmet, [bounds[0], bounds[1], bounds[2], bounds[3]]);
 
     map.addSource('grid', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
@@ -40,10 +40,11 @@ map.on('load', () => {
     map.addLayer({
         id: 'grid-fill', type: 'fill', source: 'grid',
         paint: {
-            'fill-color': ['case', ['==', ['get', 'id'], selectedSquare || ''], 'rgba(255, 100, 100, 0.8)', 'rgba(0, 100, 200, 0.3)'],
+            'fill-color': 'rgba(0, 100, 200, 0.3)', // Initial state
             'fill-outline-color': 'rgba(0, 100, 200, 0.5)'
         }
     });
+    updateSelectionVisuals(); // Apply dynamic styling
 
     map.addLayer({
         id: 'grid-labels', type: 'symbol', source: 'grid',
@@ -70,13 +71,32 @@ map.on('load', () => {
 });
 
 map.on('moveend', updateGrid);
-map.on('click', 'grid-fill', (e) => {
-    const f = e.features?.[0];
-    if (f) {
-        selectedSquare = selectedSquare === f.properties?.id ? null : f.properties?.id;
-        map.setPaintProperty('grid-fill', 'fill-color', ['case', ['==', ['get', 'id'], selectedSquare || ''], 'rgba(255, 100, 100, 0.8)', 'rgba(0, 100, 200, 0.3)']);
+map.on('click', 'grid-fill', handleGridClick);
+
+function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
+    const feature = e.features?.[0];
+    if (!feature?.properties?.id) return;
+
+    const id = feature.properties.id;
+    if (!firstSelection) {
+        firstSelection = id;
+    } else if (!secondSelection && id !== firstSelection) {
+        secondSelection = id;
+    } else {
+        firstSelection = id;
+        secondSelection = null;
     }
-});
+    updateSelectionVisuals();
+}
+
+function updateSelectionVisuals() {
+    map.setPaintProperty('grid-fill', 'fill-color', [
+        'case',
+        ['==', ['get', 'id'], firstSelection || ''], 'rgba(0, 255, 0, 0.8)',
+        ['==', ['get', 'id'], secondSelection || ''], 'rgba(255, 100, 100, 0.8)',
+        'rgba(0, 100, 200, 0.3)'
+    ]);
+}
 
 function updateGrid() {
     const zoom = map.getZoom();
@@ -94,10 +114,7 @@ function updateGrid() {
         return setGrid({ type: 'FeatureCollection', features: [] });
     }
 
-    const features = generateGridFeatures(
-        [viewWest, viewSouth, viewEast, viewNorth],
-        zoom
-    );
+    const features = generateGridFeatures([viewWest, viewSouth, viewEast, viewNorth], zoom);
     setGrid({ type: 'FeatureCollection', features });
 }
 

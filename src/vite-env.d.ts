@@ -6,6 +6,7 @@ interface Window {
 
 interface ImportMetaEnv {
     readonly VITE_MAPBOX_ACCESS_TOKEN: string
+    readonly GOOGLE_MAPS_API_KEY: string
 }
 
 interface ImportMeta {
