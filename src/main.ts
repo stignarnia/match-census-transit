@@ -22,6 +22,8 @@ const map = new mapboxgl.Map({
 let firstSelection: string | null = null;
 let secondSelection: string | null = null;
 let firstSelectionCentroid: { lat: number, lng: number } | null = null;
+let secondSelectionCentroid: { lat: number, lng: number } | null = null;
+let animationFrameId: number | null = null;
 
 // Runtime validation of GeoJSON
 const cmet = cmetData as unknown as FeatureCollection;
@@ -42,11 +44,11 @@ map.on('load', () => {
     map.addLayer({
         id: 'grid-fill', type: 'fill', source: 'grid',
         paint: {
-            'fill-color': 'rgba(0, 100, 200, 0.3)', // Initial state
+            'fill-color': 'rgba(0, 100, 200, 0.3)',
             'fill-outline-color': 'rgba(0, 100, 200, 0.5)'
         }
     });
-    updateSelectionVisuals(); // Apply dynamic styling
+    updateSelectionVisuals();
 
     map.addLayer({
         id: 'grid-labels', type: 'symbol', source: 'grid',
@@ -69,6 +71,64 @@ map.on('load', () => {
         }
     });
 
+    // Centroid markers source
+    map.addSource('centroids', {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] }
+    });
+
+    // First selection centroid (green dot)
+    map.addLayer({
+        id: 'first-centroid',
+        type: 'circle',
+        source: 'centroids',
+        filter: ['==', ['get', 'type'], 'first'],
+        paint: {
+            'circle-radius': 8,
+            'circle-color': '#10b981', // green-500
+            'circle-stroke-color': 'white',
+            'circle-stroke-width': 3,
+            'circle-opacity': 1
+        }
+    });
+
+    // Second selection centroid (red dot)
+    map.addLayer({
+        id: 'second-centroid',
+        type: 'circle',
+        source: 'centroids',
+        filter: ['==', ['get', 'type'], 'second'],
+        paint: {
+            'circle-radius': 8,
+            'circle-color': '#ef4444', // red-500
+            'circle-stroke-color': 'white',
+            'circle-stroke-width': 3,
+            'circle-opacity': 1
+        }
+    });
+
+    // Connection Line Source
+    map.addSource('connection-line', {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] }
+    });
+
+    // Single connection line layer
+    map.addLayer({
+        id: 'connection-line-layer',
+        type: 'line',
+        source: 'connection-line',
+        layout: {
+            'line-cap': 'round',
+            'line-join': 'round'
+        },
+        paint: {
+            'line-color': '#ef4444',
+            'line-width': 4,
+            'line-opacity': 0.8
+        }
+    });
+
     updateGrid();
 });
 
@@ -80,19 +140,31 @@ async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
     if (!feature?.properties?.id) return;
 
     const id = feature.properties.id;
-    // Calculate centroid of clicked feature for potential API routing
-    const centerPoint = centroid(feature as any);
-    const coords = centerPoint.geometry.coordinates; // [lng, lat]
+    const centerPoint = centroid(feature);
+    const coords = centerPoint.geometry.coordinates;
     const clickedCentroid = { lng: coords[0], lat: coords[1] };
 
     if (!firstSelection) {
         firstSelection = id;
         firstSelectionCentroid = clickedCentroid;
+        secondSelection = null;
+        secondSelectionCentroid = null;
+        resetConnectionLine();
+        updateCentroids();
+        updateSelectionVisuals();
     } else if (!secondSelection && id !== firstSelection) {
         secondSelection = id;
+        secondSelectionCentroid = clickedCentroid;
 
-        // Trigger API Call
+        // IMMEDIATELY show red dot and red background
+        updateCentroids();
+        updateSelectionVisuals();
+
         if (firstSelectionCentroid) {
+            // ONLY animate the line AFTER visuals are updated
+            animateLineDraw([firstSelectionCentroid.lng, firstSelectionCentroid.lat], [clickedCentroid.lng, clickedCentroid.lat]);
+
+            // Trigger API Logic
             console.log(`Calculating route from ${firstSelection} to ${secondSelection}...`);
             const results = await fetchRouteData(firstSelectionCentroid, clickedCentroid);
 
@@ -108,18 +180,106 @@ async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
 
             if (results.transit.duration || results.transit.distanceMeters) {
                 const minutes = results.transit.duration ? parseInt(results.transit.duration.replace('s', '')) / 60 : 0;
-                console.log(`TRANSIT: ${minutes.toFixed(1)} mins, ${(results.transit.distanceMeters || 0) / 1000} km`);
+                console.log(`TRANSIT: ${minutes.toFixed(1)} mins, ${(results.drive.distanceMeters || 0) / 1000} km`);
             } else {
                 console.log('TRANSIT: No route found or error.');
             }
         }
-
     } else {
         firstSelection = id;
         firstSelectionCentroid = clickedCentroid;
         secondSelection = null;
+        secondSelectionCentroid = null;
+        resetConnectionLine();
+        updateCentroids();
+        updateSelectionVisuals();
     }
-    updateSelectionVisuals();
+}
+
+function updateCentroids() {
+    const features: any[] = [];
+
+    if (firstSelectionCentroid) {
+        features.push({
+            type: 'Feature',
+            properties: { type: 'first' },
+            geometry: {
+                type: 'Point',
+                coordinates: [firstSelectionCentroid.lng, firstSelectionCentroid.lat]
+            }
+        });
+    }
+
+    if (secondSelectionCentroid) {
+        features.push({
+            type: 'Feature',
+            properties: { type: 'second' },
+            geometry: {
+                type: 'Point',
+                coordinates: [secondSelectionCentroid.lng, secondSelectionCentroid.lat]
+            }
+        });
+    }
+
+    const source = map.getSource('centroids') as mapboxgl.GeoJSONSource;
+    if (source) {
+        source.setData({ type: 'FeatureCollection', features });
+    }
+}
+
+function animateLineDraw(start: [number, number], end: [number, number]) {
+    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+
+    const duration = 500; // 500ms total
+    let startTime: number;
+
+    function frame(timestamp: number) {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+
+        // Smooth easing
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        // Interpolate between start and end
+        const currentEnd: [number, number] = [
+            start[0] + (end[0] - start[0]) * ease,
+            start[1] + (end[1] - start[1]) * ease
+        ];
+
+        const source = map.getSource('connection-line') as mapboxgl.GeoJSONSource;
+        if (source) {
+            source.setData({
+                type: 'FeatureCollection',
+                features: [{
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: [start, currentEnd]
+                    }
+                }]
+            });
+        }
+
+        if (progress < 1) {
+            animationFrameId = requestAnimationFrame(frame);
+        } else {
+            animationFrameId = null;
+        }
+    }
+
+    animationFrameId = requestAnimationFrame(frame);
+}
+
+function resetConnectionLine() {
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+    }
+    const source = map.getSource('connection-line') as mapboxgl.GeoJSONSource;
+    if (source) {
+        source.setData({ type: 'FeatureCollection', features: [] });
+    }
 }
 
 function updateSelectionVisuals() {
@@ -136,7 +296,6 @@ function updateGrid() {
     const bounds = map.getBounds();
     if (!bounds) return;
 
-    // Intersect viewport with grid bounds
     const cmetBounds = bbox(cmet);
     const viewWest = Math.max(bounds.getWest(), cmetBounds[0]);
     const viewSouth = Math.max(bounds.getSouth(), cmetBounds[1]);
