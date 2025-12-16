@@ -4,7 +4,8 @@ import Alpine from 'alpinejs'
 import { generateGridFeatures, configureGrid } from './grid-logic';
 import type { FeatureCollection } from 'geojson';
 import cmetData from './assets/cmet_service_areas.json';
-import { bbox } from '@turf/turf';
+import { bbox, centroid } from '@turf/turf';
+import { fetchRouteData } from './google-routes';
 
 window.Alpine = Alpine
 Alpine.start()
@@ -20,6 +21,7 @@ const map = new mapboxgl.Map({
 
 let firstSelection: string | null = null;
 let secondSelection: string | null = null;
+let firstSelectionCentroid: { lat: number, lng: number } | null = null;
 
 // Runtime validation of GeoJSON
 const cmet = cmetData as unknown as FeatureCollection;
@@ -73,17 +75,48 @@ map.on('load', () => {
 map.on('moveend', updateGrid);
 map.on('click', 'grid-fill', handleGridClick);
 
-function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
+async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
     const feature = e.features?.[0];
     if (!feature?.properties?.id) return;
 
     const id = feature.properties.id;
+    // Calculate centroid of clicked feature for potential API routing
+    const centerPoint = centroid(feature as any);
+    const coords = centerPoint.geometry.coordinates; // [lng, lat]
+    const clickedCentroid = { lng: coords[0], lat: coords[1] };
+
     if (!firstSelection) {
         firstSelection = id;
+        firstSelectionCentroid = clickedCentroid;
     } else if (!secondSelection && id !== firstSelection) {
         secondSelection = id;
+
+        // Trigger API Call
+        if (firstSelectionCentroid) {
+            console.log(`Calculating route from ${firstSelection} to ${secondSelection}...`);
+            const results = await fetchRouteData(firstSelectionCentroid, clickedCentroid);
+
+            console.log('--- Route Results ---');
+            console.log(`Origin: ${firstSelection}, Destination: ${secondSelection}`);
+
+            if (results.drive.duration || results.drive.distanceMeters) {
+                const minutes = results.drive.duration ? parseInt(results.drive.duration.replace('s', '')) / 60 : 0;
+                console.log(`DRIVE (Traffic Aware): ${minutes.toFixed(1)} mins, ${(results.drive.distanceMeters || 0) / 1000} km`);
+            } else {
+                console.log('DRIVE: No route found or error.');
+            }
+
+            if (results.transit.duration || results.transit.distanceMeters) {
+                const minutes = results.transit.duration ? parseInt(results.transit.duration.replace('s', '')) / 60 : 0;
+                console.log(`TRANSIT: ${minutes.toFixed(1)} mins, ${(results.transit.distanceMeters || 0) / 1000} km`);
+            } else {
+                console.log('TRANSIT: No route found or error.');
+            }
+        }
+
     } else {
         firstSelection = id;
+        firstSelectionCentroid = clickedCentroid;
         secondSelection = null;
     }
     updateSelectionVisuals();
