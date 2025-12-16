@@ -3,6 +3,7 @@ import mapboxgl from 'mapbox-gl';
 import Alpine from 'alpinejs'
 import { generateGridFeatures, LISBON_BBOX } from './grid-logic';
 import type { FeatureCollection } from 'geojson';
+import cmetData from './assets/cmet_service_areas.json';
 
 window.Alpine = Alpine
 Alpine.start()
@@ -35,6 +36,21 @@ map.on('load', () => {
         id: 'grid-labels', type: 'symbol', source: 'grid',
         layout: { 'text-field': ['get', 'id'], 'text-size': 12, 'text-allow-overlap': false },
         paint: { 'text-color': 'white', 'text-halo-color': 'rgba(0,0,0,0.7)', 'text-halo-width': 1 }
+    });
+
+    map.addSource('cmet', {
+        type: 'geojson',
+        data: cmetData as FeatureCollection
+    });
+
+    map.addLayer({
+        id: 'cmet-border',
+        type: 'line',
+        source: 'cmet',
+        paint: {
+            'line-color': '#00ff00',
+            'line-width': 2
+        }
     });
 
     updateGrid();
