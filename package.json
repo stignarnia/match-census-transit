@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/alpinejs": "^3.13.11",
     "@types/mapbox-gl": "^3.4.1",
     "@types/rbush": "^4.0.0",
     "typescript": "~5.9.3",
@@ -17,6 +18,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "@turf/turf": "^7.3.1",
+    "alpinejs": "^3.15.2",
     "mapbox-gl": "^3.17.0",
     "rbush": "^4.0.1",
     "tailwindcss": "^4.1.18"

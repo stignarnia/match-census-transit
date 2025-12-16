@@ -5,6 +5,11 @@ import type { FeatureCollection, Feature } from 'geojson';
 import cmetData from './assets/cmet_service_areas.json';
 import { bbox, centroid } from '@turf/turf';
 import { fetchRouteData } from './google-routes';
+import Alpine from 'alpinejs';
+import calendar from './calendar';
+
+Alpine.data('calendar', calendar);
+Alpine.start();
 
 // Color Palette
 const COLOR_BEST = '#10b981';
