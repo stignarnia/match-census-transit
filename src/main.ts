@@ -20,13 +20,20 @@ const map = new mapboxgl.Map({
 
 let selectedSquare: string | null = null;
 
+// Validate GeoJSON data at runtime to ensure type safety
+const cmet = cmetData as unknown as FeatureCollection;
+if (!cmet.type || cmet.type !== 'FeatureCollection' || !Array.isArray(cmet.features)) {
+    throw new Error('Invalid GeoJSON: cmetData must be a FeatureCollection');
+}
+
 map.on('load', () => {
     // Fit map to cmetData bounds
-    const bounds = bbox(cmetData as FeatureCollection);
+    const bounds = bbox(cmet);
     map.fitBounds([bounds[0], bounds[1], bounds[2], bounds[3]], { padding: 20 });
 
+
     // Initialize grid system with data bounds
-    configureGrid(cmetData as FeatureCollection, [bounds[0], bounds[1], bounds[2], bounds[3]]);
+    configureGrid(cmet, [bounds[0], bounds[1], bounds[2], bounds[3]]);
 
     map.addSource('grid', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
 
@@ -46,7 +53,7 @@ map.on('load', () => {
 
     map.addSource('cmet', {
         type: 'geojson',
-        data: cmetData as FeatureCollection
+        data: cmet
     });
 
     map.addLayer({
@@ -77,7 +84,7 @@ function updateGrid() {
     if (!bounds) return;
 
     // Intersect viewport with grid bounds
-    const cmetBounds = bbox(cmetData as FeatureCollection);
+    const cmetBounds = bbox(cmet);
     const viewWest = Math.max(bounds.getWest(), cmetBounds[0]);
     const viewSouth = Math.max(bounds.getSouth(), cmetBounds[1]);
     const viewEast = Math.min(bounds.getEast(), cmetBounds[2]);
@@ -89,8 +96,7 @@ function updateGrid() {
 
     const features = generateGridFeatures(
         [viewWest, viewSouth, viewEast, viewNorth],
-        zoom,
-        cmetData as FeatureCollection
+        zoom
     );
     setGrid({ type: 'FeatureCollection', features });
 }
