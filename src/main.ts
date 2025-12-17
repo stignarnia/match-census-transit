@@ -1,6 +1,5 @@
 import './style.css';
 import mapboxgl from 'mapbox-gl';
-import { generateGridFeatures, configureGrid } from './grid-logic';
 import type { FeatureCollection, Feature } from 'geojson';
 import cmetData from './assets/cmet_service_areas.json';
 import { bbox, centroid } from '@turf/turf';
@@ -14,8 +13,6 @@ Alpine.start();
 // Color Palette
 const COLOR_BEST = '#10b981';
 const COLOR_WORST = '#ef4444';
-const COLOR_GRID_FILL = 'rgba(0, 100, 200, 0.3)';
-const COLOR_GRID_OUTLINE = 'rgba(0, 100, 200, 0.5)';
 const COLOR_TEXT_LABEL = 'white';
 const COLOR_TEXT_HALO = 'rgba(0,0,0,0.7)';
 const COLOR_CMET_BORDER = '#00ff00';
@@ -27,7 +24,6 @@ const COLOR_GRAY = '#9ca3af';
 const COLOR_SELECTION_FIRST = 'rgba(0, 255, 0, 0.8)';
 const COLOR_SELECTION_SECOND = 'rgba(255, 100, 100, 0.8)';
 const COLOR_BGRI_FILL = 'rgba(232, 121, 249, 0.3)'; // Purple-ish
-
 
 // Color thresholds
 const THRESHOLD_BEST = 100;
@@ -130,8 +126,6 @@ map.on('load', () => {
 
     map.fitBounds(cmetBounds, { padding: 20 });
 
-    configureGrid(cmet, cmetBounds);
-
     // BGRI Census Data (Underneath grid)
     map.addSource('bgri', {
         type: 'vector',
@@ -145,42 +139,8 @@ map.on('load', () => {
         'source-layer': 'a8812bf3a307811dd19e',
         paint: {
             'fill-color': COLOR_BGRI_FILL,
-            'fill-outline-color': COLOR_BGRI_FILL
-        }
-    });
-
-    // Grid
-    map.addSource('grid', {
-        type: 'geojson',
-        data: { type: 'FeatureCollection', features: [] },
-        maxzoom: 14
-    });
-
-    map.addLayer({
-        id: 'grid-fill',
-        type: 'fill',
-        source: 'grid',
-        paint: {
-            'fill-color': COLOR_GRID_FILL,
-            'fill-outline-color': COLOR_GRID_OUTLINE,
+            'fill-outline-color': COLOR_BGRI_FILL,
             'fill-emissive-strength': 1
-        }
-    });
-
-    map.addLayer({
-        id: 'grid-labels',
-        type: 'symbol',
-        source: 'grid',
-        layout: {
-            'text-field': ['get', 'id'],
-            'text-size': 12,
-            'text-allow-overlap': false
-        },
-        paint: {
-            'text-color': COLOR_TEXT_LABEL,
-            'text-halo-color': COLOR_TEXT_HALO,
-            'text-halo-width': 1,
-            'text-emissive-strength': 1
         }
     });
 
@@ -276,20 +236,34 @@ map.on('load', () => {
         }
     });
 
-    // Initial visuals + grid
+    // Initial visuals
     refreshVisuals();
-    updateGrid();
 });
 
 // Events
-map.on('moveend', updateGrid);
-map.on('click', 'grid-fill', handleGridClick);
+// Listen to clicks on the bgri-fill layer
+map.on('click', 'bgri-fill', handleGridClick);
+
+// Handle cursor pointer
+map.on('mouseenter', 'bgri-fill', () => {
+    map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'bgri-fill', () => {
+    map.getCanvas().style.cursor = '';
+});
 
 // Click handler
 async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
+    // With vector tiles, we get features here
     const feature = e.features?.[0] as Feature | undefined;
-    const id = feature?.properties?.id as string | undefined;
-    if (!feature || !id) return;
+
+    // The user specified 'BGRI2021' as the ID field
+    const id = feature?.properties?.BGRI2021 as string | undefined;
+
+    if (!feature || !id) {
+        // Just return if no feature or no ID
+        return;
+    }
 
     const clickedCentroid = getFeatureCentroid(feature);
 
@@ -473,44 +447,15 @@ function resetConnectionLine() {
 
 // Selection visuals
 function updateSelectionVisuals() {
-    if (!map.getLayer('grid-fill')) return;
+    if (!map.getLayer('bgri-fill')) return;
 
-    map.setPaintProperty('grid-fill', 'fill-color', [
+    // Use BGRI2021 for selection logic
+    map.setPaintProperty('bgri-fill', 'fill-color', [
         'case',
-        ['==', ['get', 'id'], firstSelection || ''],
+        ['==', ['get', 'BGRI2021'], firstSelection || ''],
         COLOR_SELECTION_FIRST,
-        ['==', ['get', 'id'], secondSelection || ''],
+        ['==', ['get', 'BGRI2021'], secondSelection || ''],
         COLOR_SELECTION_SECOND,
-        COLOR_GRID_FILL
+        COLOR_BGRI_FILL
     ]);
-}
-
-// Grid generation
-function updateGrid() {
-    const zoom = map.getZoom();
-    const bounds = map.getBounds();
-    if (!bounds) return;
-
-    const cmetBounds = bbox(cmet);
-    const viewWest = Math.max(bounds.getWest(), cmetBounds[0]);
-    const viewSouth = Math.max(bounds.getSouth(), cmetBounds[1]);
-    const viewEast = Math.min(bounds.getEast(), cmetBounds[2]);
-    const viewNorth = Math.min(bounds.getNorth(), cmetBounds[3]);
-
-    if (viewWest >= viewEast || viewSouth >= viewNorth) {
-        return setGrid({ type: 'FeatureCollection', features: [] });
-    }
-
-    const features = generateGridFeatures(
-        [viewWest, viewSouth, viewEast, viewNorth],
-        zoom
-    );
-    setGrid({ type: 'FeatureCollection', features });
-}
-
-function setGrid(data: FeatureCollection) {
-    const source = getGeoJSONSource('grid');
-    if (!source) return;
-
-    source.setData(data);
 }
