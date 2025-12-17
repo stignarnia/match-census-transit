@@ -1,6 +1,7 @@
 import './style.css';
 import Alpine from 'alpinejs';
 import calendar, { type CalendarTimeUpdateEvent } from './calendar';
+import people from './people';
 import { map } from './map';
 import { setupMapLayers } from './layers';
 import { appState } from './state';
@@ -22,6 +23,7 @@ import {
 const USE_POPULATION_HEATMAP = true;
 
 Alpine.data('calendar', calendar);
+Alpine.data('people', people);
 Alpine.start();
 
 // Time state
