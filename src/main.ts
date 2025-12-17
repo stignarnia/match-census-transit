@@ -4,7 +4,7 @@ import calendar from './calendar';
 import { map } from './map';
 import { setupMapLayers } from './layers';
 import { appState } from './state';
-import { handleGridClick, refreshVisuals } from './interactions';
+import { handleGridClick, refreshVisuals, resetSelection } from './interactions';
 import {
     COLOR_BEST,
     COLOR_WORST,
@@ -52,4 +52,12 @@ map.on('mouseenter', 'bgri-fill', () => {
 });
 map.on('mouseleave', 'bgri-fill', () => {
     map.getCanvas().style.cursor = '';
+});
+
+// Reset selection when clicking outside the interactive layer
+map.on('click', (e) => {
+    const features = map.queryRenderedFeatures(e.point, { layers: ['bgri-fill'] });
+    if (!features.length) {
+        resetSelection();
+    }
 });

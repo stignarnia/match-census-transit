@@ -146,3 +146,12 @@ export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: F
     resetConnectionLine(map);
     refreshVisuals();
 }
+
+export function resetSelection() {
+    appState.firstSelection = null;
+    appState.firstSelectionCentroid = null;
+    appState.secondSelection = null;
+    appState.secondSelectionCentroid = null;
+    resetConnectionLine(map);
+    refreshVisuals();
+}
