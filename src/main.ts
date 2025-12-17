@@ -3,7 +3,7 @@ import Alpine from 'alpinejs';
 import calendar, { type CalendarTimeUpdateEvent } from './calendar';
 import people from './people';
 import { map } from './map';
-import { setupMapLayers, setMapVisualMode } from './layers';
+import { setupMapLayers } from './layers';
 import { appState } from './state';
 import { handleGridClick, refreshVisuals, resetSelection } from './interactions';
 import {
@@ -14,9 +14,7 @@ import {
     COLOR_CONNECTION_LABEL_TEXT,
     COLOR_CONNECTION_LABEL_HALO,
     COLOR_BGRI_FILL,
-    COLOR_BGRI_OUTLINE,
-    SOURCE_LAYER_BGRI,
-    SOURCE_LAYER_HEATMAP
+    COLOR_BGRI_OUTLINE
 } from './constants';
 
 Alpine.data('calendar', calendar);
@@ -77,67 +75,3 @@ map.on('click', (e) => {
     }
 });
 
-// Calculate density when data is loaded
-// Events
-// Listen to people selection changes
-window.addEventListener('people-selection-change', (e: Event) => {
-    const customEvent = e as CustomEvent<{ selection: string }>;
-    if (customEvent.detail && customEvent.detail.selection) {
-        const selection = customEvent.detail.selection;
-
-        // Update map visuals using the new helper
-        const activeFillExpression = setMapVisualMode(map, selection, {
-            COLOR_BGRI_FILL,
-            COLOR_BEST,
-            COLOR_CENTROID_STROKE,
-            COLOR_WORST,
-            COLOR_CONNECTION_BORDER,
-            COLOR_CONNECTION_LABEL_TEXT,
-            COLOR_CONNECTION_LABEL_HALO,
-            COLOR_BGRI_OUTLINE
-        });
-
-        // Update state so interactions use the correct fill logic
-        appState.currentFillColorExpression = activeFillExpression;
-
-        // Optionally refresh visuals to ensure consistency if a selection exists
-        refreshVisuals();
-    }
-});
-
-// Calculate density when data is loaded (Always doing this now to support switching)
-let debounceTimer: number | null = null;
-map.on('data', (e) => {
-    if (e.dataType !== 'source') return;
-    // Listen to the heatmap/centroid source loading
-    if (e.sourceId !== 'bgri-heatmap' || !e.isSourceLoaded) return;
-
-    if (debounceTimer) window.clearTimeout(debounceTimer);
-
-    debounceTimer = window.setTimeout(() => {
-        // Query using the centroid source layer
-        const features = map.querySourceFeatures('bgri-heatmap', {
-            sourceLayer: SOURCE_LAYER_HEATMAP
-        });
-
-        features.forEach((feature) => {
-            if (!feature.id) return;
-
-            const individuals = feature.properties?.N_INDIVIDUOS;
-            const areaM2 = feature.properties?.AREA_M2;
-
-            if (
-                individuals !== undefined && individuals !== null &&
-                areaM2 !== undefined && areaM2 !== null && areaM2 > 0
-            ) {
-                const density = individuals / areaM2;
-
-                // Apply state to the POLYGON source ('bgri') using the shared ID
-                map.setFeatureState(
-                    { source: 'bgri', sourceLayer: SOURCE_LAYER_BGRI, id: feature.id },
-                    { density: density }
-                );
-            }
-        });
-    }, 500); // Debounce to avoid excessive calculation
-});
