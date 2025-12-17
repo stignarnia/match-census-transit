@@ -47,25 +47,42 @@ for layer in layer_names:
     print(f"Reading layer: {layer}")
     gdf = gpd.read_file(gpkg_path, layer=layer, engine="pyogrio")
 
-    # --- polygons to WGS84 (for polygons tileset, unchanged behavior) ---
-    gdf_wgs84 = gdf.to_crs(epsg=4326)
-
+    # --- 1. Process CENTROIDS (Chonky: All attributes + AREA_M2) ---
+    print(f"Processing layer {layer} for centroids...")
+    
     safe_name = "".join(c if c.isalnum() or c in "-_" else "_" for c in layer)
-    poly_out_path = os.path.join(output_dir, f"{safe_name}_wgs84.geojson")
 
-    print(f"Writing {len(gdf_wgs84)} polygon features to {poly_out_path}")
-    gdf_wgs84.to_file(poly_out_path, driver="GeoJSON")
-
-    # --- NEW: centroids for heatmap tileset ---
-    # work in projected CRS (EPSG:3763) for correct centroids
+    # Work in projected CRS (EPSG:3763) for correct area and centroid calculation
     gdf_proj = gdf.to_crs(epsg=3763)
-    gdf_points = gdf_proj.copy()
-    gdf_points["geometry"] = gdf_points.geometry.centroid
-    # back to WGS84 for Mapbox
-    gdf_points = gdf_points.to_crs(epsg=4326)
-
+    
+    # Calculate Area in square meters
+    gdf_proj["AREA_M2"] = gdf_proj.geometry.area
+    
+    # Create centroids
+    gdf_centroids_proj = gdf_proj.copy()
+    gdf_centroids_proj["geometry"] = gdf_centroids_proj.geometry.centroid
+    
+    # Project back to WGS84 for Mapbox
+    gdf_centroids_wgs84 = gdf_centroids_proj.to_crs(epsg=4326)
+    
     centroid_out_path = os.path.join(output_dir, f"{safe_name}_centroids_wgs84.geojson")
-    print(f"Writing {len(gdf_points)} centroid features to {centroid_out_path}")
-    gdf_points.to_file(centroid_out_path, driver="GeoJSON")
+    print(f"Writing {len(gdf_centroids_wgs84)} rich centroid features (with AREA_M2) to {centroid_out_path}")
+    gdf_centroids_wgs84.to_file(centroid_out_path, driver="GeoJSON")
+
+    # --- 2. Process POLYGONS (Lean: Only ID + Geometry) ---
+    print(f"Processing layer {layer} for polygons...")
+    
+    # Keep only the ID column 'BGRI2021' and the geometry
+    columns_to_keep = ["BGRI2021", "geometry"]
+    
+    # Filter columns on the original GDF (which is in source CRS, likely EPSG:3763)
+    gdf_lean = gdf[columns_to_keep].copy()
+    
+    # Project to WGS84
+    gdf_lean_wgs84 = gdf_lean.to_crs(epsg=4326)
+    
+    poly_out_path = os.path.join(output_dir, f"{safe_name}_wgs84.geojson")
+    print(f"Writing {len(gdf_lean_wgs84)} lean polygon features to {poly_out_path}")
+    gdf_lean_wgs84.to_file(poly_out_path, driver="GeoJSON")
 
 print("Done.")

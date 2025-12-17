@@ -31,6 +31,6 @@ export const POPULATION_DENSITY_EXPRESSION: ExpressionSpecification = [
 
 // Mapbox Tileset Constants
 export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.ka74c554wsq4';
-export const SOURCE_LAYER_HEATMAP = 'c921642b0ab40bb7d620';
+export const SOURCE_LAYER_HEATMAP = 'c56c767dc457b2f92e75';
 export const TILESET_URL_BGRI = 'mapbox://stignarnia.fukjd3p5wied';
-export const SOURCE_LAYER_BGRI = 'a8812bf3a307811dd19e';
+export const SOURCE_LAYER_BGRI = '34beff8bae5db5744e8f';

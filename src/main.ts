@@ -5,7 +5,6 @@ import { map } from './map';
 import { setupMapLayers } from './layers';
 import { appState } from './state';
 import { handleGridClick, refreshVisuals, resetSelection } from './interactions';
-import { area } from '@turf/turf';
 import {
     COLOR_BEST,
     COLOR_WORST,
@@ -16,7 +15,8 @@ import {
     COLOR_BGRI_FILL,
     COLOR_BGRI_OUTLINE,
     POPULATION_DENSITY_EXPRESSION,
-    SOURCE_LAYER_BGRI
+    SOURCE_LAYER_BGRI,
+    SOURCE_LAYER_HEATMAP
 } from './constants';
 
 const USE_POPULATION_HEATMAP = true;
@@ -84,24 +84,30 @@ if (USE_POPULATION_HEATMAP) {
     let debounceTimer: number | null = null;
     map.on('data', (e) => {
         if (e.dataType !== 'source') return;
-        // Mapbox events are discriminated by dataType
-        if (e.sourceId !== 'bgri' || !e.isSourceLoaded) return;
+        // Listen to the heatmap/centroid source loading
+        if (e.sourceId !== 'bgri-heatmap' || !e.isSourceLoaded) return;
 
         if (debounceTimer) window.clearTimeout(debounceTimer);
 
         debounceTimer = window.setTimeout(() => {
-            const features = map.queryRenderedFeatures({ layers: ['bgri-fill'] });
+            // Query using the centroid source layer
+            const features = map.querySourceFeatures('bgri-heatmap', {
+                sourceLayer: SOURCE_LAYER_HEATMAP
+            });
 
             features.forEach((feature) => {
                 if (!feature.id) return;
 
                 const individuals = feature.properties?.N_INDIVIDUOS;
-                if (individuals !== undefined && individuals !== null) {
-                    // Turf area returns square meters
-                    const polygonArea = area(feature);
-                    // Density: Individuals per square meter
-                    const density = individuals / polygonArea;
+                const areaM2 = feature.properties?.AREA_M2;
 
+                if (
+                    individuals !== undefined && individuals !== null &&
+                    areaM2 !== undefined && areaM2 !== null && areaM2 > 0
+                ) {
+                    const density = individuals / areaM2;
+
+                    // Apply state to the POLYGON source ('bgri') using the shared ID
                     map.setFeatureState(
                         { source: 'bgri', sourceLayer: SOURCE_LAYER_BGRI, id: feature.id },
                         { density: density }
