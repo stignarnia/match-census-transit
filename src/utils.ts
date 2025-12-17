@@ -1,37 +1,3 @@
-import type { Feature, FeatureCollection } from 'geojson';
-import { centroid, union } from '@turf/turf';
-
-// Helper to get centroid for a grid feature, stitching parts if split by tiles
-export function getFeatureCentroid(map: mapboxgl.Map, feature: Feature, id: string): { lng: number; lat: number } {
-    let geometry = feature.geometry;
-
-    // Try to find all visible parts of this feature (in case it's split by tile boundaries)
-    const relatedFeatures = map.queryRenderedFeatures({
-        layers: ['bgri-fill'],
-        filter: ['==', ['get', 'BGRI2021'], id]
-    });
-
-    // If we found multiple pieces (and at least 2), merge them
-    if (relatedFeatures.length > 1) {
-        try {
-            // Turf v7 union takes a FeatureCollection
-            const collection = {
-                type: 'FeatureCollection',
-                features: relatedFeatures
-            } as FeatureCollection<any>;
-
-            const u = union(collection);
-            if (u) geometry = u.geometry;
-        } catch (e) {
-            console.warn('Union failed, falling back to simple centroid', e);
-        }
-    }
-
-    const centerPoint = centroid({ type: 'Feature', properties: {}, geometry });
-    const coords = centerPoint.geometry.coordinates as [number, number];
-    return { lng: coords[0], lat: coords[1] };
-}
-
 // Duration parsing
 export function parseDurationSeconds(duration?: string | null): number {
     if (!duration) return 0;

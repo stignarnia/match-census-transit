@@ -1,4 +1,3 @@
-import type { Feature } from 'geojson';
 import { getGeoJSONSource } from './utils';
 
 export interface VisualsTheme {
@@ -11,39 +10,31 @@ export interface VisualsTheme {
 let animationFrameId: number | null = null;
 
 // Centroid source updates
-export function updateCentroids(
+// Manage feature states for point selection
+export function updatePointSelection(
     map: mapboxgl.Map,
-    firstSelectionCentroid: { lat: number; lng: number } | null,
-    secondSelectionCentroid: { lat: number; lng: number } | null
+    firstId: string | null,
+    secondId: string | null
 ) {
-    const features: Feature[] = [];
+    const sourceId = 'bgri-heatmap';
+    const sourceLayer = 'c921642b0ab40bb7d620';
 
-    if (firstSelectionCentroid) {
-        features.push({
-            type: 'Feature',
-            properties: { type: 'first' },
-            geometry: {
-                type: 'Point',
-                coordinates: [firstSelectionCentroid.lng, firstSelectionCentroid.lat]
-            }
-        });
+    // Clear all feature states for this source layer
+    map.removeFeatureState({ source: sourceId, sourceLayer });
+
+    // Set new states
+    if (firstId) {
+        map.setFeatureState(
+            { source: sourceId, sourceLayer, id: firstId },
+            { selected: true, selectionType: 'first' }
+        );
     }
-
-    if (secondSelectionCentroid) {
-        features.push({
-            type: 'Feature',
-            properties: { type: 'second' },
-            geometry: {
-                type: 'Point',
-                coordinates: [secondSelectionCentroid.lng, secondSelectionCentroid.lat]
-            }
-        });
+    if (secondId) {
+        map.setFeatureState(
+            { source: sourceId, sourceLayer, id: secondId },
+            { selected: true, selectionType: 'second' }
+        );
     }
-
-    const source = getGeoJSONSource(map, 'centroids');
-    if (!source) return;
-
-    source.setData({ type: 'FeatureCollection', features });
 }
 
 // Line animation

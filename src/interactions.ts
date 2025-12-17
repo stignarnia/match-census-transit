@@ -13,13 +13,12 @@ import {
     THRESHOLD_WORST
 } from './constants';
 import {
-    getFeatureCentroid,
     parseDurationSeconds,
     interpolateColor,
     getGeoJSONSource
 } from './utils';
 import {
-    updateCentroids,
+    updatePointSelection,
     updateSelectionVisuals,
     animateLineDraw,
     resetConnectionLine
@@ -34,7 +33,7 @@ export function getLineColor(percentage: number): string {
 }
 
 export function refreshVisuals() {
-    updateCentroids(map, appState.firstSelectionCentroid, appState.secondSelectionCentroid);
+    updatePointSelection(map, appState.firstSelection, appState.secondSelection);
     updateSelectionVisuals(map, appState.firstSelection, appState.secondSelection, {
         COLOR_SELECTION_FIRST,
         COLOR_SELECTION_SECOND,
@@ -55,7 +54,20 @@ export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: F
         return;
     }
 
-    const clickedCentroid = getFeatureCentroid(map, feature, id);
+    // Find the point feature in the heatmap layer that corresponds to this grid cell
+    const pointFeatures = map.querySourceFeatures('bgri-heatmap', {
+        sourceLayer: 'c921642b0ab40bb7d620',
+        filter: ['==', 'BGRI2021', id]
+    });
+
+    if (!pointFeatures.length) {
+        console.warn('Could not find corresponding point for grid cell', id);
+        return;
+    }
+
+    const firstPoint = pointFeatures[0];
+    const coords = (firstPoint.geometry as any).coordinates as [number, number];
+    const clickedCentroid = { lng: coords[0], lat: coords[1] };
 
     const selectingNewFirst =
         !appState.firstSelection ||

@@ -13,7 +13,8 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
     // BGRI Heatmap (Zoom 0-11)
     map.addSource('bgri-heatmap', {
         type: 'vector',
-        url: 'mapbox://stignarnia.ka74c554wsq4'
+        url: 'mapbox://stignarnia.ka74c554wsq4',
+        promoteId: 'BGRI2021'
     });
 
     map.addLayer({
@@ -61,6 +62,44 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
         }
     });
 
+    // Hidden points layer for centroids (Zoom 12+)
+    // We use feature-state to reveal selected points
+    map.addLayer({
+        id: 'bgri-points',
+        type: 'circle',
+        source: 'bgri-heatmap',
+        'source-layer': 'c921642b0ab40bb7d620',
+        minzoom: 12,
+        paint: {
+            'circle-radius': 8,
+            'circle-stroke-width': 3,
+            'circle-stroke-color': theme.COLOR_CENTROID_STROKE,
+            'circle-emissive-strength': 1,
+            // Opacity is 0 by default, 1 when selected
+            'circle-opacity': [
+                'case',
+                ['boolean', ['feature-state', 'selected'], false],
+                1,
+                0
+            ],
+            'circle-stroke-opacity': [
+                'case',
+                ['boolean', ['feature-state', 'selected'], false],
+                1,
+                0
+            ],
+            // Color depends on selection type
+            'circle-color': [
+                'case',
+                ['==', ['feature-state', 'selectionType'], 'first'],
+                theme.COLOR_BEST,
+                ['==', ['feature-state', 'selectionType'], 'second'],
+                theme.COLOR_WORST,
+                theme.COLOR_BEST // default fallback
+            ]
+        }
+    });
+
     // BGRI Census Data (Underneath grid)
     map.addSource('bgri', {
         type: 'vector',
@@ -77,42 +116,6 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
             'fill-color': theme.COLOR_BGRI_FILL,
             'fill-outline-color': theme.COLOR_BGRI_OUTLINE,
             'fill-emissive-strength': 1
-        }
-    });
-
-    // Centroids
-    map.addSource('centroids', {
-        type: 'geojson',
-        data: { type: 'FeatureCollection', features: [] }
-    });
-
-    map.addLayer({
-        id: 'first-centroid',
-        type: 'circle',
-        source: 'centroids',
-        filter: ['==', ['get', 'type'], 'first'],
-        paint: {
-            'circle-radius': 8,
-            'circle-color': theme.COLOR_BEST,
-            'circle-stroke-color': theme.COLOR_CENTROID_STROKE,
-            'circle-stroke-width': 3,
-            'circle-opacity': 1,
-            'circle-emissive-strength': 1
-        }
-    });
-
-    map.addLayer({
-        id: 'second-centroid',
-        type: 'circle',
-        source: 'centroids',
-        filter: ['==', ['get', 'type'], 'second'],
-        paint: {
-            'circle-radius': 8,
-            'circle-color': theme.COLOR_WORST,
-            'circle-stroke-color': theme.COLOR_CENTROID_STROKE,
-            'circle-stroke-width': 3,
-            'circle-opacity': 1,
-            'circle-emissive-strength': 1
         }
     });
 
