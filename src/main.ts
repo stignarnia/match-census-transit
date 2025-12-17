@@ -1,6 +1,6 @@
 import './style.css';
 import Alpine from 'alpinejs';
-import calendar, { type CalendarTimeUpdateEvent } from './calendar';
+import calendar from './calendar';
 import people from './people';
 import { map } from './map';
 import { setupMapLayers } from './layers';
@@ -20,14 +20,6 @@ import {
 Alpine.data('calendar', calendar);
 Alpine.data('people', people);
 Alpine.start();
-
-// Time state
-window.addEventListener('calendar-time-update', (e: Event) => {
-    const customEvent = e as CalendarTimeUpdateEvent;
-    if (customEvent.detail && customEvent.detail.date) {
-        appState.latestCalendarTime = customEvent.detail.date;
-    }
-});
 
 // Map setup
 const initializeMap = () => {
@@ -74,4 +66,3 @@ map.on('click', (e) => {
         resetSelection();
     }
 });
-

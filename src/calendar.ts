@@ -1,3 +1,5 @@
+import { appState } from './state';
+
 export interface CalendarDay {
     date: number;
     fullDate: Date;
@@ -5,12 +7,6 @@ export interface CalendarDay {
     isToday: boolean;
     isSelected: boolean;
     isDisabled: boolean;
-}
-
-export interface CalendarTimeUpdateEvent extends CustomEvent {
-    detail: {
-        date: Date;
-    };
 }
 
 interface CalendarData {
@@ -39,7 +35,7 @@ interface CalendarData {
     isSelectedHour(h: number): boolean;
     isSelectedMinute(m: number): boolean;
     reset(): void;
-    dispatchTime(date: Date): void;
+    updateTime(date: Date): void;
 }
 
 export default (): CalendarData => ({
@@ -65,7 +61,7 @@ export default (): CalendarData => ({
         this.viewDate = new Date();
 
         // Initial dispatch
-        this.dispatchTime(this.now);
+        this.updateTime(this.now);
     },
 
     destroy() {
@@ -87,7 +83,7 @@ export default (): CalendarData => ({
             // Dispatch time update if minute changed
             const currentMinute = this.now.getMinutes();
             if (this.lastDispatchedMinute !== currentMinute) {
-                this.dispatchTime(this.now);
+                this.updateTime(this.now);
                 this.lastDispatchedMinute = currentMinute;
             }
         }
@@ -210,7 +206,7 @@ export default (): CalendarData => ({
 
         this.userSelectedDate = target;
         this.showDatePicker = false;
-        this.dispatchTime(target);
+        this.updateTime(target);
     },
 
     // --- Time Logic ---
@@ -228,7 +224,7 @@ export default (): CalendarData => ({
         let target = this.userSelectedDate ? new Date(this.userSelectedDate) : new Date(this.now);
         target.setHours(h);
         this.userSelectedDate = target;
-        this.dispatchTime(target);
+        this.updateTime(target);
     },
 
     selectMinute(m: number) {
@@ -237,7 +233,7 @@ export default (): CalendarData => ({
         target.setMinutes(m);
         this.userSelectedDate = target;
         this.showTimePicker = false;
-        this.dispatchTime(target);
+        this.updateTime(target);
     },
 
     isSelectedHour(h: number): boolean {
@@ -257,13 +253,10 @@ export default (): CalendarData => ({
         this.showDatePicker = false;
         this.showTimePicker = false;
         this.lastDispatchedMinute = null; // Force update on next tick or immediate
-        this.dispatchTime(new Date());
+        this.updateTime(new Date());
     },
 
-    dispatchTime(date: Date) {
-        const event: CalendarTimeUpdateEvent = new CustomEvent('calendar-time-update', {
-            detail: { date }
-        });
-        window.dispatchEvent(event);
+    updateTime(date: Date) {
+        appState.latestCalendarTime = date;
     }
-})
+});
