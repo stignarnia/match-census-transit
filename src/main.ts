@@ -2,7 +2,7 @@ import './style.css';
 import mapboxgl from 'mapbox-gl';
 import type { FeatureCollection, Feature } from 'geojson';
 import cmetData from './assets/cmet_service_areas.json';
-import { bbox, centroid } from '@turf/turf';
+import { bbox, centroid, union } from '@turf/turf';
 import { fetchRouteData } from './google-routes';
 import Alpine from 'alpinejs';
 import calendar from './calendar';
@@ -13,17 +13,15 @@ Alpine.start();
 // Color Palette
 const COLOR_BEST = '#10b981';
 const COLOR_WORST = '#ef4444';
-const COLOR_TEXT_LABEL = 'white';
-const COLOR_TEXT_HALO = 'rgba(0,0,0,0.7)';
 const COLOR_CMET_BORDER = '#00ff00';
-const COLOR_CENTROID_STROKE = 'white';
+const COLOR_CENTROID_STROKE = '#ffffff';
 const COLOR_CONNECTION_BORDER = '#ffffff';
 const COLOR_CONNECTION_LABEL_TEXT = '#ffffff';
 const COLOR_CONNECTION_LABEL_HALO = '#000000';
 const COLOR_GRAY = '#9ca3af';
 const COLOR_SELECTION_FIRST = 'rgba(0, 255, 0, 0.8)';
 const COLOR_SELECTION_SECOND = 'rgba(255, 100, 100, 0.8)';
-const COLOR_BGRI_FILL = 'rgba(232, 121, 249, 0.3)'; // Purple-ish
+const COLOR_BGRI_FILL = 'rgba(232, 121, 249, 0.3)';
 
 // Color thresholds
 const THRESHOLD_BEST = 100;
@@ -64,9 +62,33 @@ if (!cmet.type || cmet.type !== 'FeatureCollection' || !Array.isArray(cmet.featu
     throw new Error('Invalid GeoJSON: cmetData must be a FeatureCollection');
 }
 
-// Helper to get centroid for a grid feature
-function getFeatureCentroid(feature: Feature): { lng: number; lat: number } {
-    const centerPoint = centroid(feature);
+// Helper to get centroid for a grid feature, stitching parts if split by tiles
+function getFeatureCentroid(feature: Feature, id: string): { lng: number; lat: number } {
+    let geometry = feature.geometry;
+
+    // Try to find all visible parts of this feature (in case it's split by tile boundaries)
+    const relatedFeatures = map.queryRenderedFeatures({
+        layers: ['bgri-fill'],
+        filter: ['==', ['get', 'BGRI2021'], id]
+    });
+
+    // If we found multiple pieces (and at least 2), merge them
+    if (relatedFeatures.length > 1) {
+        try {
+            // Turf v7 union takes a FeatureCollection
+            const collection = {
+                type: 'FeatureCollection',
+                features: relatedFeatures
+            } as FeatureCollection<any>;
+
+            const u = union(collection);
+            if (u) geometry = u.geometry;
+        } catch (e) {
+            console.warn('Union failed, falling back to simple centroid', e);
+        }
+    }
+
+    const centerPoint = centroid({ type: 'Feature', properties: {}, geometry });
     const coords = centerPoint.geometry.coordinates as [number, number];
     return { lng: coords[0], lat: coords[1] };
 }
@@ -265,7 +287,7 @@ async function handleGridClick(e: mapboxgl.MapLayerMouseEvent) {
         return;
     }
 
-    const clickedCentroid = getFeatureCentroid(feature);
+    const clickedCentroid = getFeatureCentroid(feature, id);
 
     const selectingNewFirst =
         !firstSelection || (firstSelection && secondSelection && id !== firstSelection);
