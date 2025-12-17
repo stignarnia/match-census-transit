@@ -26,6 +26,8 @@ const COLOR_CONNECTION_LABEL_HALO = '#000000';
 const COLOR_GRAY = '#9ca3af';
 const COLOR_SELECTION_FIRST = 'rgba(0, 255, 0, 0.8)';
 const COLOR_SELECTION_SECOND = 'rgba(255, 100, 100, 0.8)';
+const COLOR_BGRI_FILL = 'rgba(232, 121, 249, 0.3)'; // Purple-ish
+
 
 // Color thresholds
 const THRESHOLD_BEST = 100;
@@ -129,6 +131,23 @@ map.on('load', () => {
     map.fitBounds(cmetBounds, { padding: 20 });
 
     configureGrid(cmet, cmetBounds);
+
+    // BGRI Census Data (Underneath grid)
+    map.addSource('bgri', {
+        type: 'vector',
+        url: 'mapbox://stignarnia.fukjd3p5wied'
+    });
+
+    map.addLayer({
+        id: 'bgri-fill',
+        type: 'fill',
+        source: 'bgri',
+        'source-layer': 'a8812bf3a307811dd19e',
+        paint: {
+            'fill-color': COLOR_BGRI_FILL,
+            'fill-outline-color': COLOR_BGRI_FILL
+        }
+    });
 
     // Grid
     map.addSource('grid', {
