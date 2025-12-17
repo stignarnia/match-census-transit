@@ -15,6 +15,10 @@ export default (): PeopleData => ({
 
     select(option: string) {
         this.selected = option;
-        // Logic will be wired up later
+
+        // Dispatch event for main.ts to pick up
+        window.dispatchEvent(new CustomEvent('people-selection-change', {
+            detail: { selection: option }
+        }));
     }
 });

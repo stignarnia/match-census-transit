@@ -17,7 +17,7 @@ export interface LayerTheme {
     COLOR_CONNECTION_LABEL_HALO: string;
 }
 
-export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulationHeatmap: boolean) {
+export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
     // BGRI Heatmap (Zoom 0-11)
     map.addSource('bgri-heatmap', {
         type: 'vector',
@@ -53,31 +53,15 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
                 0.8, 'rgb(239,138,98)',
                 1, 'rgb(178,24,43)'
             ],
-            // Dynamic weight based on config
-            'heatmap-weight': usePopulationHeatmap
-                ? [
-                    'interpolate',
-                    ['linear'],
-                    ['get', 'N_INDIVIDUOS'],
-                    0, 0,
-                    1000, 1 // Scale down high population counts to a 0-1 range for weight if needed, or just let it saturate
-                ]
-                : 1,
-            'heatmap-intensity': usePopulationHeatmap
-                ? [
-                    'interpolate',
-                    ['linear'],
-                    ['zoom'],
-                    0, 0.1, // Lower intensity for population since weight is high
-                    11, 1
-                ]
-                : [
-                    'interpolate',
-                    ['linear'],
-                    ['zoom'],
-                    0, 1,
-                    11, 3
-                ]
+            // Default "Nothing" mode: standard heatmap behavior (points = 1)
+            'heatmap-weight': 1,
+            'heatmap-intensity': [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 1,
+                11, 3
+            ]
         }
     });
 
@@ -133,10 +117,8 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
         'source-layer': SOURCE_LAYER_BGRI,
         minzoom: 12,
         paint: {
-            // Dynamic fill color
-            'fill-color': usePopulationHeatmap
-                ? POPULATION_DENSITY_EXPRESSION
-                : theme.COLOR_BGRI_FILL,
+            // Default fill color
+            'fill-color': theme.COLOR_BGRI_FILL,
             'fill-outline-color': theme.COLOR_BGRI_OUTLINE,
             'fill-emissive-strength': 1
         }
@@ -188,4 +170,47 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
             'text-emissive-strength': 1
         }
     });
+}
+
+export function setMapVisualMode(map: mapboxgl.Map, mode: string, theme: LayerTheme) {
+    // Mode: 'Nothing' (default) or 'Population density'
+
+    if (mode === 'Population density') {
+        // Heatmap: Weight by population
+        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-weight', [
+            'interpolate',
+            ['linear'],
+            ['get', 'N_INDIVIDUOS'],
+            0, 0,
+            1000, 1
+        ]);
+        // Heatmap: Lower intensity
+        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-intensity', [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            0, 0.1,
+            11, 1
+        ]);
+        // Fill: Color by density
+        map.setPaintProperty('bgri-fill', 'fill-color', POPULATION_DENSITY_EXPRESSION);
+
+        return POPULATION_DENSITY_EXPRESSION;
+    } else {
+        // Default: 'Nothing'
+        // Heatmap: Default weight
+        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-weight', 1);
+        // Heatmap: Default intensity
+        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-intensity', [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            0, 1,
+            11, 3
+        ]);
+        // Fill: Default color
+        map.setPaintProperty('bgri-fill', 'fill-color', theme.COLOR_BGRI_FILL);
+
+        return theme.COLOR_BGRI_FILL;
+    }
 }
