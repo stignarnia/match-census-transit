@@ -152,7 +152,7 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
         paint: {
             // Dynamic fill color
             'fill-color': usePopulationHeatmap
-                ? POPULATION_DENSITY_EXPRESSION as any
+                ? POPULATION_DENSITY_EXPRESSION
                 : theme.COLOR_BGRI_FILL,
             'fill-outline-color': theme.COLOR_BGRI_OUTLINE,
             'fill-emissive-strength': 1

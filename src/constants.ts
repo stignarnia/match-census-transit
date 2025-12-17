@@ -1,3 +1,5 @@
+import type { ExpressionSpecification } from 'mapbox-gl';
+
 // Color Palette
 export const COLOR_BEST = '#10b981';
 export const COLOR_WORST = '#ef4444';
@@ -15,7 +17,7 @@ export const COLOR_BGRI_OUTLINE = 'rgba(75, 131, 252, 0.3)';
 export const THRESHOLD_BEST = 100;
 export const THRESHOLD_WORST = 300;
 
-export const POPULATION_DENSITY_EXPRESSION = [
+export const POPULATION_DENSITY_EXPRESSION: ExpressionSpecification = [
     'interpolate',
     ['linear'],
     ['coalesce', ['feature-state', 'density'], 0],
@@ -25,4 +27,4 @@ export const POPULATION_DENSITY_EXPRESSION = [
     0.005, 'rgb(253,219,199)',
     0.01, 'rgb(239,138,98)',
     0.02, 'rgb(178,24,43)'
-] as const;
+];

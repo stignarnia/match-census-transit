@@ -1,9 +1,38 @@
-export default () => ({
+interface CalendarData {
+    now: Date;
+    userSelectedDate: Date | null;
+    isUserInteraction: boolean;
+    intervalId: number | null;
+    lastDispatchedMinute: number | null;
+    showDatePicker: boolean;
+    showTimePicker: boolean;
+    viewDate: Date;
+    init(): void;
+    destroy(): void;
+    tick(): void;
+    readonly displayDate: string;
+    readonly displayTime: string;
+    readonly monthName: string;
+    readonly days: { date: number; fullDate: Date; isCurrentMonth: boolean; isToday: boolean; isSelected: boolean; isDisabled: boolean }[];
+    prevMonth(): void;
+    nextMonth(): void;
+    selectDate(day: any): void;
+    readonly hours: number[];
+    readonly minutes: number[];
+    selectHour(h: number): void;
+    selectMinute(m: number): void;
+    isSelectedHour(h: number): boolean;
+    isSelectedMinute(m: number): boolean;
+    reset(): void;
+    dispatchTime(date: Date): void;
+}
+
+export default (): CalendarData => ({
     now: new Date(),
-    userSelectedDate: null as Date | null,
+    userSelectedDate: null,
     isUserInteraction: false,
-    intervalId: null as number | null,
-    lastDispatchedMinute: null as number | null,
+    intervalId: null,
+    lastDispatchedMinute: null,
 
     // UI Visibility State
     showDatePicker: false,
@@ -13,9 +42,9 @@ export default () => ({
     viewDate: new Date(), // For browsing months without selecting
 
     init() {
-        this.intervalId = setInterval(() => {
+        this.intervalId = window.setInterval(() => {
             this.tick();
-        }, 1000) as unknown as number;
+        }, 1000);
 
         // Init viewDate
         this.viewDate = new Date();

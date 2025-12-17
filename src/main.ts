@@ -25,7 +25,9 @@ Alpine.start();
 
 // Time state
 window.addEventListener('calendar-time-update', (e: Event) => {
-    appState.latestCalendarTime = (e as CustomEvent).detail.date;
+    if (e instanceof CustomEvent) {
+        appState.latestCalendarTime = e.detail.date;
+    }
 });
 
 // Map setup
@@ -43,7 +45,7 @@ const initializeMap = () => {
 
     // Set the base fill expression in state so interactions.ts uses it
     appState.currentFillColorExpression = USE_POPULATION_HEATMAP
-        ? POPULATION_DENSITY_EXPRESSION as any
+        ? POPULATION_DENSITY_EXPRESSION
         : COLOR_BGRI_FILL;
 
     // Initial visuals
@@ -81,8 +83,8 @@ if (USE_POPULATION_HEATMAP) {
     let debounceTimer: number | null = null;
     map.on('data', (e) => {
         if (e.dataType !== 'source') return;
-        const event = e as mapboxgl.MapSourceDataEvent;
-        if (event.sourceId !== 'bgri' || !event.isSourceLoaded) return;
+        // Mapbox events are discriminated by dataType
+        if (e.sourceId !== 'bgri' || !e.isSourceLoaded) return;
 
         if (debounceTimer) window.clearTimeout(debounceTimer);
 

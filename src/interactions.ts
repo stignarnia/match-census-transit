@@ -44,12 +44,12 @@ export function refreshVisuals() {
 // Click handler
 export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: Feature[] }) {
     // With vector tiles, we get features here
-    const feature = e.features?.[0] as Feature | undefined;
+    const feature = e.features?.[0];
 
     // The user specified 'BGRI2021' as the ID field
-    const id = feature?.properties?.BGRI2021 as string | undefined;
+    const id = feature?.properties?.BGRI2021;
 
-    if (!feature || !id) {
+    if (!feature || typeof id !== 'string') {
         // Just return if no feature or no ID
         return;
     }
@@ -66,7 +66,9 @@ export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: F
     }
 
     const firstPoint = pointFeatures[0];
-    const coords = (firstPoint.geometry as any).coordinates as [number, number];
+    if (firstPoint.geometry.type !== 'Point') return;
+
+    const coords = firstPoint.geometry.coordinates; // TS knows this is Position (number[])
     const clickedCentroid = { lng: coords[0], lat: coords[1] };
 
     const selectingNewFirst =

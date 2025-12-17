@@ -24,5 +24,5 @@ export function interpolateColor(color1: string, color2: string, factor: number)
 // Convenience source getter
 export function getGeoJSONSource(map: mapboxgl.Map, id: string): mapboxgl.GeoJSONSource | null {
     const source = map.getSource(id);
-    return source ? (source as mapboxgl.GeoJSONSource) : null;
+    return source && source.type === 'geojson' ? source : null;
 }
