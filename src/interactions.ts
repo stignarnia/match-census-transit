@@ -38,7 +38,7 @@ export function refreshVisuals() {
         COLOR_SELECTION_FIRST,
         COLOR_SELECTION_SECOND,
         COLOR_BGRI_FILL
-    });
+    }, appState.currentFillColorExpression || COLOR_BGRI_FILL);
 }
 
 // Click handler

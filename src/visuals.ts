@@ -104,7 +104,8 @@ export function updateSelectionVisuals(
     map: mapboxgl.Map,
     firstSelection: string | null,
     secondSelection: string | null,
-    theme: VisualsTheme
+    theme: VisualsTheme,
+    baseFillColor: any
 ) {
     if (!map.getLayer('bgri-fill')) return;
 
@@ -115,6 +116,6 @@ export function updateSelectionVisuals(
         theme.COLOR_SELECTION_FIRST,
         ['==', ['get', 'BGRI2021'], secondSelection || ''],
         theme.COLOR_SELECTION_SECOND,
-        theme.COLOR_BGRI_FILL
+        baseFillColor
     ]);
 }

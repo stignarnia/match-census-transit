@@ -5,6 +5,7 @@ import { map } from './map';
 import { setupMapLayers } from './layers';
 import { appState } from './state';
 import { handleGridClick, refreshVisuals, resetSelection } from './interactions';
+import { area } from '@turf/turf';
 import {
     COLOR_BEST,
     COLOR_WORST,
@@ -13,8 +14,11 @@ import {
     COLOR_CONNECTION_LABEL_TEXT,
     COLOR_CONNECTION_LABEL_HALO,
     COLOR_BGRI_FILL,
-    COLOR_BGRI_OUTLINE
+    COLOR_BGRI_OUTLINE,
+    POPULATION_DENSITY_EXPRESSION
 } from './constants';
+
+const USE_POPULATION_HEATMAP = true;
 
 Alpine.data('calendar', calendar);
 Alpine.start();
@@ -25,7 +29,7 @@ window.addEventListener('calendar-time-update', (e: Event) => {
 });
 
 // Map setup
-map.on('load', () => {
+const initializeMap = () => {
     setupMapLayers(map, {
         COLOR_BGRI_FILL,
         COLOR_BEST,
@@ -35,10 +39,22 @@ map.on('load', () => {
         COLOR_CONNECTION_LABEL_TEXT,
         COLOR_CONNECTION_LABEL_HALO,
         COLOR_BGRI_OUTLINE
-    });
+    }, USE_POPULATION_HEATMAP);
+
+    // Set the base fill expression in state so interactions.ts uses it
+    appState.currentFillColorExpression = USE_POPULATION_HEATMAP
+        ? POPULATION_DENSITY_EXPRESSION as any
+        : COLOR_BGRI_FILL;
+
     // Initial visuals
     refreshVisuals();
-});
+};
+
+if (map.loaded()) {
+    initializeMap();
+} else {
+    map.on('load', initializeMap);
+}
 
 // Events
 // Listen to clicks on the bgri-fill layer
@@ -59,3 +75,36 @@ map.on('click', (e) => {
         resetSelection();
     }
 });
+
+// Calculate density when data is loaded
+if (USE_POPULATION_HEATMAP) {
+    let debounceTimer: number | null = null;
+    map.on('data', (e) => {
+        if (e.dataType !== 'source') return;
+        const event = e as mapboxgl.MapSourceDataEvent;
+        if (event.sourceId !== 'bgri' || !event.isSourceLoaded) return;
+
+        if (debounceTimer) window.clearTimeout(debounceTimer);
+
+        debounceTimer = window.setTimeout(() => {
+            const features = map.queryRenderedFeatures({ layers: ['bgri-fill'] });
+
+            features.forEach((feature) => {
+                if (!feature.id) return;
+
+                const individuals = feature.properties?.N_INDIVIDUOS;
+                if (individuals !== undefined && individuals !== null) {
+                    // Turf area returns square meters
+                    const polygonArea = area(feature);
+                    // Density: Individuals per square meter
+                    const density = individuals / polygonArea;
+
+                    map.setFeatureState(
+                        { source: 'bgri', sourceLayer: 'a8812bf3a307811dd19e', id: feature.id },
+                        { density: density }
+                    );
+                }
+            });
+        }, 500); // Debounce to avoid excessive calculation
+    });
+}

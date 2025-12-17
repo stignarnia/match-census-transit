@@ -1,3 +1,5 @@
+import { POPULATION_DENSITY_EXPRESSION } from './constants';
+
 export interface LayerTheme {
     COLOR_BGRI_FILL: string;
     COLOR_BGRI_OUTLINE: string;
@@ -9,7 +11,30 @@ export interface LayerTheme {
     COLOR_CONNECTION_LABEL_HALO: string;
 }
 
-export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
+export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulationHeatmap: boolean) {
+    // Cleanup existing layers/sources to support HMR/Reloads
+    const layers = [
+        'bgri-heatmap-layer',
+        'bgri-points',
+        'bgri-fill',
+        'connection-line-border',
+        'connection-line-layer',
+        'connection-label-layer'
+    ];
+    layers.forEach(id => {
+        if (map.getLayer(id)) map.removeLayer(id);
+    });
+
+    const sources = [
+        'bgri-heatmap',
+        'bgri',
+        'connection-line',
+        'connection-label'
+    ];
+    sources.forEach(id => {
+        if (map.getSource(id)) map.removeSource(id);
+    });
+
     // BGRI Heatmap (Zoom 0-11)
     map.addSource('bgri-heatmap', {
         type: 'vector',
@@ -24,20 +49,16 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
         'source-layer': 'c921642b0ab40bb7d620',
         maxzoom: 12,
         paint: {
-            // Increase the heatmap weight based on frequency and property magnitude
-            'heatmap-weight': 1,
-            // Increase the heatmap color weight weight by zoom level
-            // heatmap-intensity is a multiplier on top of heatmap-weight
-            'heatmap-intensity': [
+            // Unchanged props
+            'heatmap-opacity': 1,
+            'heatmap-radius': [
                 'interpolate',
                 ['linear'],
                 ['zoom'],
-                0, 1,
-                11, 3
+                0, 2,
+                11, 20
             ],
-            // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
-            // Begin color ramp at 0-stop with a 0-transparency color
-            // to create a blur-like effect.
+            // Color ramp
             'heatmap-color': [
                 'interpolate',
                 ['linear'],
@@ -49,16 +70,31 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
                 0.8, 'rgb(239,138,98)',
                 1, 'rgb(178,24,43)'
             ],
-            // Adjust the heatmap radius by zoom level
-            'heatmap-radius': [
-                'interpolate',
-                ['linear'],
-                ['zoom'],
-                0, 2,
-                11, 20
-            ],
-            // Transition from heatmap to circle layer by zoom level
-            'heatmap-opacity': 1
+            // Dynamic weight based on config
+            'heatmap-weight': usePopulationHeatmap
+                ? [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'N_INDIVIDUOS'],
+                    0, 0,
+                    1000, 1 // Scale down high population counts to a 0-1 range for weight if needed, or just let it saturate
+                ]
+                : 1,
+            'heatmap-intensity': usePopulationHeatmap
+                ? [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    0, 0.1, // Lower intensity for population since weight is high
+                    11, 1
+                ]
+                : [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    0, 1,
+                    11, 3
+                ]
         }
     });
 
@@ -103,7 +139,8 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
     // BGRI Census Data (Underneath grid)
     map.addSource('bgri', {
         type: 'vector',
-        url: 'mapbox://stignarnia.fukjd3p5wied'
+        url: 'mapbox://stignarnia.fukjd3p5wied',
+        promoteId: 'BGRI2021' // Important for feature-state
     });
 
     map.addLayer({
@@ -113,7 +150,10 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
         'source-layer': 'a8812bf3a307811dd19e',
         minzoom: 12,
         paint: {
-            'fill-color': theme.COLOR_BGRI_FILL,
+            // Dynamic fill color
+            'fill-color': usePopulationHeatmap
+                ? POPULATION_DENSITY_EXPRESSION as any
+                : theme.COLOR_BGRI_FILL,
             'fill-outline-color': theme.COLOR_BGRI_OUTLINE,
             'fill-emissive-strength': 1
         }

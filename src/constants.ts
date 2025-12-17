@@ -14,3 +14,15 @@ export const COLOR_BGRI_OUTLINE = 'rgba(75, 131, 252, 0.3)';
 // Color thresholds
 export const THRESHOLD_BEST = 100;
 export const THRESHOLD_WORST = 300;
+
+export const POPULATION_DENSITY_EXPRESSION = [
+    'interpolate',
+    ['linear'],
+    ['coalesce', ['feature-state', 'density'], 0],
+    0, 'rgba(33,102,172,0)',
+    0.0002, 'rgb(103,169,207)',
+    0.001, 'rgb(209,229,240)',
+    0.005, 'rgb(253,219,199)',
+    0.01, 'rgb(239,138,98)',
+    0.02, 'rgb(178,24,43)'
+] as const;
