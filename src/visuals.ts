@@ -1,5 +1,6 @@
 import { getGeoJSONSource } from './utils';
 import { SOURCE_LAYER_HEATMAP } from './constants';
+import type { ExpressionSpecification } from 'mapbox-gl';
 
 export interface VisualsTheme {
     COLOR_SELECTION_FIRST: string;
@@ -106,7 +107,7 @@ export function updateSelectionVisuals(
     firstSelection: string | null,
     secondSelection: string | null,
     theme: VisualsTheme,
-    baseFillColor: any
+    baseFillColor: string | ExpressionSpecification
 ) {
     if (!map.getLayer('bgri-fill')) return;
 

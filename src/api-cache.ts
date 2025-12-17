@@ -1,4 +1,4 @@
-export function saveToCache(key: string, data: any): void {
+export function saveToCache<T>(key: string, data: T): void {
     try {
         const cacheEntry = {
             timestamp: Date.now(),
@@ -10,7 +10,7 @@ export function saveToCache(key: string, data: any): void {
     }
 }
 
-export function getFromCache(key: string): any | null {
+export function getFromCache<T>(key: string): T | null {
     try {
         // Clean up old cache entries (older than 1 week)
         cleanupOldCache();

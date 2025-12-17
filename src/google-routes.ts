@@ -24,7 +24,7 @@ export async function fetchRouteData(origin: Coord, destination: Coord, baseTime
     const departureTime = new Date(baseTime.getTime() + 60 * 1000).toISOString();
 
     const cacheKey = generateCacheKey(origin, destination, departureTime);
-    const cached = getFromCache(cacheKey);
+    const cached = getFromCache<RouteResult>(cacheKey);
 
     if (cached) {
         console.log('Serving route data from cache');
@@ -105,7 +105,7 @@ export async function fetchRouteData(origin: Coord, destination: Coord, baseTime
             }
         };
 
-        saveToCache(cacheKey, result);
+        saveToCache<RouteResult>(cacheKey, result);
         return result;
 
     } catch (error) {

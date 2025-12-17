@@ -1,3 +1,12 @@
+export interface CalendarDay {
+    date: number;
+    fullDate: Date;
+    isCurrentMonth: boolean;
+    isToday: boolean;
+    isSelected: boolean;
+    isDisabled: boolean;
+}
+
 interface CalendarData {
     now: Date;
     userSelectedDate: Date | null;
@@ -13,10 +22,10 @@ interface CalendarData {
     readonly displayDate: string;
     readonly displayTime: string;
     readonly monthName: string;
-    readonly days: { date: number; fullDate: Date; isCurrentMonth: boolean; isToday: boolean; isSelected: boolean; isDisabled: boolean }[];
+    readonly days: CalendarDay[];
     prevMonth(): void;
     nextMonth(): void;
-    selectDate(day: any): void;
+    selectDate(day: CalendarDay): void;
     readonly hours: number[];
     readonly minutes: number[];
     selectHour(h: number): void;
@@ -103,7 +112,7 @@ export default (): CalendarData => ({
         return this.viewDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
     },
 
-    get days(): { date: number; fullDate: Date; isCurrentMonth: boolean; isToday: boolean; isSelected: boolean; isDisabled: boolean }[] {
+    get days(): CalendarDay[] {
         const year = this.viewDate.getFullYear();
         const month = this.viewDate.getMonth(); // 0-indexed
 
@@ -182,7 +191,7 @@ export default (): CalendarData => ({
         this.viewDate = new Date(this.viewDate.getFullYear(), this.viewDate.getMonth() + 1, 1);
     },
 
-    selectDate(day: any) {
+    selectDate(day: CalendarDay) {
         if (day.isDisabled) return;
 
         this.isUserInteraction = true;
