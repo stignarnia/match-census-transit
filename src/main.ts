@@ -35,7 +35,12 @@ mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v11',
+    style: 'mapbox://styles/mapbox/standard',
+    config: {
+        basemap: {
+            lightPreset: "night"
+        }
+    },
     center: [-9.15, 38.72],
     zoom: 10
 });
@@ -138,7 +143,8 @@ map.on('load', () => {
         source: 'grid',
         paint: {
             'fill-color': COLOR_GRID_FILL,
-            'fill-outline-color': COLOR_GRID_OUTLINE
+            'fill-outline-color': COLOR_GRID_OUTLINE,
+            'fill-emissive-strength': 1
         }
     });
 
@@ -154,7 +160,8 @@ map.on('load', () => {
         paint: {
             'text-color': COLOR_TEXT_LABEL,
             'text-halo-color': COLOR_TEXT_HALO,
-            'text-halo-width': 1
+            'text-halo-width': 1,
+            'text-emissive-strength': 1
         }
     });
 
@@ -164,7 +171,7 @@ map.on('load', () => {
         id: 'cmet-border',
         type: 'line',
         source: 'cmet',
-        paint: { 'line-color': COLOR_CMET_BORDER, 'line-width': 2 }
+        paint: { 'line-color': COLOR_CMET_BORDER, 'line-width': 2, 'line-emissive-strength': 1 }
     });
 
     // Centroids
@@ -183,7 +190,8 @@ map.on('load', () => {
             'circle-color': COLOR_BEST,
             'circle-stroke-color': COLOR_CENTROID_STROKE,
             'circle-stroke-width': 3,
-            'circle-opacity': 1
+            'circle-opacity': 1,
+            'circle-emissive-strength': 1
         }
     });
 
@@ -197,7 +205,8 @@ map.on('load', () => {
             'circle-color': COLOR_WORST,
             'circle-stroke-color': COLOR_CENTROID_STROKE,
             'circle-stroke-width': 3,
-            'circle-opacity': 1
+            'circle-opacity': 1,
+            'circle-emissive-strength': 1
         }
     });
 
@@ -212,7 +221,7 @@ map.on('load', () => {
         type: 'line',
         source: 'connection-line',
         layout: { 'line-cap': 'round', 'line-join': 'round' },
-        paint: { 'line-color': COLOR_CONNECTION_BORDER, 'line-width': 18, 'line-opacity': 1 }
+        paint: { 'line-color': COLOR_CONNECTION_BORDER, 'line-width': 18, 'line-opacity': 1, 'line-emissive-strength': 1 }
     });
 
     map.addLayer({
@@ -220,7 +229,7 @@ map.on('load', () => {
         type: 'line',
         source: 'connection-line',
         layout: { 'line-cap': 'round', 'line-join': 'round' },
-        paint: { 'line-color': COLOR_WORST, 'line-width': 12, 'line-opacity': 1 }
+        paint: { 'line-color': COLOR_WORST, 'line-width': 12, 'line-opacity': 1, 'line-emissive-strength': 1 }
     });
 
     // Connection Label
@@ -243,7 +252,8 @@ map.on('load', () => {
         paint: {
             'text-color': COLOR_CONNECTION_LABEL_TEXT,
             'text-halo-color': COLOR_CONNECTION_LABEL_HALO,
-            'text-halo-width': 2
+            'text-halo-width': 2,
+            'text-emissive-strength': 1
         }
     });
 
