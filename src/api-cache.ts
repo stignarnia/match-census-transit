@@ -32,7 +32,8 @@ function cleanupOldCache(): void {
     const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000;
     const now = Date.now();
 
-    for (let i = 0; i < localStorage.length; i++) {
+    // Iterate backwards to safely remove items while iterating
+    for (let i = localStorage.length - 1; i >= 0; i--) {
         const key = localStorage.key(i);
         if (key && key.startsWith('route_')) {
             try {

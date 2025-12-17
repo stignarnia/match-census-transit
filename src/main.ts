@@ -1,6 +1,6 @@
 import './style.css';
 import Alpine from 'alpinejs';
-import calendar from './calendar';
+import calendar, { type CalendarTimeUpdateEvent } from './calendar';
 import { map } from './map';
 import { setupMapLayers } from './layers';
 import { appState } from './state';
@@ -26,8 +26,9 @@ Alpine.start();
 
 // Time state
 window.addEventListener('calendar-time-update', (e: Event) => {
-    if (e instanceof CustomEvent) {
-        appState.latestCalendarTime = e.detail.date;
+    const customEvent = e as CalendarTimeUpdateEvent;
+    if (customEvent.detail && customEvent.detail.date) {
+        appState.latestCalendarTime = customEvent.detail.date;
     }
 });
 

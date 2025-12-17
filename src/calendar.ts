@@ -7,6 +7,12 @@ export interface CalendarDay {
     isDisabled: boolean;
 }
 
+export interface CalendarTimeUpdateEvent extends CustomEvent {
+    detail: {
+        date: Date;
+    };
+}
+
 interface CalendarData {
     now: Date;
     userSelectedDate: Date | null;
@@ -255,8 +261,9 @@ export default (): CalendarData => ({
     },
 
     dispatchTime(date: Date) {
-        window.dispatchEvent(new CustomEvent('calendar-time-update', {
+        const event: CalendarTimeUpdateEvent = new CustomEvent('calendar-time-update', {
             detail: { date }
-        }));
+        });
+        window.dispatchEvent(event);
     }
 })
