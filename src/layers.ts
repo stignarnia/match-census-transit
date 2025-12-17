@@ -11,6 +11,7 @@ if (!cmet.type || cmet.type !== 'FeatureCollection' || !Array.isArray(cmet.featu
 export interface LayerTheme {
     COLOR_BGRI_FILL: string;
     COLOR_CMET_BORDER: string;
+    COLOR_BGRI_OUTLINE: string;
     COLOR_BEST: string;
     COLOR_CENTROID_STROKE: string;
     COLOR_WORST: string;
@@ -43,7 +44,7 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
         'source-layer': 'a8812bf3a307811dd19e',
         paint: {
             'fill-color': theme.COLOR_BGRI_FILL,
-            'fill-outline-color': theme.COLOR_BGRI_FILL,
+            'fill-outline-color': theme.COLOR_BGRI_OUTLINE,
             'fill-emissive-strength': 1
         }
     });

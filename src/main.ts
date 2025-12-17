@@ -13,7 +13,8 @@ import {
     COLOR_CONNECTION_BORDER,
     COLOR_CONNECTION_LABEL_TEXT,
     COLOR_CONNECTION_LABEL_HALO,
-    COLOR_BGRI_FILL
+    COLOR_BGRI_FILL,
+    COLOR_BGRI_OUTLINE
 } from './constants';
 
 Alpine.data('calendar', calendar);
@@ -34,7 +35,8 @@ map.on('load', () => {
         COLOR_WORST,
         COLOR_CONNECTION_BORDER,
         COLOR_CONNECTION_LABEL_TEXT,
-        COLOR_CONNECTION_LABEL_HALO
+        COLOR_CONNECTION_LABEL_HALO,
+        COLOR_BGRI_OUTLINE
     });
     // Initial visuals
     refreshVisuals();
