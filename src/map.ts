@@ -11,5 +11,5 @@ export const map = new mapboxgl.Map({
         }
     },
     center: [-9.15, 38.72],
-    zoom: 10
+    zoom: 12
 });

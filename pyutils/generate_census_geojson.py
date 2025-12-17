@@ -47,16 +47,25 @@ for layer in layer_names:
     print(f"Reading layer: {layer}")
     gdf = gpd.read_file(gpkg_path, layer=layer, engine="pyogrio")
 
-    # Reproject to WGS84 (EPSG:4326) so Mapbox accepts the GeoJSON
-    if gdf.crs is not None and gdf.crs.to_epsg() != 4326:
-        print(f"Reprojecting layer {layer} from {gdf.crs} to EPSG:4326")
-        gdf = gdf.to_crs(epsg=4326)
+    # --- polygons to WGS84 (for polygons tileset, unchanged behavior) ---
+    gdf_wgs84 = gdf.to_crs(epsg=4326)
 
-    # Safe filename from layer name
     safe_name = "".join(c if c.isalnum() or c in "-_" else "_" for c in layer)
-    out_path = os.path.join(output_dir, f"{safe_name}_wgs84.geojson")
+    poly_out_path = os.path.join(output_dir, f"{safe_name}_wgs84.geojson")
 
-    print(f"Writing {len(gdf)} features to {out_path}")
-    gdf.to_file(out_path, driver="GeoJSON")
+    print(f"Writing {len(gdf_wgs84)} polygon features to {poly_out_path}")
+    gdf_wgs84.to_file(poly_out_path, driver="GeoJSON")
+
+    # --- NEW: centroids for heatmap tileset ---
+    # work in projected CRS (EPSG:3763) for correct centroids
+    gdf_proj = gdf.to_crs(epsg=3763)
+    gdf_points = gdf_proj.copy()
+    gdf_points["geometry"] = gdf_points.geometry.centroid
+    # back to WGS84 for Mapbox
+    gdf_points = gdf_points.to_crs(epsg=4326)
+
+    centroid_out_path = os.path.join(output_dir, f"{safe_name}_centroids_wgs84.geojson")
+    print(f"Writing {len(gdf_points)} centroid features to {centroid_out_path}")
+    gdf_points.to_file(centroid_out_path, driver="GeoJSON")
 
 print("Done.")
