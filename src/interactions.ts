@@ -10,7 +10,8 @@ import {
     COLOR_SELECTION_SECOND,
     COLOR_BGRI_FILL,
     THRESHOLD_BEST,
-    THRESHOLD_WORST
+    THRESHOLD_WORST,
+    SOURCE_LAYER_HEATMAP
 } from './constants';
 import {
     parseDurationSeconds,
@@ -56,7 +57,7 @@ export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: F
 
     // Find the point feature in the heatmap layer that corresponds to this grid cell
     const pointFeatures = map.querySourceFeatures('bgri-heatmap', {
-        sourceLayer: 'c921642b0ab40bb7d620',
+        sourceLayer: SOURCE_LAYER_HEATMAP,
         filter: ['==', 'BGRI2021', id]
     });
 

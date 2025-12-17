@@ -15,7 +15,8 @@ import {
     COLOR_CONNECTION_LABEL_HALO,
     COLOR_BGRI_FILL,
     COLOR_BGRI_OUTLINE,
-    POPULATION_DENSITY_EXPRESSION
+    POPULATION_DENSITY_EXPRESSION,
+    SOURCE_LAYER_BGRI
 } from './constants';
 
 const USE_POPULATION_HEATMAP = true;
@@ -102,7 +103,7 @@ if (USE_POPULATION_HEATMAP) {
                     const density = individuals / polygonArea;
 
                     map.setFeatureState(
-                        { source: 'bgri', sourceLayer: 'a8812bf3a307811dd19e', id: feature.id },
+                        { source: 'bgri', sourceLayer: SOURCE_LAYER_BGRI, id: feature.id },
                         { density: density }
                     );
                 }

@@ -1,4 +1,10 @@
-import { POPULATION_DENSITY_EXPRESSION } from './constants';
+import {
+    POPULATION_DENSITY_EXPRESSION,
+    TILESET_URL_HEATMAP,
+    SOURCE_LAYER_HEATMAP,
+    TILESET_URL_BGRI,
+    SOURCE_LAYER_BGRI
+} from './constants';
 
 export interface LayerTheme {
     COLOR_BGRI_FILL: string;
@@ -12,33 +18,10 @@ export interface LayerTheme {
 }
 
 export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulationHeatmap: boolean) {
-    // Cleanup existing layers/sources to support HMR/Reloads
-    const layers = [
-        'bgri-heatmap-layer',
-        'bgri-points',
-        'bgri-fill',
-        'connection-line-border',
-        'connection-line-layer',
-        'connection-label-layer'
-    ];
-    layers.forEach(id => {
-        if (map.getLayer(id)) map.removeLayer(id);
-    });
-
-    const sources = [
-        'bgri-heatmap',
-        'bgri',
-        'connection-line',
-        'connection-label'
-    ];
-    sources.forEach(id => {
-        if (map.getSource(id)) map.removeSource(id);
-    });
-
     // BGRI Heatmap (Zoom 0-11)
     map.addSource('bgri-heatmap', {
         type: 'vector',
-        url: 'mapbox://stignarnia.ka74c554wsq4',
+        url: TILESET_URL_HEATMAP,
         promoteId: 'BGRI2021'
     });
 
@@ -46,7 +29,7 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
         id: 'bgri-heatmap-layer',
         type: 'heatmap',
         source: 'bgri-heatmap',
-        'source-layer': 'c921642b0ab40bb7d620',
+        'source-layer': SOURCE_LAYER_HEATMAP,
         maxzoom: 12,
         paint: {
             // Unchanged props
@@ -104,7 +87,7 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
         id: 'bgri-points',
         type: 'circle',
         source: 'bgri-heatmap',
-        'source-layer': 'c921642b0ab40bb7d620',
+        'source-layer': SOURCE_LAYER_HEATMAP,
         minzoom: 12,
         paint: {
             'circle-radius': 8,
@@ -139,7 +122,7 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
     // BGRI Census Data (Underneath grid)
     map.addSource('bgri', {
         type: 'vector',
-        url: 'mapbox://stignarnia.fukjd3p5wied',
+        url: TILESET_URL_BGRI,
         promoteId: 'BGRI2021' // Important for feature-state
     });
 
@@ -147,7 +130,7 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme, usePopulati
         id: 'bgri-fill',
         type: 'fill',
         source: 'bgri',
-        'source-layer': 'a8812bf3a307811dd19e',
+        'source-layer': SOURCE_LAYER_BGRI,
         minzoom: 12,
         paint: {
             // Dynamic fill color

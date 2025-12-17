@@ -1,4 +1,5 @@
 import { getGeoJSONSource } from './utils';
+import { SOURCE_LAYER_HEATMAP } from './constants';
 
 export interface VisualsTheme {
     COLOR_SELECTION_FIRST: string;
@@ -17,7 +18,7 @@ export function updatePointSelection(
     secondId: string | null
 ) {
     const sourceId = 'bgri-heatmap';
-    const sourceLayer = 'c921642b0ab40bb7d620';
+    const sourceLayer = SOURCE_LAYER_HEATMAP;
 
     // Clear all feature states for this source layer
     map.removeFeatureState({ source: sourceId, sourceLayer });
