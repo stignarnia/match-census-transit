@@ -1,7 +1,6 @@
 // Color Palette
 export const COLOR_BEST = '#10b981';
 export const COLOR_WORST = '#ef4444';
-export const COLOR_CMET_BORDER = '#10b981';
 export const COLOR_CENTROID_STROKE = '#ffffff';
 export const COLOR_CONNECTION_BORDER = '#ffffff';
 export const COLOR_CONNECTION_LABEL_TEXT = '#ffffff';

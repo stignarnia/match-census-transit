@@ -8,7 +8,6 @@ import { handleGridClick, refreshVisuals, resetSelection } from './interactions'
 import {
     COLOR_BEST,
     COLOR_WORST,
-    COLOR_CMET_BORDER,
     COLOR_CENTROID_STROKE,
     COLOR_CONNECTION_BORDER,
     COLOR_CONNECTION_LABEL_TEXT,
@@ -29,7 +28,6 @@ window.addEventListener('calendar-time-update', (e: Event) => {
 map.on('load', () => {
     setupMapLayers(map, {
         COLOR_BGRI_FILL,
-        COLOR_CMET_BORDER,
         COLOR_BEST,
         COLOR_CENTROID_STROKE,
         COLOR_WORST,

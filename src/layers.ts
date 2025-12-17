@@ -1,16 +1,5 @@
-import { bbox } from '@turf/turf';
-import cmetData from './assets/cmet_service_areas.json';
-import type { FeatureCollection } from 'geojson';
-
-// GeoJSON validation
-const cmet = cmetData as unknown as FeatureCollection;
-if (!cmet.type || cmet.type !== 'FeatureCollection' || !Array.isArray(cmet.features)) {
-    throw new Error('Invalid GeoJSON: cmetData must be a FeatureCollection');
-}
-
 export interface LayerTheme {
     COLOR_BGRI_FILL: string;
-    COLOR_CMET_BORDER: string;
     COLOR_BGRI_OUTLINE: string;
     COLOR_BEST: string;
     COLOR_CENTROID_STROKE: string;
@@ -21,15 +10,6 @@ export interface LayerTheme {
 }
 
 export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
-    const bounds = bbox(cmet);
-    const cmetBounds: [number, number, number, number] = [
-        bounds[0],
-        bounds[1],
-        bounds[2],
-        bounds[3]
-    ];
-
-    map.fitBounds(cmetBounds, { padding: 20 });
 
     // BGRI Census Data (Underneath grid)
     map.addSource('bgri', {
@@ -49,14 +29,6 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
         }
     });
 
-    // CMET border
-    map.addSource('cmet', { type: 'geojson', data: cmet });
-    map.addLayer({
-        id: 'cmet-border',
-        type: 'line',
-        source: 'cmet',
-        paint: { 'line-color': theme.COLOR_CMET_BORDER, 'line-width': 2, 'line-emissive-strength': 1 }
-    });
 
     // Centroids
     map.addSource('centroids', {
