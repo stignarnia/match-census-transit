@@ -1,0 +1,4295 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.033609199999999,
+          38.510065
+        ]
+      },
+      "properties": {
+        "name": "FME Solutions",
+        "address": "R. Serra de Montejunto 45, 2925-768 São Lourenço, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.857770799999999,
+          38.5225855
+        ]
+      },
+      "properties": {
+        "name": "Dom Manuel Martins Secondary School",
+        "address": "Av. António Sérgio, 2910-053 Setúbal, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.891700199999999,
+          38.527338
+        ]
+      },
+      "properties": {
+        "name": "School Sebastião da Gama",
+        "address": "R. Escola Técnica, 2900-354 Setúbal, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8941,
+          38.525404699999996
+        ]
+      },
+      "properties": {
+        "name": "Escola agrícola Setúbal",
+        "address": "Setúbal, 2900-667 Setúbal, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8830862,
+          38.5281729
+        ]
+      },
+      "properties": {
+        "name": "Mios Academy",
+        "address": "Av. Bento Gonçalves 37, 2910-433 Setúbal, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1930034,
+          38.617762899999995
+        ]
+      },
+      "properties": {
+        "name": "ÚNICA - Universidade Intergeracional de Almada",
+        "address": "R. António Andrade 1121, 2820 Charneca de Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1900072,
+          38.6179644
+        ]
+      },
+      "properties": {
+        "name": "ÚNICA - Universidade Internacional (sala de Informática)",
+        "address": "R. de Marco Cabaço 12, 2820-644 Charneca de Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1150073,
+          38.6162722
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária Manuel Cargaleiro",
+        "address": "R. Bento de Moura Portugal, 2845-154 Amora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.098715499999999,
+          38.619084
+        ]
+      },
+      "properties": {
+        "name": "Secondary School Alfredo dos Reis Silveira",
+        "address": "Av. 25 de Abril 1, 2840-400 Arrentela, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.120918399999999,
+          38.6290067
+        ]
+      },
+      "properties": {
+        "name": "Secondary School Amora",
+        "address": "R. Mário Sacramento 326, 2845-122 Amora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.094896199999999,
+          38.630835399999995
+        ]
+      },
+      "properties": {
+        "name": "Escola Dr António Augusto Louro",
+        "address": "R. Carolina Michaelis de Vasconcelos 2840, 2840 Arrentela, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0943879,
+          38.622302600000005
+        ]
+      },
+      "properties": {
+        "name": "Escola Profissional Bento de Jesus Caraça - Seixal",
+        "address": "Rua Júlio Augusto Henriques, Quinta Tendarinha, Passeio Alexandre Braga 55 Lojas 1 e 2, 2840-212 Arrentela, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1143735,
+          38.614404799999996
+        ]
+      },
+      "properties": {
+        "name": "Pavilhão Escola Secundária Manuel Cargaleiro",
+        "address": "R. Roque 17, 2845-146 Amora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1110504,
+          38.6165709
+        ]
+      },
+      "properties": {
+        "name": "UNISSEIXAL - Senior University Do Seixal",
+        "address": "R. Gen. Humberto Delgado 2 C, 2845-160 Amora, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.181294399999999,
+          38.6393627
+        ]
+      },
+      "properties": {
+        "name": "School Daniel Sampaio",
+        "address": "R. Dr. Alberto de Araújo, 2815-811 Sobreda, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.205365,
+          38.6611525
+        ]
+      },
+      "properties": {
+        "name": "NOVA School of Science and Technology (FCT NOVA)",
+        "address": "Largo da Torre, 2829-516 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.200232,
+          38.6669871
+        ]
+      },
+      "properties": {
+        "name": "Egas Moniz - Cooperative of Higher Education, Crl",
+        "address": "Campus Universitário, Quinta da Granja, Monte de Caparica, 2829-511 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.205209199999999,
+          38.660948499999996
+        ]
+      },
+      "properties": {
+        "name": "Universidade Nova de Lisboa",
+        "address": "Campus FCT Nova, 2825-149 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1971306,
+          38.6669427
+        ]
+      },
+      "properties": {
+        "name": "Egas Moniz School of Health - Campus building N",
+        "address": "Rua do Facho 26, 2825-075 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2075803,
+          38.6618937
+        ]
+      },
+      "properties": {
+        "name": "Departamento de Ciências da Vida, FCT/UNL",
+        "address": "Campus de, 2825 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2071414,
+          38.660722799999995
+        ]
+      },
+      "properties": {
+        "name": "Departamento de Ciências da Terra -FCT-UNL",
+        "address": "Campus FCT, Faculdade de Ciências e Tecnologia, 2829-516 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.206595900000002,
+          38.6604327
+        ]
+      },
+      "properties": {
+        "name": "Ed. VIII - Departamento de Engenharia Mecânica e Industrial, FCT/UNL",
+        "address": "Campus Universitário, 2825-114 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2071407,
+          38.6601595
+        ]
+      },
+      "properties": {
+        "name": "Ed. IX - Departamento de Engenharia Civil, FCT/UNL",
+        "address": "Campus Universitário, 2829-516, Faculdade de Ciências e Tecnologia, 2829-516 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2035243,
+          38.6608801
+        ]
+      },
+      "properties": {
+        "name": "Departamento de Ciência dos Materiais, FCT/UNL",
+        "address": "Campus Universitário, 2825-182 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2056813,
+          38.6612675
+        ]
+      },
+      "properties": {
+        "name": "Ed. I - Department of Physics, FCT / UNL",
+        "address": "Campus Universitário, 2829-516, 2825-149 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.204481399999999,
+          38.6616478
+        ]
+      },
+      "properties": {
+        "name": "ViaCópia",
+        "address": "Faculdade de Ciências e Tecnologias Campus de, 2829-516 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2072464,
+          38.6631133
+        ]
+      },
+      "properties": {
+        "name": "Edifício III",
+        "address": "Universidade, 2825 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2038707,
+          38.6613289
+        ]
+      },
+      "properties": {
+        "name": "Ed. II - Departamento de Informática",
+        "address": "Campus de, 2929-516 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.203707,
+          38.661359999999995
+        ]
+      },
+      "properties": {
+        "name": "Departamento de Informática, FCT/UNL",
+        "address": "MQ6W+GG, 2825-182 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2035058,
+          38.6593386
+        ]
+      },
+      "properties": {
+        "name": "CEMOP - UNINOVA",
+        "address": "Campus da Caparica, UNINOVA Ed.2, Faculdade de Ciências e Tecnologia, 2829-516 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.207780999999999,
+          38.6623251
+        ]
+      },
+      "properties": {
+        "name": "LAQV REQUIMTE",
+        "address": "Faculdade de Ciências e Tecnologia, N377-1 JB-2, 2829-516 Caparica, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1752723,
+          38.6404484
+        ]
+      },
+      "properties": {
+        "name": "ISEV - Instituto Superior Estudos Veterinários",
+        "address": "R. Gen. Humberto Delgado 81, 2815-848 Sobreda, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1506322,
+          38.6380213
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária João de Barros",
+        "address": "R. Dr. Manuel de Arriaga, 2855-098 Corroios, Seixal, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.163523399999999,
+          38.65052670000001
+        ]
+      },
+      "properties": {
+        "name": "Secondary School with 3rd Romeu Correia Cycle",
+        "address": "R. Virginia Moura s/n, 2810-501 Almada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1599196,
+          38.661653
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária c/ 3º Ciclo do Ensino Básico de António Gedeão",
+        "address": "Alameda de Guerra Junqueiro 11, 2810-071 Almada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.154697299999999,
+          38.6526305
+        ]
+      },
+      "properties": {
+        "name": "Secondary School with 3rd cycle Francisco Simões",
+        "address": "R. Jorge Pereira 2A, 2810-436 Almada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.165479,
+          38.634901
+        ]
+      },
+      "properties": {
+        "name": "MATinspira - Explicações de Matemática - Professor Luís Silva (Tlm: 929076040)",
+        "address": "R. José Gomes Ferreira 26, 2855-040 Corroios, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.079777,
+          38.6601366
+        ]
+      },
+      "properties": {
+        "name": "Universidad Nacional Pablo Herrera",
+        "address": "Av. Alfredo da Silva 26, 2830-346 Barreiro, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0405789,
+          38.64502530000001
+        ]
+      },
+      "properties": {
+        "name": "Baixa da Banheira High School",
+        "address": "Praceta Maria H.V. Silva, 2835-220 Vale da Amoreira, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.058774699999999,
+          38.6578257
+        ]
+      },
+      "properties": {
+        "name": "Secondary School Augusto Cabrita",
+        "address": "R. Maria Lamas 4A, 2830-088 Barreiro, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0374454,
+          38.6320255
+        ]
+      },
+      "properties": {
+        "name": "School Centre Escolas de Santo António",
+        "address": "R. António Aleixo, 2835 Santo António da Charneca, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.069486000000001,
+          38.6654096
+        ]
+      },
+      "properties": {
+        "name": "Professional School Bento de Jesus Caraga - Barreiro",
+        "address": "R. Stinville 14, 2830-302 Barreiro, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.037128599999999,
+          38.6324087
+        ]
+      },
+      "properties": {
+        "name": "EB 2,3 Secundária de Santo Antonio Da Charneca",
+        "address": "R. António Aleixo 1, 2835-691 Santo António da Charneca, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.071353,
+          38.652912199999996
+        ]
+      },
+      "properties": {
+        "name": "Escolas Preparatórias",
+        "address": "R. Armindo de Almeida, 2830-256 Barreiro, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9863237,
+          38.6588133
+        ]
+      },
+      "properties": {
+        "name": "Secondary School of Moita",
+        "address": "Largo da Juventude, 2864-005 Moita, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4337124,
+          38.696972900000006
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária de Cascais",
+        "address": "Av. Pedro Álvares Cabral, Bairro do Rosário, 2754-513 Cascais, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.438102899999999,
+          38.7019896
+        ]
+      },
+      "properties": {
+        "name": "Externato Nossa Senhora do Rosário -- Salesianas Cascais",
+        "address": "R. Maria Auxiliadora 53, 2750-181 Cascais, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4268225,
+          38.699511799999996
+        ]
+      },
+      "properties": {
+        "name": "Cascais",
+        "address": "Av. 25 de Abril, 2750-642 Cascais, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.424045,
+          38.701733
+        ]
+      },
+      "properties": {
+        "name": "Cabo da Roca International English School",
+        "address": "R. José Florindo 44B, 2750-400 Cascais, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4191978,
+          38.698712799999996
+        ]
+      },
+      "properties": {
+        "name": "Frederick Asante",
+        "address": "S.E.F. - delegação Regional de, R. da Misericórdia 1, 2750-642 Cascais, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3839168,
+          38.702248
+        ]
+      },
+      "properties": {
+        "name": "São João do Estoril High School",
+        "address": "R. Brito Camacho 401, 2769-501 Estoril, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.390848499999999,
+          38.7042589
+        ]
+      },
+      "properties": {
+        "name": "BitProfit Trading School",
+        "address": "125 Largo Amalia Rodrigues, Estoril, 2765-281 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3791171,
+          38.7075183
+        ]
+      },
+      "properties": {
+        "name": "Alp campos",
+        "address": "R. António da Costa Carvalho 97, 2765-016 Estoril, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.318372300000002,
+          38.685413499999996
+        ]
+      },
+      "properties": {
+        "name": "School Sebastião e Silva",
+        "address": "R. Liceu 61, 2780-061 Oeiras, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3365342,
+          38.6986766
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária de Carcavelos",
+        "address": "R. da Escola Secundária de Carcavelos 93, 2775 Carcavelos, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3228586,
+          38.698671399999995
+        ]
+      },
+      "properties": {
+        "name": "Secundary School Quinta do Marquês",
+        "address": "R. Escolas, 2780-102 Oeiras, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3257771,
+          38.6784797
+        ]
+      },
+      "properties": {
+        "name": "Nova School of Business and Economics",
+        "address": "R. da Holanda 1, 2775-405 Carcavelos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3269547,
+          38.6776688
+        ]
+      },
+      "properties": {
+        "name": "Nova SBE Executive Education",
+        "address": "N6 7, 2775-687 Carcavelos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.321967299999999,
+          38.6958811
+        ]
+      },
+      "properties": {
+        "name": "ITQB NOVA",
+        "address": "Av. da República, 2780-157 Oeiras, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3251952,
+          38.6782008
+        ]
+      },
+      "properties": {
+        "name": "NOVA SBE | WESTMOUNT iNSTITUTE OF TOURISM & HOSPITALITY",
+        "address": "R. da Holanda 1, 2775-405 Carcavelos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.325779599999999,
+          38.6784824
+        ]
+      },
+      "properties": {
+        "name": "Gestão - Universidade Nova de Lisboa SBE",
+        "address": "R. da Holanda 1, 2775-405 Carcavelos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3266894,
+          38.6795517
+        ]
+      },
+      "properties": {
+        "name": "CEMS Office - Nova SBE",
+        "address": "Nova SBE Campus de Carcavelos, R. da Holanda n.1, 2775-405 Carcavelos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.345595099999999,
+          38.689600899999995
+        ]
+      },
+      "properties": {
+        "name": "Instituto Médico Veterinário da Parede Lda",
+        "address": "Av. António Arroio 4A, 2775-153 Parede, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.320386,
+          38.684725
+        ]
+      },
+      "properties": {
+        "name": "Mariacademia",
+        "address": "Av. Dom João I 14, 2780-065 Oeiras, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.314601399999999,
+          38.696860699999995
+        ]
+      },
+      "properties": {
+        "name": "BIOFARMA",
+        "address": "2780-028 Oeiras, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2977604,
+          38.6990172
+        ]
+      },
+      "properties": {
+        "name": "School Luís de Freitas Branco",
+        "address": "R. Carlos Vieira Ramos, 2774-516 Paço de Arcos, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2988623,
+          38.6911968
+        ]
+      },
+      "properties": {
+        "name": "Escola Náutica Infante D. Henrique",
+        "address": "Av. Eng. Bonneville Franco, 2770-058 Paço de Arcos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3013,
+          38.690117
+        ]
+      },
+      "properties": {
+        "name": "Residência de Estudantes ENIDH",
+        "address": "Av. Eng. Bonneville Franco, 2770 Paço de Arcos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2424722,
+          38.7061328
+        ]
+      },
+      "properties": {
+        "name": "Primary and Secondary School Amélia Rey Colaço",
+        "address": "R. Manuel Ferreira, 2799-550 Linda-a-Velha, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2543604,
+          38.702619
+        ]
+      },
+      "properties": {
+        "name": "Faculdade de motricidade humana, Pavilhão",
+        "address": "Av. Pierre de Coubertin 1495, 1495 Cruz Quebrada, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1953488,
+          38.700551399999995
+        ]
+      },
+      "properties": {
+        "name": "High School Marquês de Pombal",
+        "address": "R. Alexandre de Sá Pinto 85, 1300 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.188834,
+          38.7023157
+        ]
+      },
+      "properties": {
+        "name": "Secondary School Rainha Dona Amélia",
+        "address": "R. Jau 11, 1300 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1876173,
+          38.7017211
+        ]
+      },
+      "properties": {
+        "name": "Secondary School Fonseca Benevides",
+        "address": "Rua Jau, Pólo de Educação e Formação D. João de Castro, 1300-312 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1846592,
+          38.702791
+        ]
+      },
+      "properties": {
+        "name": "CINEL (Entrada parque de estacionamento)",
+        "address": "Calçada Santo Amaro, 1300-516 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1919787,
+          38.6979273
+        ]
+      },
+      "properties": {
+        "name": "Lusíada University",
+        "address": "R. da Junqueira 188-198, 1349-001 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.186450200000001,
+          38.7001207
+        ]
+      },
+      "properties": {
+        "name": "Instituto de Higiene e Medicina Tropical (IHMT)",
+        "address": "R. da Junqueira 100, 1349-008 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.183181399999999,
+          38.7047321
+        ]
+      },
+      "properties": {
+        "name": "Residência Universitária Luís de Camões",
+        "address": "R. Luís de Camões 116, 1300-358 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.182529400000002,
+          38.7061616
+        ]
+      },
+      "properties": {
+        "name": "Portão principal ISA",
+        "address": "1300 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1935395,
+          38.7011281
+        ]
+      },
+      "properties": {
+        "name": "Universidade Lusíada - Oficinas de Design",
+        "address": "1300-488 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1870972,
+          38.6989259
+        ]
+      },
+      "properties": {
+        "name": "CKR Consultoria",
+        "address": "R. da Junqueira 116, 1300-344 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.151717099999999,
+          38.6820826
+        ]
+      },
+      "properties": {
+        "name": "Cacilhas-Tejo Secondary School",
+        "address": "PC Gil Vicente 6 Cacilhas, Cacilhas, 2804-506 Almada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1553544,
+          38.6773062
+        ]
+      },
+      "properties": {
+        "name": "Secondary school Emídio Navarro",
+        "address": "Av. Rainha Dona Leonor, 2809-009 Almada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1644998,
+          38.67454920000001
+        ]
+      },
+      "properties": {
+        "name": "Schools Group Anselmo de Andrade",
+        "address": "R. Ramiro Ferrão 11C, 2809-011 Almada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1582998,
+          38.6752312
+        ]
+      },
+      "properties": {
+        "name": "TKM - Universidade Sénior Dom Sancho I",
+        "address": "Av. Rainha Dona Leonor 25 A, 2805-012 Almada, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1442143,
+          38.707467199999996
+        ]
+      },
+      "properties": {
+        "name": "alvalade",
+        "address": "R. Nova do Carvalho 66, 1200-019 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.152938299999999,
+          38.707037799999995
+        ]
+      },
+      "properties": {
+        "name": "Escola",
+        "address": "Av. Dom Carlos I 11, 1200-868 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.146822199999999,
+          38.7070521
+        ]
+      },
+      "properties": {
+        "name": "escola audovisuais",
+        "address": "Cais do Sodre, 1200-161 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.149701799999999,
+          38.7077248
+        ]
+      },
+      "properties": {
+        "name": "ITIC",
+        "address": "Rua Dom Luís I 20, 1200-151 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1577462,
+          38.7064448
+        ]
+      },
+      "properties": {
+        "name": "RocketShop",
+        "address": "Calçada Ribeiro Santos 25, 1200-789 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1537461,
+          38.7079211
+        ]
+      },
+      "properties": {
+        "name": "Cool Cook Club",
+        "address": "Largo Vitorino Damásio 8, 1200-109 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.967502699999999,
+          38.7043517
+        ]
+      },
+      "properties": {
+        "name": "Daynellys bailon",
+        "address": "R. António Rodrigues Pimentel 36, 2870-459 Montijo, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.949291299999999,
+          38.7026575
+        ]
+      },
+      "properties": {
+        "name": "CLA Montijo - Centro Local de Aprendizagem da Universidade Aberta",
+        "address": "Montijo Professional School, R. José de Almada Negreiros 217, 2870-422 Montijo, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.439045499999999,
+          38.7116235
+        ]
+      },
+      "properties": {
+        "name": "King's College School, Cascais",
+        "address": "R. Doctor Manuel Antonio Costa Matos 164, 2750-290 Cascais, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.4417549,
+          38.7159281
+        ]
+      },
+      "properties": {
+        "name": "Sapienti International School (SIS)",
+        "address": "R. Birre 183, 2750-217 Cascais, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.361269199999999,
+          38.7348322
+        ]
+      },
+      "properties": {
+        "name": "Salesianos de Manique",
+        "address": "R. Salesianos 1, Manique de Baixo, 2645-438 Alcabideche, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3920724,
+          38.717184499999995
+        ]
+      },
+      "properties": {
+        "name": "ESHTE - Escola Superior de Hotelaria e Turismo do Estoril",
+        "address": "Av. Condes de Barcelona 808 2765, 2765-273 Estoril, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3992607,
+          38.733081999999996
+        ]
+      },
+      "properties": {
+        "name": "School of Health Sciences of Alcoitão",
+        "address": "Rua Conde Barão, 2649-506 Alcabideche, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3920241,
+          38.7164843
+        ]
+      },
+      "properties": {
+        "name": "Universidade",
+        "address": "Av. Condes de Barcelona 808, 2765-273 Estoril, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3406171,
+          38.716992399999995
+        ]
+      },
+      "properties": {
+        "name": "SECONDARY SCHOOL OF FREI GONÇALO AZEVEDO",
+        "address": "R. 1º de Maio, 2785-260 São Domingos de Rana, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.340618599999999,
+          38.7172744
+        ]
+      },
+      "properties": {
+        "name": "Escola 2 do Lopinho",
+        "address": "Rua Frei Gonçalo de Azevedo, 2785-259 São Domingos de Rana, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2768724,
+          38.7262279
+        ]
+      },
+      "properties": {
+        "name": "Oeiras International School, Main Campus",
+        "address": "R. Antero de Quental 7, 2730-013 Oeiras, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3046086,
+          38.7345401
+        ]
+      },
+      "properties": {
+        "name": "Aquilino Ribeiro School Group",
+        "address": "Av. Domingos Vandelli 75, 2740-123 Porto Salvo, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.304616099999999,
+          38.733880299999996
+        ]
+      },
+      "properties": {
+        "name": "Porto salvo",
+        "address": "Av. Domingos Vandelli, 2740-123 Porto Salvo, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3026572,
+          38.7370274
+        ]
+      },
+      "properties": {
+        "name": "Instituto Superior Técnico - Taguspark",
+        "address": "Av. Prof. Dr. Cavaco Silva, 2744-016 Porto Salvo, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.284988199999999,
+          38.7419491
+        ]
+      },
+      "properties": {
+        "name": "Atlantic - University Higher Institution",
+        "address": "Fábrica da Pólvora de, 2730-036 Barcarena, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2870499,
+          38.7422982
+        ]
+      },
+      "properties": {
+        "name": "Departamento de Engenharia Atlântica - Edifício Eugénio Machado Macedo",
+        "address": "Edifício Machado Macedo, 2730-036, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2852718,
+          38.7415205
+        ]
+      },
+      "properties": {
+        "name": "Biblioteca Atlântica - University Higher School",
+        "address": "Estr. Cacém 61, 2730-036, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2247317,
+          38.7348062
+        ]
+      },
+      "properties": {
+        "name": "PaRK International School | Alfragide | Senior School",
+        "address": "Estr. de Alfragide 94, 2610-015 Amadora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.214377299999999,
+          38.7095565
+        ]
+      },
+      "properties": {
+        "name": "School Restelo",
+        "address": "R. Antão Gonçalves, 1400-015 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2462222,
+          38.7217336
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária Camilo Castelo Branco",
+        "address": "R. Luz Veloso 5A, 2790-406 Carnaxide, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2259751,
+          38.7094569
+        ]
+      },
+      "properties": {
+        "name": "Secondary School De Miraflores",
+        "address": "Av. Gen. Norton de Matos, 1495-148 Algés, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.21605,
+          38.708321999999995
+        ]
+      },
+      "properties": {
+        "name": "PaRK International School (Restelo)",
+        "address": "Av. das Descobertas 21, 1400-091 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.235029299999999,
+          38.7121116
+        ]
+      },
+      "properties": {
+        "name": "Associação Antigos Alunos da ESLAV",
+        "address": "Av. Carolina Michaelis 18A, 2795-051 Linda-a-Velha, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.240373,
+          38.717743399999996
+        ]
+      },
+      "properties": {
+        "name": "Nova Atena",
+        "address": "R. Almeida Garrett 20, 2795-012 Linda-a-Velha, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.242610299999999,
+          38.727072899999996
+        ]
+      },
+      "properties": {
+        "name": "Uscqal - Universidade Sénior de Carnaxide",
+        "address": "R. Cesário Verde 15, 2790-047 Carnaxide, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.245370399999999,
+          38.710825899999996
+        ]
+      },
+      "properties": {
+        "name": "ESTUDAR DIREITO - EXPLICAÇÕES DE DIREITO",
+        "address": "Largo Alberto Sampaio, 2795-000 Linda-a-Velha, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.222292699999999,
+          38.737671
+        ]
+      },
+      "properties": {
+        "name": "Fallen Learning Center, Lda",
+        "address": "Pct do Comércio, 2610-042 Amadora, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1680964,
+          38.712669999999996
+        ]
+      },
+      "properties": {
+        "name": "School Josefa de Óbidos",
+        "address": "R. Cel. Ribeiro Viana 11, 1399-040 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.194871299999999,
+          38.7128598
+        ]
+      },
+      "properties": {
+        "name": "Faculty of Architecture, University of Lisbon",
+        "address": "R. Sá Nogueira, 1349-063 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1979682,
+          38.713262500000006
+        ]
+      },
+      "properties": {
+        "name": "Instituto Superior de Ciências Sociais e Politicas da Universidade de Lisboa (ISCSP)",
+        "address": "R. Almerindo Lessa, 1300-663 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1823055,
+          38.7076284
+        ]
+      },
+      "properties": {
+        "name": "School of Agriculture University of Lisbon (ISA)",
+        "address": "Tapada da Ajuda, 1349-017 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1954628,
+          38.7140777
+        ]
+      },
+      "properties": {
+        "name": "Faculty of Veterinary Medicine of the University of Lisbon",
+        "address": "Faculdade de Medicina Veterinária, Av. Universidade Técnica, 1300-477 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.175899,
+          38.712736199999995
+        ]
+      },
+      "properties": {
+        "name": "Escola Superior de Saúde da Cruz Vermelha Portuguesa",
+        "address": "Av. de Ceuta 1 13º Piso, 1300-125 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.194303000000001,
+          38.7148823
+        ]
+      },
+      "properties": {
+        "name": "Veterinary School Hospital of FMV-ULisboa",
+        "address": "Av. Universidade Técnica, 1300-477 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.165607699999999,
+          38.7145443
+        ]
+      },
+      "properties": {
+        "name": "Escola das Artes - Autónoma",
+        "address": "R. Fernando Assis Pacheco 207, 1350-264 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.203180999999999,
+          38.7100258
+        ]
+      },
+      "properties": {
+        "name": "Universidade Sénior da Ajuda",
+        "address": "R. das Açucenas 1 Loja B, 1300-012 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.185810799999999,
+          38.7087876
+        ]
+      },
+      "properties": {
+        "name": "Associação BIOPOLIS | CIBIO - InBIO",
+        "address": "CIBIO, Centro de Investigação em Biodiversidade e Recursos Genéticos, InBIO Laboratório Associado, School of Agriculture University of Lisbon (ISA), Tapada da Ajuda, 1349-017 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.182268900000002,
+          38.707915
+        ]
+      },
+      "properties": {
+        "name": "Laboratório Associado Terra",
+        "address": "School of Agriculture University of Lisbon (ISA), Tapada da Ajuda, 1349-017 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1848121,
+          38.7087509
+        ]
+      },
+      "properties": {
+        "name": "Forestry Department of ISA",
+        "address": "Edificio de Dep de Eng Florestal, 1300 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1725586,
+          38.705562199999996
+        ]
+      },
+      "properties": {
+        "name": "Faculdade de ciências de Lisboa",
+        "address": "R. Gilberto Rola, 1350-154 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1941452,
+          38.7133884
+        ]
+      },
+      "properties": {
+        "name": "OBATI - Observatório da Arquitectura, Tecnologia e Inovação",
+        "address": "1300 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.198005,
+          38.713046
+        ]
+      },
+      "properties": {
+        "name": "Núcleo de Estudantes de Relações Internacionais (NERI)",
+        "address": "1300-666 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1423265,
+          38.7296468
+        ]
+      },
+      "properties": {
+        "name": "Camões High School",
+        "address": "Praça José Fontana, 1050-129 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.156793,
+          38.726484
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária Maria Amália Vaz de Carvalho",
+        "address": "R. Rodrigo da Fonseca 115, 1099-069 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.140119799999999,
+          38.7397284
+        ]
+      },
+      "properties": {
+        "name": "School Dona Filipa de Lencastre",
+        "address": "Av. Magalhães Lima 5, 1000-165 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1586021,
+          38.7164119
+        ]
+      },
+      "properties": {
+        "name": "Pedro Nunes",
+        "address": "Av. Álvares Cabral, 1269-093 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1631216,
+          38.7417879
+        ]
+      },
+      "properties": {
+        "name": "D. Pedro V High School",
+        "address": "Estrada das Laranjeiras 122, 1600-136 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1618008,
+          38.738524399999996
+        ]
+      },
+      "properties": {
+        "name": "PaRK International School | Praça de Espanha",
+        "address": "Av. Columbano Bordalo Pinheiro 52, 1500 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1496811,
+          38.712233999999995
+        ]
+      },
+      "properties": {
+        "name": "School Passos Manuel",
+        "address": "Tv. do Convento de Jesus, 1249-027 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.130662599999999,
+          38.7266945
+        ]
+      },
+      "properties": {
+        "name": "School Dona Luísa de Gusmão",
+        "address": "Rua da Penha de França 193, 1199-011 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1461785,
+          38.7407292
+        ]
+      },
+      "properties": {
+        "name": "Externatos Crisfal",
+        "address": "Av. da República 52, 1050-196 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1579079,
+          38.725966899999996
+        ]
+      },
+      "properties": {
+        "name": "Professional School of Geographic Sciences",
+        "address": "R. Artilharia 1 107 Piso 1, 1099-052 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1371839,
+          38.7350687
+        ]
+      },
+      "properties": {
+        "name": "Externato Marques de Pombal",
+        "address": "Largo do Leão 9, 1000-188 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1623288,
+          38.7258515
+        ]
+      },
+      "properties": {
+        "name": "BGA Hub - Campolide",
+        "address": "R. de Campolide 24A, 1070-036 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.152548800000002,
+          38.7215432
+        ]
+      },
+      "properties": {
+        "name": "Odd School",
+        "address": "R. Braamcamp 84, 1250-096 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1516907,
+          38.7394669
+        ]
+      },
+      "properties": {
+        "name": "Estudar Mais - Centro de Estudos",
+        "address": "Av. de Berna 31, 1050-181 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.138705,
+          38.7368192
+        ]
+      },
+      "properties": {
+        "name": "Instituto Superior Técnico",
+        "address": "Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1506489,
+          38.7406173
+        ]
+      },
+      "properties": {
+        "name": "Faculty of Social and Human Sciences (FCSH-UNL)",
+        "address": "Avenida Berna 26 C, 1069-061 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1397741,
+          38.720213799999996
+        ]
+      },
+      "properties": {
+        "name": "NOVA Medical School",
+        "address": "Campo dos Mártires da Pátria 130, 1169-056 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1599155,
+          38.7324171
+        ]
+      },
+      "properties": {
+        "name": "NOVA IMS Information Management School",
+        "address": "Campus de Campolide, 1070-312 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.125978199999999,
+          38.7121972
+        ]
+      },
+      "properties": {
+        "name": "Ispa - Instituto Universitário de Ciências Psicológicas, Sociais e da Vida",
+        "address": "R. do Jardim do Tabaco 34, 1149-041 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1402974,
+          38.708906999999996
+        ]
+      },
+      "properties": {
+        "name": "Faculdade de Belas-Artes da Universidade de Lisboa",
+        "address": "Largo da Academia Nacional de Belas Artes 4, 1249-058 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1547764,
+          38.7108263
+        ]
+      },
+      "properties": {
+        "name": "ISEG Edifício Francesinhas II",
+        "address": "R. Francesinhas 21, 1200-675 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.145736600000001,
+          38.724544699999996
+        ]
+      },
+      "properties": {
+        "name": "University Autónoma de Lisboa",
+        "address": "Palácio Dos Condes Do Redondo, R. de Santa Marta 56, 1169-023 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1602663,
+          38.733820200000004
+        ]
+      },
+      "properties": {
+        "name": "Universidade NOVA de Lisboa",
+        "address": "1099-085 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1601577,
+          38.7338489
+        ]
+      },
+      "properties": {
+        "name": "Reitoria da Universidade NOVA de Lisboa",
+        "address": "Campus de, 1099-085 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.161918100000001,
+          38.7331073
+        ]
+      },
+      "properties": {
+        "name": "Campus Campolide",
+        "address": "Campolide, 1070-124 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.152332399999999,
+          38.718154999999996
+        ]
+      },
+      "properties": {
+        "name": "Universidade Aberta",
+        "address": "R. da Escola Politécnica n.º 147, 1269-001 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.151542599999999,
+          38.7182388
+        ]
+      },
+      "properties": {
+        "name": "Escola Politécnica de Lisboa",
+        "address": "R. da Escola Politécnica 56 58, 1250-102 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1436364,
+          38.7096157
+        ]
+      },
+      "properties": {
+        "name": "Forward College - Lisbon campus",
+        "address": "Rua das Flores 71, 1200-016 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1583659,
+          38.7158014
+        ]
+      },
+      "properties": {
+        "name": "Escola Superior de Educação João de Deus",
+        "address": "Av. Álvares Cabral 69, 1269-094 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1517629,
+          38.7398728
+        ]
+      },
+      "properties": {
+        "name": "Instituto de Línguas da Universidade Nova de Lisboa",
+        "address": "Av. de Berna 26-C, 1069-061 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1378154,
+          38.7379175
+        ]
+      },
+      "properties": {
+        "name": "Pavilhão de Informática I / III",
+        "address": "Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.155521,
+          38.7100953
+        ]
+      },
+      "properties": {
+        "name": "IDEFE",
+        "address": "Rua do Quelhas 6, 1200-781 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1320217,
+          38.721810999999995
+        ]
+      },
+      "properties": {
+        "name": "BioLab Lisboa",
+        "address": "Mercado Forno do Tijolo BioLab Lisboa, R. Maria da Fonte Pavilhão B, 1170-221 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1260679,
+          38.7121676
+        ]
+      },
+      "properties": {
+        "name": "Escola Superior de Educadores de Infância Maria Ulrich",
+        "address": "R. do Jardim do Tabaco 36, 1100-081 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1303634,
+          38.7337367
+        ]
+      },
+      "properties": {
+        "name": "Universität",
+        "address": "Carcavelos Campus, Rua da Holanda no. 1, 2775-405 Carcavelos, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.312274000000002,
+          38.75149340000001
+        ]
+      },
+      "properties": {
+        "name": "Catolica Medical School",
+        "address": "Estr. Octávio Pato, 2635-631 Rio de Mouro, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.313041499999999,
+          38.7513456
+        ]
+      },
+      "properties": {
+        "name": "Escola Superior de Enfermagem São Francisco das Misericórdias",
+        "address": "2635-631 Rio de Mouro, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3339476,
+          38.7746476
+        ]
+      },
+      "properties": {
+        "name": "Run Code School",
+        "address": "Edificio Startup, R. Retiro dos Pacatos 50, 2635-224 Rio de Mouro, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.298135,
+          38.7786671
+        ]
+      },
+      "properties": {
+        "name": "School Matias Aires",
+        "address": "Av. Bombeiros Voluntários 48, Agualva, 2735-521 Agualva-Cacém, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2771768,
+          38.7588844
+        ]
+      },
+      "properties": {
+        "name": "Stuart Carvalhais High School",
+        "address": "R. Jasmins, Massamá, 2745-796 Queluz, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2690249,
+          38.7538756
+        ]
+      },
+      "properties": {
+        "name": "Secondary School Miguel Torga",
+        "address": "R. Cidade Desportiva, Monte Abraão, 2745 Queluz, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2986968,
+          38.7504093
+        ]
+      },
+      "properties": {
+        "name": "Colégio Rainha Dona Leonor De Lencastre Neon",
+        "address": "R. Cidade de Rio de Janeiro N.º20, 2735-659 Agualva-Cacém, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.298408199999999,
+          38.7784938
+        ]
+      },
+      "properties": {
+        "name": "Casal Saloio",
+        "address": "Av. Bombeiros Voluntários 52, 2735-521 Agualva-Cacém, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2989752,
+          38.7724191
+        ]
+      },
+      "properties": {
+        "name": "Universidade Sénior Intergeracional de Agualva e Mira Sintra",
+        "address": "Tv. da Capela, 2735-521 Agualva-Cacém, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2751884,
+          38.7541734
+        ]
+      },
+      "properties": {
+        "name": "Espaço \"Casa Animada\"",
+        "address": "Av. 25 de Abril 17, Massamá, 2745-832 Queluz, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2670742,
+          38.746274500000006
+        ]
+      },
+      "properties": {
+        "name": "Universidade Sénior de Barcarena",
+        "address": "antiga escola primária, R. Bartolomeu Dias, 2730-026, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.299705399999999,
+          38.7736006
+        ]
+      },
+      "properties": {
+        "name": "A tua academia",
+        "address": "R. Cidade de Paris 14, 2735-521 Agualva-Cacém, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.306404299999999,
+          38.769405299999995
+        ]
+      },
+      "properties": {
+        "name": "Portugal",
+        "address": "Lgo Dona Maria Ii 89, 2735-258 Agualva-Cacém, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2974164,
+          38.768845999999996
+        ]
+      },
+      "properties": {
+        "name": "muehlhan",
+        "address": "Rua Praceta Paulo da Gama.4 5Dto Agualva Cacém, 2735-158 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2470632,
+          38.7600875
+        ]
+      },
+      "properties": {
+        "name": "School Seomara da Costa Primo",
+        "address": "R. Elias Garcia 329, 2700-323 Amadora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2311075,
+          38.7552464
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária da Amadora",
+        "address": "Av. Alexandre Salles 12, 2720-012 Amadora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.252673,
+          38.7544693
+        ]
+      },
+      "properties": {
+        "name": "Escola Básica e Secundária Padre Alberto Neto",
+        "address": "Av. Cmte. Paiva Couceiro, 2745-190 Queluz, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2158244,
+          38.764074799999996
+        ]
+      },
+      "properties": {
+        "name": "School Fernando Namora",
+        "address": "R. Luís Vaz de Camões 86, 2650-197 Amadora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2246806,
+          38.763691699999995
+        ]
+      },
+      "properties": {
+        "name": "School Mães d'Água",
+        "address": "R. da Q.ta da Bolacha, 2700-689 Amadora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2274373,
+          38.7460308
+        ]
+      },
+      "properties": {
+        "name": "Secundary School Doutor Azevedo neves",
+        "address": "Av. João Paulo II, Damaia, 2720-001 Amadora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2241277,
+          38.7610634
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundaria da Amadora",
+        "address": "Av. Octávio Pato, 2700-064 Amadora, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2352758,
+          38.763489
+        ]
+      },
+      "properties": {
+        "name": "Lisbon Theater and Film School - IPL",
+        "address": "Av. Marquês de Pombal 22B, 2700-571 Amadora, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2309541,
+          38.7513194
+        ]
+      },
+      "properties": {
+        "name": "Uniati - Universidade Sénior da Reboleira",
+        "address": "Largo da Igreja da Reboleira, 2720-176 Amadora, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2386404,
+          38.7570123
+        ]
+      },
+      "properties": {
+        "name": "Uftia - Unidade De Formação Intergeracional Da Amadora, Unipessoal Lda.",
+        "address": "Centro Paroquial Da Igreja Matriz Da, Praça da Igreja 29, 2700-738 Amadora, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2268604,
+          38.760874
+        ]
+      },
+      "properties": {
+        "name": "universidade olympus",
+        "address": "R. das Terras da Eira 3D N 6, 2700-812 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2310388,
+          38.7534639
+        ]
+      },
+      "properties": {
+        "name": "University Bookmaker",
+        "address": "Pct Casal Brandao, N2, 2720-089 Amadora, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1933261,
+          38.7477746
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária José Gomes Ferreira",
+        "address": "R. Prof. José Sebastião e Silva 1, 1500-500 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2016989,
+          38.7677899
+        ]
+      },
+      "properties": {
+        "name": "School Braamcamp Freire",
+        "address": "R. Dr. Gama Barros 2, 1675-175 Odivelas, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2002889,
+          38.7507028
+        ]
+      },
+      "properties": {
+        "name": "Externato Álvares Cabral",
+        "address": "Estr. de Benfica 628, 1500-108 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.166027099999999,
+          38.749264100000005
+        ]
+      },
+      "properties": {
+        "name": "Catholic University of Portugal",
+        "address": "Edifício Reitoria, 1649-023 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1936293,
+          38.7601444
+        ]
+      },
+      "properties": {
+        "name": "European University of Lisbon",
+        "address": "Quinta do Bom Nome, Estr. da Correia 53, 1500-210 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.195119,
+          38.7459449
+        ]
+      },
+      "properties": {
+        "name": "Lisbon School of Education",
+        "address": "Campus de Benfica do Instituto Politécnico de Lisboa, 1549-003 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1832868,
+          38.7649845
+        ]
+      },
+      "properties": {
+        "name": "IPAM LISBOA - Instituto Português de Administração de Marketing",
+        "address": "R. Laura Ayres 4, 1600-510 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.183555,
+          38.7648752
+        ]
+      },
+      "properties": {
+        "name": "Universidade Europeia - Campus LISPOLIS",
+        "address": "R. Laura Aires 4, 1600-604 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1934746,
+          38.749559999999995
+        ]
+      },
+      "properties": {
+        "name": "Instituto Politécnico de Lisboa",
+        "address": "Estr. de Benfica 529, 1549-020 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.185108999999999,
+          38.750471399999995
+        ]
+      },
+      "properties": {
+        "name": "ISG - Instituto Superior de Gestão",
+        "address": "R. Prof. Reinaldo dos Santos 46, 1500-552 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.166456400000001,
+          38.7494389
+        ]
+      },
+      "properties": {
+        "name": "Faculty of Human Sciences of the Catholic University of Portugal",
+        "address": "1649-023 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.196079,
+          38.7454932
+        ]
+      },
+      "properties": {
+        "name": "Campus de Benfica do IPLisboa",
+        "address": "R. Carolina Michaelis de Vasconcelos, 1500-651 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.166038499999999,
+          38.7486432
+        ]
+      },
+      "properties": {
+        "name": "Institute of Political Studies",
+        "address": "Universidade Catolica Portuguesa, Palma de Cima, 1649-023 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1956058,
+          38.746962499999995
+        ]
+      },
+      "properties": {
+        "name": "IPL - Social Services",
+        "address": "Campus de Benfica do IPL - Ed. P3, 1500-651 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1832861,
+          38.7649875
+        ]
+      },
+      "properties": {
+        "name": "Universidade Europeia",
+        "address": "R. Laura Ayres 17, 1600-604 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1785139,
+          38.761595299999996
+        ]
+      },
+      "properties": {
+        "name": "Sozinho Em Casa-acolhimento Ocasional De Crianças Lda.",
+        "address": "R. Aristides de Sousa Mendes 2, 1600-759 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.195062799999999,
+          38.750707299999995
+        ]
+      },
+      "properties": {
+        "name": "Unisben",
+        "address": "R. Dr. José Baptista de Sousa, 1500-500 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2038581,
+          38.7521688
+        ]
+      },
+      "properties": {
+        "name": "Benfica",
+        "address": "R. Amélia Rey Colaço Nº 8 B, 1500-664 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.195459999999999,
+          38.7464034
+        ]
+      },
+      "properties": {
+        "name": "Serviço de Saúde Ocupacional IPLisboa",
+        "address": "Escola Superior de Educação de Lisboa, 1500-651 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2081284,
+          38.7449115
+        ]
+      },
+      "properties": {
+        "name": "Shisha Store",
+        "address": "Av. Camilo Castelo Branco 12B, 2610-030 Amadora, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1652367,
+          38.749604
+        ]
+      },
+      "properties": {
+        "name": "Main entrance to university",
+        "address": "1649-023 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.173638,
+          38.7428412
+        ]
+      },
+      "properties": {
+        "name": "Internacional University",
+        "address": "Estr. de Benfica 275, 1500-072 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.168655000000001,
+          38.7562429
+        ]
+      },
+      "properties": {
+        "name": "UBA | Universidade Sénior Briosos de Alvalade, Polo 2",
+        "address": "R. Mem de Sá 8, 1600-168 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1360317,
+          38.757826
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária Padre António Vieira",
+        "address": "R. Marquês Soveral, 1749-063 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.166616,
+          38.767896199999996
+        ]
+      },
+      "properties": {
+        "name": "Colégio Planalto",
+        "address": "R. Armindo Rodrigues 28, 1600-414 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.140945499999999,
+          38.7513657
+        ]
+      },
+      "properties": {
+        "name": "Rainha Dona Leonor Secondary School",
+        "address": "R. Maria Amália Vaz de Carvalho 20, 1700-295 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.162253900000001,
+          38.769832699999995
+        ]
+      },
+      "properties": {
+        "name": "Lumiar High School",
+        "address": "Rua Mário Sampaio Ribeiro, R. da Quinta dos Frades, 1600-488 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.135005699999999,
+          38.744380899999996
+        ]
+      },
+      "properties": {
+        "name": "School Luís de Camões",
+        "address": "Av. Padre Manuel da Nóbrega 15, 1000 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1590014,
+          38.768754699999995
+        ]
+      },
+      "properties": {
+        "name": "Campus Académico do Lumiar",
+        "address": "Alameda das Linhas de Torres 179, 1750-142 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.153431699999999,
+          38.7478481
+        ]
+      },
+      "properties": {
+        "name": "Iscte - University Institute of Lisbon",
+        "address": "Av. das Forças Armadas, 1649-026 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.153115999999999,
+          38.758024299999995
+        ]
+      },
+      "properties": {
+        "name": "Universidade Lusófona - Centro Universitário de Lisboa",
+        "address": "Campo Grande 376, 1749-024 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.157716,
+          38.753648
+        ]
+      },
+      "properties": {
+        "name": "Faculty of Humanities of the University of Lisbon",
+        "address": "Alameda da Universidade, 1600-214 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1600122,
+          38.752139199999995
+        ]
+      },
+      "properties": {
+        "name": "cidade universitária",
+        "address": "R. Rodrigo da Fonseca 88, 1099-039 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.158244999999999,
+          38.7526578
+        ]
+      },
+      "properties": {
+        "name": "University of Lisbon",
+        "address": "Cidade Universitária, Alameda da Universidade, 1649-004 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1609454,
+          38.746803799999995
+        ]
+      },
+      "properties": {
+        "name": "Lisbon School of Medicine",
+        "address": "Av. Prof. Egas Moniz MB, 1649-028 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1516413,
+          38.7480207
+        ]
+      },
+      "properties": {
+        "name": "ISCTE Business School",
+        "address": "Av. das Forças Armadas 40, 1649-026 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.160212099999999,
+          38.768945099999996
+        ]
+      },
+      "properties": {
+        "name": "Institute of Education and Sciences",
+        "address": "Alameda das Linhas de Torres 179, 1750-142 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1552417,
+          38.7491765
+        ]
+      },
+      "properties": {
+        "name": "IGOT-ULisboa - Instituto de Geografia e Ordenamento do Território da Universidade de Lisboa",
+        "address": "R. Branca Edmée Marques, 1600-276 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1553226,
+          38.752648799999996
+        ]
+      },
+      "properties": {
+        "name": "Faculdade de Psicologia da Universidade de Lisboa",
+        "address": "Alameda da Universidade, 1649-013 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.160011100000002,
+          38.768468399999996
+        ]
+      },
+      "properties": {
+        "name": "ISTEC - Institute of Advanced Technologies",
+        "address": "Alameda das Linhas de Torres 179, 1750-142 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1574492,
+          38.7521212
+        ]
+      },
+      "properties": {
+        "name": "Academic Association of the Faculty of Law of Lisbon",
+        "address": "Alameda da Universidade, 1649-014 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1553737,
+          38.7526949
+        ]
+      },
+      "properties": {
+        "name": "Institute of Education - ULisboa",
+        "address": "Alameda da Universidade, 1649-013 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1079575,
+          38.7702285
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária António Damásio",
+        "address": "Av. Dr. Francisco Luís Gomes, 1800-151 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.112163299999999,
+          38.751516300000006
+        ]
+      },
+      "properties": {
+        "name": "School Dom Dinis",
+        "address": "R. Manuel Teixeira Gomes 1950, 1950-189 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.110914200000002,
+          38.7636566
+        ]
+      },
+      "properties": {
+        "name": "School Eça de Queirós",
+        "address": "Escola Secundária com 3.º Ciclo do Ensino Básico de Eça de Queirós, R. Cidade de Benguela 303, 1800-071 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.097992099999999,
+          38.7761078
+        ]
+      },
+      "properties": {
+        "name": "Escola Superior de Enfermagem de Lisboa - Pólo Artur Ravara",
+        "address": "69.01, Av. Dom João II 4, 1990-096 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.113128999999999,
+          38.744716
+        ]
+      },
+      "properties": {
+        "name": "Instituto Piaget",
+        "address": "Lote 544, 2.º, Av. João Paulo II, 1950-157 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0976246,
+          38.773885799999995
+        ]
+      },
+      "properties": {
+        "name": "Instituto politécnico de Lisboa",
+        "address": "Av. Dom João II, 1990-046 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1171469,
+          38.7560658
+        ]
+      },
+      "properties": {
+        "name": "Pavilhão de Mecânica do ISEL",
+        "address": "1950-007 Lisbon, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1171911,
+          38.757351
+        ]
+      },
+      "properties": {
+        "name": "LEC -ISEL",
+        "address": "R. Conselheiro Emídio Navarro, 1950 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.116993899999999,
+          38.756869200000004
+        ]
+      },
+      "properties": {
+        "name": "Pavilhão de Eletrónica do ISEL",
+        "address": "Edificio E Especialidades, 1950 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1129901,
+          38.7476157
+        ]
+      },
+      "properties": {
+        "name": "SS International Ministries",
+        "address": "Praça Dr. Fernando Amado Lote 573 8F, 1950-091 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1102984,
+          38.7661321
+        ]
+      },
+      "properties": {
+        "name": "Fomento-estudos E Organização De Empresas, S.a.",
+        "address": "R. Cidade de Benguela 564, 1800 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1157171,
+          38.755595199999995
+        ]
+      },
+      "properties": {
+        "name": "Sala de Reuniões do DEETC",
+        "address": "Edificio F Engenharia DEEA e DEETC, 1950 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.095447499999999,
+          38.7736738
+        ]
+      },
+      "properties": {
+        "name": "elloIT Consultoria Informática",
+        "address": "Av. do Atlântico N16 14º Piso Sl 8, 1990-019 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0973312,
+          38.7707386
+        ]
+      },
+      "properties": {
+        "name": "NATURALEZA® Tech - Biofeedback Specialists",
+        "address": "Av. Dom João II 50 piso 4, 1990-095 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.963765,
+          38.7474847
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária de Alcochete",
+        "address": "R. da Escola Secundária 272, 2890-006 Alcochete, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3784472,
+          38.7996793
+        ]
+      },
+      "properties": {
+        "name": "High School of Santa Maria",
+        "address": "R. Pedro de Cintra 4, 2710-436 Sintra, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.382854,
+          38.8018511
+        ]
+      },
+      "properties": {
+        "name": "Iscte-Sintra",
+        "address": "Av. Heliodoro Salgado 3, 2710-569 Sintra, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.380734499999999,
+          38.8025143
+        ]
+      },
+      "properties": {
+        "name": "INSANE OS REIS",
+        "address": "R. Câmara Pestana, 2710-626 Sintra, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3369413,
+          38.7837867
+        ]
+      },
+      "properties": {
+        "name": "School Mem Martins",
+        "address": "R. São Francisco Xavier 87, 2635-195 Rio de Mouro, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.318472,
+          38.782242
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária Leal da Câmara",
+        "address": "Av. Pedro Nunes 1, 2635-317 Rio de Mouro, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.342058,
+          38.794632
+        ]
+      },
+      "properties": {
+        "name": "Kindergarten Reggio Emilia",
+        "address": "Rua de Olivença 3, 2725-308 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3196678,
+          38.7847551
+        ]
+      },
+      "properties": {
+        "name": "Universidade Sénior Criar Afectos de Rio de Mouro",
+        "address": "Praceta Amoreiras, 2635-103 Rio de Mouro, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3367791,
+          38.783584999999995
+        ]
+      },
+      "properties": {
+        "name": "CFAES | Centro de Formação da Associação de Escolas de Sintra",
+        "address": "Escola Secundária de Mem Martins, R. São Francisco Xavier 87, 2635-195 Rio de Mouro, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.234060999999999,
+          38.8096026
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária de Caneças",
+        "address": "R. Vítor Hugo 1685, 1685 Caneças, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2287655,
+          38.81164950000001
+        ]
+      },
+      "properties": {
+        "name": "EB 2,3 Castanheiros de Caneças",
+        "address": "Escola Básica Castanheiros, R. Olivença 14B, 1685-595 Caneças, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1794386,
+          38.7940287
+        ]
+      },
+      "properties": {
+        "name": "Odivelas High School",
+        "address": "Av. Prof. Dr. Augusto Abreu Lopes 23, 2675-300 Odivelas, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1840396,
+          38.8026623
+        ]
+      },
+      "properties": {
+        "name": "School Ramada",
+        "address": "Avenida Projectada A Est.Nacional 205, Ramada, Lisboa, 2620-414 Ramada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1896221,
+          38.8086325
+        ]
+      },
+      "properties": {
+        "name": "Externato Flor do Campo",
+        "address": "R. 4 de Outubro 11, 2620-206 Ramada, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1916741,
+          38.807128899999995
+        ]
+      },
+      "properties": {
+        "name": "Instituto Superior de Lisboa e Vale do Tejo (ISCE)",
+        "address": "R. Bento de Jesus Caraça 12, 2620-379 Ramada, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1871796,
+          38.805013699999996
+        ]
+      },
+      "properties": {
+        "name": "Pedago-sociedade De Empreendimentos Pedagógicos Lda",
+        "address": "R. Marquesa D'Alorna 12, 2620-272 Odivelas, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1592218,
+          38.7822101
+        ]
+      },
+      "properties": {
+        "name": "Santa Cecilia Music Academy",
+        "address": "Largo do Min. 9, 1750-200 Lisboa, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1430863,
+          38.7923811
+        ]
+      },
+      "properties": {
+        "name": "Secondary school Camarate",
+        "address": "R. Heróis de Mucaba 165, 2680-048 Camarate, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1594451,
+          38.7733612
+        ]
+      },
+      "properties": {
+        "name": "Av de Berna",
+        "address": "Largo República da Turquia 1750, 1750-248 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.114702099999999,
+          38.7864042
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária Arco-Íris (Portela)",
+        "address": "Av. das Escolas 20, 2685-202 Portela, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1057808,
+          38.7887461
+        ]
+      },
+      "properties": {
+        "name": "Schools Group Eduardo Gageiro",
+        "address": "R. Sport Grupo Sacavenense 28, 2685-011 Sacavém, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1025102,
+          38.7818095
+        ]
+      },
+      "properties": {
+        "name": "IADE - Creative University",
+        "address": "Rua Adão Manuel Ramos Barata 3, Moscavide, 1886-502 Lisboa, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.093354,
+          38.8113592
+        ]
+      },
+      "properties": {
+        "name": "IST - Technological and Nuclear Campus",
+        "address": "Estrada Nacional 10, km 139,7, 2695-066 Bobadela LRS, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1059251,
+          38.7948601
+        ]
+      },
+      "properties": {
+        "name": "Salão Cabeleireiro Africano Junior Quade",
+        "address": "Rua Auta da Palma CarlOs n°2 Rc Dt, antigO lOte 48, R. Auta da Palma Carlos 48, 2685-024 Sacavém, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1066544,
+          38.79074620000001
+        ]
+      },
+      "properties": {
+        "name": "Academia dos Saberes - Pólo de Sacavém",
+        "address": "Quinta do Património, R. Cooperativa a Sacavenense 20, 2685-005 Sacavém, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1017704,
+          38.7969212
+        ]
+      },
+      "properties": {
+        "name": "Colégio Jardins Do Cristo Rei, Lda",
+        "address": "R. Domingos José de Morais 59, 2685-046 Sacavém, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3335885,
+          38.836022199999995
+        ]
+      },
+      "properties": {
+        "name": "Portuguese Air Force Academy",
+        "address": "2715-311 Pêro Pinheiro, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.175285299999999,
+          38.8117191
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária José Cardoso Pires",
+        "address": "R. Vergílio Ferreira, 2660-350 Santo António dos Cavaleiros, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1631646,
+          38.8293177
+        ]
+      },
+      "properties": {
+        "name": "ES António Carvalho Figueiredo",
+        "address": "R. 25 de Abril 6B, 2670-482 Loures, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1632876,
+          38.8276523
+        ]
+      },
+      "properties": {
+        "name": "Secondary School José Afonso",
+        "address": "Rua da República, 2670-468 Loures, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3515199,
+          38.9017301
+        ]
+      },
+      "properties": {
+        "name": "Campus Consciência Sistémica | Lagar da Alma",
+        "address": "Carvalhal na Igreja, a Nova EM606 1, 2640-111 Cheleiros, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0365571,
+          38.8908655
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária de Gago Coutinho",
+        "address": "Rua Heróis da Aviação 2615-205 no 3, 2615 Alverca do Ribatejo, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3359116,
+          38.9418122
+        ]
+      },
+      "properties": {
+        "name": "Escola Secundária José Saramago",
+        "address": "Av. Cidade de Leimen 1, 2640-470 Mafra, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3341458,
+          38.937007699999995
+        ]
+      },
+      "properties": {
+        "name": "Academia de Ensino Superior de Mafra",
+        "address": "Av. Primeiro de Maio 1, 2640-455 Mafra, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3353114,
+          38.937068599999996
+        ]
+      },
+      "properties": {
+        "name": "ICM - USEMA, Universidade Sénior de Mafra",
+        "address": "Complexo Cultural Quinta da Raposa, Largo Cel. Brito Gorjão, 2640-465 Mafra, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.331845999999999,
+          38.9367964
+        ]
+      },
+      "properties": {
+        "name": "Postgrado en Odontología - UCAM - PgO UCAM",
+        "address": "R. Serpa Pinto 75-A, 2640-534 Mafra, Portugal",
+        "harvest_category": "university"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.230153600000001,
+          38.9289625
+        ]
+      },
+      "properties": {
+        "name": "Escola Profissional Santo Ouen",
+        "address": "Casal das Andorinhas, R. Q.ta Dos Estrangeiros, 2665-601 Venda do Pinheiro, Portugal",
+        "harvest_category": "secondary_school"
+      }
+    }
+  ]
+}

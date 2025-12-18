@@ -13,107 +13,101 @@ API_URL = 'https://places.googleapis.com/v1/places:searchNearby'
 CENTER_LAT = 38.72
 CENTER_LNG = -9.15
 TOTAL_SQUARE_KM = 50
-LENS_SIZE_KM = 4 # 4km x 4km sub-sections
+LENS_SIZE_KM = 4 
 
 if not API_KEY:
     print("Error: VITE_GOOGLE_MAPS_API_KEY not found in ../.env")
     sys.exit(1)
 
 if len(sys.argv) < 2:
-    print("Usage: python harvest.py <category> (e.g., python harvest.py hospital)")
+    print("Usage: python harvest.py <cat1> <cat2> ...")
     sys.exit(1)
 
-CATEGORY = sys.argv[1]
-OUTPUT_PATH = f'../src/assets/{CATEGORY}.json'
+CATEGORIES = sys.argv[1:]
+OUTPUT_FILENAME = f"{CATEGORIES[0]}.json"
+OUTPUT_PATH = f'../src/assets/{OUTPUT_FILENAME}'
 
-# 2. Grid Calculation Logic
-# 1 degree lat ~ 111km
-# 1 degree lng ~ 111km * cos(lat)
+# 2. Grid Logic
 lat_step = LENS_SIZE_KM / 111.0
 lng_step = LENS_SIZE_KM / (111.0 * math.cos(math.radians(CENTER_LAT)))
-
 steps = int(TOTAL_SQUARE_KM / LENS_SIZE_KM)
 start_lat = CENTER_LAT - ((steps / 2) * lat_step)
 start_lng = CENTER_LNG - ((steps / 2) * lng_step)
 
-def harvest_grid():
+def run_multi_harvest():
     unique_places = {}
-    print(f"🚀 Starting harvest for category: '{CATEGORY}'")
-    print(f"📍 Center: {CENTER_LAT}, {CENTER_LNG} | Area: 50x50km")
+    scan_radius_meters = (LENS_SIZE_KM * 1000) * 0.70 # Optimized overlap
+
+    print(f"🚀 Starting Multi-Category Harvest")
+    print(f"🏷️  Target Categories: {', '.join(CATEGORIES)}")
 
     for i in range(steps + 1):
         for j in range(steps + 1):
-            current_lat = start_lat + (i * lat_step)
-            current_lng = start_lng + (j * lng_step)
+            curr_lat = start_lat + (i * lat_step)
+            curr_lng = start_lng + (j * lng_step)
             
-            headers = {
-                'Content-Type': 'application/json',
-                'X-Goog-Api-Key': API_KEY,
-                'X-Goog-FieldMask': 'places.id,places.displayName,places.location,places.formattedAddress'
-            }
-            
-            payload = {
-                "includedTypes": [CATEGORY],
-                "maxResultCount": 20,
-                "locationRestriction": {
-                    "circle": {
-                        "center": {
-                            "latitude": current_lat,
-                            "longitude": current_lng
-                        },
-                        "radius": (LENS_SIZE_KM * 1000) / 2 # Radius for a 4km coverage
+            # Since searchNearby only accepts 1 type, we loop the categories for THIS tile
+            for category in CATEGORIES:
+                headers = {
+                    'Content-Type': 'application/json',
+                    'X-Goog-Api-Key': API_KEY,
+                    'X-Goog-FieldMask': 'places.id,places.displayName,places.location,places.formattedAddress'
+                }
+                
+                payload = {
+                    "includedTypes": [category], # MUST be a single-item list
+                    "maxResultCount": 20,
+                    "locationRestriction": {
+                        "circle": {
+                            "center": {"latitude": curr_lat, "longitude": curr_lng},
+                            "radius": scan_radius_meters
+                        }
                     }
                 }
-            }
 
-            try:
-                response = requests.post(API_URL, headers=headers, json=payload)
-                response.raise_for_status()
-                data = response.json()
+                try:
+                    response = requests.post(API_URL, headers=headers, json=payload)
+                    if response.status_code == 400:
+                        # Catch specific case where a type might not be supported in SearchNearby
+                        print(f"\n⚠️ Category '{category}' might be invalid for SearchNearby.")
+                        continue
+                        
+                    response.raise_for_status()
+                    data = response.json()
 
-                if "places" in data:
-                    for place in data["places"]:
-                        p_id = place["id"]
-                        if p_id not in unique_places:
-                            unique_places[p_id] = {
-                                "id": p_id,
-                                "name": place.get("displayName", {}).get("text", "Unknown"),
-                                "address": place.get("formattedAddress", ""),
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [
-                                        place["location"]["longitude"],
-                                        place["location"]["latitude"]
-                                    ]
+                    if "places" in data:
+                        for p in data["places"]:
+                            p_id = p["id"]
+                            if p_id not in unique_places:
+                                unique_places[p_id] = {
+                                    "type": "Feature",
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [p["location"]["longitude"], p["location"]["latitude"]]
+                                    },
+                                    "properties": {
+                                        "name": p.get("displayName", {}).get("text", "Unknown"),
+                                        "address": p.get("formattedAddress", ""),
+                                        "harvest_category": category
+                                    }
                                 }
-                            }
-                
-                print(f"Scanned grid {i},{j} | Found: {len(data.get('places', []))} | Total unique: {len(unique_places)}")
+                except Exception as e:
+                    print(f"\n❌ Error at {curr_lat}, {curr_lng} for {category}: {e}")
 
-            except Exception as e:
-                print(f"⚠️ Error at {current_lat}, {current_lng}: {e}")
+            sys.stdout.write(f"\rGrid {i},{j} done. Total unique found: {len(unique_places)}")
+            sys.stdout.flush()
 
-    # 3. Save as GeoJSON FeatureCollection
+    # 3. Save as Single GeoJSON
     geojson = {
         "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "geometry": p["geometry"],
-                "properties": {
-                    "name": p["name"],
-                    "address": p["address"],
-                    "category": CATEGORY
-                }
-            } for p in unique_places.values()
-        ]
+        "features": list(unique_places.values())
     }
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         json.dump(geojson, f, indent=2, ensure_ascii=False)
     
-    print(f"\n✅ Done! Saved {len(unique_places)} unique places to {OUTPUT_PATH}")
+    print(f"\n\n✅ SUCCESS: {len(unique_places)} places saved to {OUTPUT_PATH}")
 
 if __name__ == "__main__":
-    harvest_grid()
+    run_multi_harvest()
