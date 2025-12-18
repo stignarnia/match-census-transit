@@ -1,4 +1,4 @@
-import { getFromCache, saveToCache, generateDistanceMatrixCacheKey } from './api-cache';
+import { getFromCache, saveToCache, generateCacheKey } from './api-cache';
 
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 const API_URL = 'https://routes.googleapis.com/distanceMatrix/v2:computeRouteMatrix';
@@ -23,7 +23,7 @@ export async function fetchRouteData(origin: Coord, destination: Coord, baseTime
     // Set departure time to baseTime + 1 minute (for safety buffer)
     const departureTime = new Date(baseTime.getTime() + 60 * 1000).toISOString();
 
-    const cacheKey = generateDistanceMatrixCacheKey(origin, destination, departureTime);
+    const cacheKey = generateCacheKey(origin, destination, departureTime);
     const cached = getFromCache<RouteResult>(cacheKey);
 
     if (cached) {
