@@ -6,7 +6,8 @@ import {
     SOURCE_LAYER_HEATMAP,
     SOURCE_LAYER_BGRI,
     POPULATION_DENSITY_EXPRESSION,
-    OLD_PEOPLE_RATIO_EXPRESSION
+    OLD_PEOPLE_RATIO_EXPRESSION,
+    YOUNG_PEOPLE_RATIO_EXPRESSION
 } from './constants';
 
 export interface PeopleData {
@@ -96,6 +97,37 @@ const metrics: MetricConfig[] = [
                 ['get', 'N_INDIVIDUOS_65_OU_MAIS'], // Weight by number of old people
                 0, 0,
                 1000, 1 // Adjust max value as needed
+            ],
+            heatmapIntensity: [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 0.1,
+                11, 1
+            ]
+        }
+    },
+    {
+        id: 'Young People Ratio',
+        stateKey: 'young_ratio',
+        calculate: (props: any) => {
+            const individuals = props.N_INDIVIDUOS;
+            const youngPeople = (props.N_INDIVIDUOS_0_14 || 0) + (props.N_INDIVIDUOS_15_24 || 0);
+            if (
+                individuals !== undefined && individuals !== null && individuals > 0
+            ) {
+                return youngPeople / individuals;
+            }
+            return null;
+        },
+        visualConfig: {
+            fillColor: YOUNG_PEOPLE_RATIO_EXPRESSION,
+            heatmapWeight: [
+                'interpolate',
+                ['linear'],
+                ['+', ['coalesce', ['get', 'N_INDIVIDUOS_0_14'], 0], ['coalesce', ['get', 'N_INDIVIDUOS_15_24'], 0]],
+                0, 0,
+                1000, 1
             ],
             heatmapIntensity: [
                 'interpolate',
