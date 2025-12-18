@@ -2,6 +2,7 @@ import './style.css';
 import Alpine from 'alpinejs';
 import calendar from './calendar';
 import people from './people';
+import places from './places';
 import { map } from './map';
 import { setupMapLayers } from './layers';
 import { appState } from './state';
@@ -18,7 +19,25 @@ import {
 } from './constants';
 
 Alpine.data('calendar', calendar);
-Alpine.data('people', people);
+Alpine.data('ui', () => ({
+    panels: [
+        {
+            id: 'people',
+            title: 'People',
+            class: 'top-8 left-8',
+            data: people(),
+        },
+        {
+            id: 'places',
+            title: 'Places',
+            class: 'top-8 right-8',
+            data: places(),
+        }
+    ],
+    init() {
+        this.panels.forEach(p => p.data.init());
+    }
+}));
 Alpine.start();
 
 // Map setup
