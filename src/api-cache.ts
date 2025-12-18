@@ -51,6 +51,6 @@ function cleanupOldCache(): void {
     }
 }
 
-export function generateCacheKey(origin: { lat: number, lng: number }, destination: { lat: number, lng: number }, departureTime: string): string {
+export function generateDistanceMatrixCacheKey(origin: { lat: number, lng: number }, destination: { lat: number, lng: number }, departureTime: string): string {
     return `route_${origin.lat}_${origin.lng}_${destination.lat}_${destination.lng}_${departureTime}`;
 }

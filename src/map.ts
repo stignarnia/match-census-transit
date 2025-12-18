@@ -7,7 +7,13 @@ export const map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/standard',
     config: {
         basemap: {
-            lightPreset: "night"
+            lightPreset: "night",
+            showPointOfInterestLabels: false,
+            show3dObjects: false,
+            show3dBuildings: false,
+            show3dTrees: false,
+            show3dLandmarks: false,
+            showLandmarkIconLabels: false
         }
     },
     center: [-9.15, 38.72],
