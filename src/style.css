@@ -12,3 +12,16 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+/* Custom Popup Styles */
+.unified-popup .mapboxgl-popup-content {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.unified-popup .mapboxgl-popup-tip {
+    border-top-color: rgba(24, 24, 27, 0.9); /* zinc-900 with opacity */
+}

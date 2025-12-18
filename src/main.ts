@@ -85,3 +85,10 @@ map.on('click', (e) => {
         resetSelection();
     }
 });
+
+// Global ESC handler
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        resetSelection();
+    }
+});

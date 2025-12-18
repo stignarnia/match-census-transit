@@ -44,6 +44,8 @@ export function refreshVisuals() {
 
 // Click handler
 export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: Feature[] }) {
+    if (e.defaultPrevented) return;
+
     // With vector tiles, we get features here
     const feature = e.features?.[0];
 
