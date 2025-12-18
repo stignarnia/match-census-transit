@@ -55,7 +55,7 @@ export default (): PlacesData => ({
 
             const category = document.createElement('div');
             category.className = 'text-[10px] font-bold uppercase tracking-widest text-emerald-500 mb-0.5';
-            category.innerText = props.harvest_category || props.category || 'Place';
+            category.innerText = (props.harvest_category || 'Place').replace(/_/g, ' ');
             header.appendChild(category);
 
             const title = document.createElement('div');

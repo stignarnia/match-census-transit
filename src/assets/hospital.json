@@ -6,6 +6,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -9.0183018,
+          38.522092199999996
+        ]
+      },
+      "properties": {
+        "name": "Unidade de Saúde de Azeitão",
+        "address": "R. Dr. Agostinho Machado Faria 32, 2925 São Lourenço, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -9.0150749,
           38.5188053
         ]
@@ -13,7 +28,37 @@
       "properties": {
         "name": "Centro Veterinario",
         "address": "R. José Augusto Coelho 8C, 2925-538 São Lourenço, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9341599,
+          38.490200099999996
+        ]
+      },
+      "properties": {
+        "name": "Sant'Iago do Outão Orthopedic Hospital",
+        "address": "2900 Setúbal, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9002995,
+          38.4902429
+        ]
+      },
+      "properties": {
+        "name": "Posto de Socorro de Tróia",
+        "address": "Alameda do Pinheiro Manso, 7570-789 Troia, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -28,7 +73,7 @@
       "properties": {
         "name": "Hospital Nossa Senhora da Arrábida",
         "address": "R. Ary dos Santos 11, 2925-061 Azeitão, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -43,7 +88,7 @@
       "properties": {
         "name": "Centro Do Apogeu - Actividades De Saúde E Médicas Unipessoal Lda.",
         "address": "R. dos Fetos 11, Brejo dos Clérigos, 2925-201 São Simão, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -58,7 +103,7 @@
       "properties": {
         "name": "Hospital da Luz Setúbal",
         "address": "Estrada Nacional 10, km 37, 2900-722 Setúbal, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -73,97 +118,7 @@
       "properties": {
         "name": "Unidade de Transição de Psiquiatria",
         "address": "N10 130, 2900 Setúbal, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9116757,
-          38.5331445
-        ]
-      },
-      "properties": {
-        "name": "Centro de Psiquiatria",
-        "address": "N10 130, 2900 Setúbal, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9091866,
-          38.5328486
-        ]
-      },
-      "properties": {
-        "name": "Urgência adulto hospital luz 24h/7dias",
-        "address": "2900 Setúbal, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.8807947,
-          38.52923940000001
-        ]
-      },
-      "properties": {
-        "name": "Hospital de São Bernardo",
-        "address": "R. Camilo Castelo Branco 175, 2910-549 Setúbal, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.8816063,
-          38.528997
-        ]
-      },
-      "properties": {
-        "name": "Centro Hospitalar De Setúbal E.P.E.",
-        "address": "Rua Camilo Castelo Branco, Aptd. 140, Setúbal, 2910-446 Setúbal, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.881666,
-          38.5296313
-        ]
-      },
-      "properties": {
-        "name": "Clínica Coração Setúbal, Lda",
-        "address": "Av. Dom João II 48, 2910-446 Setúbal, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.8810995,
-          38.529176
-        ]
-      },
-      "properties": {
-        "name": "Unidade Local de Saúde Arrábida",
-        "address": "Pça Touros) Hospital, 2910-549 Setúbal, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -178,7 +133,112 @@
       "properties": {
         "name": "Centro Médico Do Trabalho - Dr. Rui Caferra, Lda.",
         "address": "Praceta Manuel Nunes de Almeida 18, 2900-481 Setúbal, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9116757,
+          38.5331445
+        ]
+      },
+      "properties": {
+        "name": "Centro de Psiquiatria",
+        "address": "N10 130, 2900 Setúbal, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8952871,
+          38.5260369
+        ]
+      },
+      "properties": {
+        "name": "Santa casa da misericórdia- consultas",
+        "address": "R. Acácio Barradas 2, 2900-197 Setúbal, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9091866,
+          38.5328486
+        ]
+      },
+      "properties": {
+        "name": "Urgência adulto hospital luz 24h/7dias",
+        "address": "2900 Setúbal, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8807947,
+          38.52923940000001
+        ]
+      },
+      "properties": {
+        "name": "Hospital de São Bernardo",
+        "address": "R. Camilo Castelo Branco 175, 2910-549 Setúbal, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8816063,
+          38.528997
+        ]
+      },
+      "properties": {
+        "name": "Centro Hospitalar De Setúbal E.P.E.",
+        "address": "Rua Camilo Castelo Branco, Aptd. 140, Setúbal, 2910-446 Setúbal, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.881666,
+          38.5296313
+        ]
+      },
+      "properties": {
+        "name": "Clínica Coração Setúbal, Lda",
+        "address": "Av. Dom João II 48, 2910-446 Setúbal, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8810995,
+          38.529176
+        ]
+      },
+      "properties": {
+        "name": "Unidade Local de Saúde Arrábida",
+        "address": "Pça Touros) Hospital, 2910-549 Setúbal, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -193,7 +253,7 @@
       "properties": {
         "name": "CLIMUNAL​ - CLINICA DE IMUNOALERGOLOGIA",
         "address": "R. Gama Braga 33, 2900-102 Setúbal, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -201,29 +261,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.139071699999999,
-          38.601658199999996
+          -9.1246038,
+          38.6210507
         ]
       },
       "properties": {
-        "name": "Sossego Turquesa - Unipessoal Lda",
-        "address": "Av. de Belverde 629, 2845-483 Amora, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1144754,
-          38.617302599999995
-        ]
-      },
-      "properties": {
-        "name": "Smefir",
-        "address": "R. João das Regras 6, 2845 Amora, Portugal",
-        "category": "hospital"
+        "name": "Unidade De Intervenção Comunitária do Seixal",
+        "address": "Rua da Cordoaria 49A, 2845-091 Amora, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -238,7 +283,52 @@
       "properties": {
         "name": "Centro de saude",
         "address": "Rua da Cordoaria, 2845-130 Amora, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.125741399999999,
+          38.623115399999996
+        ]
+      },
+      "properties": {
+        "name": "Gerador um",
+        "address": "R. dos Foros de Amora 1, 2845-004 Amora, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.139071699999999,
+          38.601658199999996
+        ]
+      },
+      "properties": {
+        "name": "Sossego Turquesa - Unipessoal Lda",
+        "address": "Av. de Belverde 629, 2845-483 Amora, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1144754,
+          38.617302599999995
+        ]
+      },
+      "properties": {
+        "name": "Smefir",
+        "address": "R. João das Regras 6, 2845 Amora, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -253,112 +343,7 @@
       "properties": {
         "name": "Centro de Saúde Pinhal Novo 2",
         "address": "R. Manuel Verissimo da Silva 29 Loja B, 2955-151 Pinhal Novo, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1516606,
-          38.6634563
-        ]
-      },
-      "properties": {
-        "name": "UTITA - Unidade de Tratamento Intensivo de Toxicodependência e Alcoolismo",
-        "address": "2810 Almada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1602106,
-          38.6547225
-        ]
-      },
-      "properties": {
-        "name": "Análises Clínicas Affidea Laboratórios - Almada - Feijó",
-        "address": "R. José Estevão Coelho de Magalhães 21 Cave, 2810-101 Almada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1542453,
-          38.664235399999995
-        ]
-      },
-      "properties": {
-        "name": "CENTRO DE MEDICINA NAVAL (CMN)",
-        "address": "2810 Almada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0574633,
-          38.6552344
-        ]
-      },
-      "properties": {
-        "name": "Hospital de Nossa Senhora do Rosário",
-        "address": "Av. Movimento das Forças Armadas 79C, 2830-003 Barreiro, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.067109199999999,
-          38.6518966
-        ]
-      },
-      "properties": {
-        "name": "Centro Medico Barreiro",
-        "address": "Av. Dom João i 16, 2830-276 Barreiro, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.060268899999999,
-          38.6526502
-        ]
-      },
-      "properties": {
-        "name": "Fundaçao gulbenkian",
-        "address": "Av. Brasília 2680, 2830-048 Apelação, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.063659000000001,
-          38.6556036
-        ]
-      },
-      "properties": {
-        "name": "Hospital de Nossa Senhora do Rosário - Radioterapia",
-        "address": "Av. Bocage, 2830-082 Barreiro, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -373,7 +358,142 @@
       "properties": {
         "name": "Banco de Ajudas Técnicas - Fundação COI",
         "address": "R. José Régio 57 r/c, 2955-202 Pinhal Novo, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.168257299999999,
+          38.6667871
+        ]
+      },
+      "properties": {
+        "name": "Centro Médico E Ecográfico De Dr. João Paulo Marques, Unipessoal Lda.",
+        "address": "R. Salgueiro Maia nº15D, 2805-323 Almada, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1516606,
+          38.6634563
+        ]
+      },
+      "properties": {
+        "name": "UTITA - Unidade de Tratamento Intensivo de Toxicodependência e Alcoolismo",
+        "address": "2810 Almada, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1669828,
+          38.6676043
+        ]
+      },
+      "properties": {
+        "name": "CLÍNICA MÉDICA DR. TRINCÃO",
+        "address": "Praceta Bento Gonçalves 28 S/L Esq, 2805-101 Almada, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1602106,
+          38.6547225
+        ]
+      },
+      "properties": {
+        "name": "Análises Clínicas Affidea Laboratórios - Almada - Feijó",
+        "address": "R. José Estevão Coelho de Magalhães 21 Cave, 2810-101 Almada, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1542453,
+          38.664235399999995
+        ]
+      },
+      "properties": {
+        "name": "CENTRO DE MEDICINA NAVAL (CMN)",
+        "address": "2810 Almada, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0574633,
+          38.6552344
+        ]
+      },
+      "properties": {
+        "name": "Hospital de Nossa Senhora do Rosário",
+        "address": "Av. Movimento das Forças Armadas 79C, 2830-003 Barreiro, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.067109199999999,
+          38.6518966
+        ]
+      },
+      "properties": {
+        "name": "Centro Medico Barreiro",
+        "address": "Av. Dom João i 16, 2830-276 Barreiro, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.060268899999999,
+          38.6526502
+        ]
+      },
+      "properties": {
+        "name": "Fundaçao gulbenkian",
+        "address": "Av. Brasília 2680, 2830-048 Apelação, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.063659000000001,
+          38.6556036
+        ]
+      },
+      "properties": {
+        "name": "Hospital de Nossa Senhora do Rosário - Radioterapia",
+        "address": "Av. Bocage, 2830-082 Barreiro, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -388,22 +508,7 @@
       "properties": {
         "name": "Analyses Clinical",
         "address": "R. João Fernandes, 2750-642 Cascais, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3818555,
-          38.698870299999996
-        ]
-      },
-      "properties": {
-        "name": "USF São João do Estoril",
-        "address": "R. Egas Moniz 9010 Piso 1, 2765-618 Estoril, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -418,7 +523,7 @@
       "properties": {
         "name": "Hospital Ortopédico de Sant'Ana",
         "address": "R. Benguela, 2775-501 Parede, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -426,14 +531,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.344858499999999,
-          38.6965053
+          -9.3818555,
+          38.698870299999996
         ]
       },
       "properties": {
-        "name": "CERCICA",
-        "address": "Parque Urbano Quinta de Rana, 2785 São Domingos de Rana, Portugal",
-        "category": "hospital"
+        "name": "USF São João do Estoril",
+        "address": "R. Egas Moniz 9010 Piso 1, 2765-618 Estoril, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -441,179 +546,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.334522100000001,
-          38.6945732
+          -9.3582971,
+          38.6906746
         ]
       },
       "properties": {
-        "name": "CAPS",
-        "address": "R. Barão Moçâmedes 161, 2775-711 Carcavelos, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3465398,
-          38.689476899999995
-        ]
-      },
-      "properties": {
-        "name": "Centro Psicogeriátrico da Parede",
-        "address": "R. Machado dos Santos 2, 2775-208 Parede, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.354063199999999,
-          38.6916463
-        ]
-      },
-      "properties": {
-        "name": "Consultório de Patologia Clínica Clinilab Lda.",
-        "address": "R. Dr. João de Meneses 1, 2775-296 Parede, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.294021899999999,
-          38.7011438
-        ]
-      },
-      "properties": {
-        "name": "Med First - Soluções Globais na Emergência",
-        "address": "Estrada de Paço de Arcos 9 Edifício Espaço – Piso 2/G, 2770-218 Paço de Arcos, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1883365,
-          38.6996879
-        ]
-      },
-      "properties": {
-        "name": "Hospital Egas Moniz",
-        "address": "R. da Junqueira 126, 1349-019 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1776666,
-          38.673956
-        ]
-      },
-      "properties": {
-        "name": "Hospital Garcia de Orta - Urgência Geral",
-        "address": "2805 Almada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1783442,
-          38.6748447
-        ]
-      },
-      "properties": {
-        "name": "Centro de Desenvolvimento da Criança Professor Torrado da Silva",
-        "address": "MRGC+3Q, 2805 Almada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1546793,
-          38.6734643
-        ]
-      },
-      "properties": {
-        "name": "Unisana Hospitais - Hospital de Almada",
-        "address": "R. Manuel Febrero 85, 2805-192 Almada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.418142399999999,
-          38.7300091
-        ]
-      },
-      "properties": {
-        "name": "Hospital de Cascais Dr. José de Almeida",
-        "address": "Av. Brigadeiro Victor Novais Gonçalves, 2755-009 Alcabideche, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.4321744,
-          38.7088426
-        ]
-      },
-      "properties": {
-        "name": "Hospital CUF Cascais",
-        "address": "R. Fernão Lopes 60, 2750-663 Cascais, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.445816299999999,
-          38.7281021
-        ]
-      },
-      "properties": {
-        "name": "Gpsaúde - Soc. Gestora Centro Medicina Física Reabilitação Sul, S.A",
-        "address": "R. Tomaz da Fonseca, 2750 Aldeia de Juso, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3849915,
-          38.7076299
-        ]
-      },
-      "properties": {
-        "name": "academia império",
-        "address": "R. Frei Miguel Contreiras, 2765-338 Estoril, Portugal",
-        "category": "hospital"
+        "name": "Clínica SAMS Parede",
+        "address": "Av. da República 1583, 2775-272 Parede, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -628,7 +568,7 @@
       "properties": {
         "name": "Centro Médico Dr.Luís Ribeiro Da Silva, Lda.",
         "address": "R. Guiomar Torrezão 21, 2765-283 Estoril, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -636,14 +576,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.3757185,
-          38.7097155
+          -9.3849915,
+          38.7076299
         ]
       },
       "properties": {
-        "name": "Clínica Dr Rogério",
-        "address": "R. Pêro da Covilhã, 2765-182 Estoril, Portugal",
-        "category": "hospital"
+        "name": "academia império",
+        "address": "R. Frei Miguel Contreiras, 2765-338 Estoril, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -651,14 +591,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.3384498,
-          38.723165699999996
+          -9.354063199999999,
+          38.6916463
         ]
       },
       "properties": {
-        "name": "Igreja Nave",
-        "address": "Av. Salgueiro Maia 978A, 2785-754 São Domingos de Rana, Portugal",
-        "category": "hospital"
+        "name": "Consultório de Patologia Clínica Clinilab Lda.",
+        "address": "R. Dr. João de Meneses 1, 2775-296 Parede, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -666,14 +606,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.330669499999999,
-          38.7320491
+          -9.344858499999999,
+          38.6965053
         ]
       },
       "properties": {
-        "name": "Maternar - Sara Pinto Gonçalves",
-        "address": "2785-299 São Domingos de Rana, Portugal",
-        "category": "hospital"
+        "name": "CERCICA",
+        "address": "Parque Urbano Quinta de Rana, 2785 São Domingos de Rana, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -681,14 +621,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2716844,
-          38.7118398
+          -9.334522100000001,
+          38.6945732
         ]
       },
       "properties": {
-        "name": "Naturidade Laveiras",
-        "address": "Estr. Murganhal, 2760-074 Caxias, Portugal",
-        "category": "hospital"
+        "name": "CAPS",
+        "address": "R. Barão Moçâmedes 161, 2775-711 Carcavelos, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -696,14 +636,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2704869,
-          38.7100657
+          -9.31005,
+          38.6956236
         ]
       },
       "properties": {
-        "name": "Unidade de Cuidados Médicos",
-        "address": "Estr. Murganhal, Murganhal, 2760 Caxias, Portugal",
-        "category": "hospital"
+        "name": "Consultório de Patologia Clinica Clinilab Lda",
+        "address": "Av. Emb. Augusto de Castro 21, 2780-200 Oeiras, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -711,14 +651,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.233873299999999,
-          38.7269912
+          -9.3465398,
+          38.689476899999995
         ]
       },
       "properties": {
-        "name": "Hospital Santa Cruz",
-        "address": "Av. Prof. Dr. Reinaldo dos Santos, 2790-134 Carnaxide, Portugal",
-        "category": "hospital"
+        "name": "Centro Psicogeriátrico da Parede",
+        "address": "R. Machado dos Santos 2, 2775-208 Parede, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -726,14 +666,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2334481,
-          38.7317274
+          -9.3051123,
+          38.7013047
         ]
       },
       "properties": {
-        "name": "Instituto S. João de Deus - Carnaxide",
-        "address": "Av. João Paulo II 29, 2790-249 Carnaxide, Portugal",
-        "category": "hospital"
+        "name": "Hospital da Luz Oeiras",
+        "address": "Rua Coro de Santo Amaro de Oeiras 12, 2780-379 Oeiras, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -741,14 +681,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2302868,
-          38.7284742
+          -9.294021899999999,
+          38.7011438
         ]
       },
       "properties": {
-        "name": "Centro Oncológico Dra. Natália Chaves",
-        "address": "R. Manuel Anastácio Alves 2 2790, 2790 Carnaxide, Portugal",
-        "category": "hospital"
+        "name": "Med First - Soluções Globais na Emergência",
+        "address": "Estrada de Paço de Arcos 9 Edifício Espaço – Piso 2/G, 2770-218 Paço de Arcos, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -756,14 +696,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.230577199999999,
-          38.7283824
+          -9.2278881,
+          38.7034118
         ]
       },
       "properties": {
-        "name": "clinica quadrantes",
-        "address": "R. Manuel Anastácio Alves, 2790 Carnaxide, Portugal",
-        "category": "hospital"
+        "name": "USF Damião de Góis",
+        "address": "R. Dr. Manuel de Arriaga 32 40, 1495-025 Algés, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -771,14 +711,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2141784,
-          38.7116719
+          -9.176860099999999,
+          38.6738694
         ]
       },
       "properties": {
-        "name": "Veterinary Hospital Restelo",
-        "address": "R. Gregório Lopes 1513 Loja E, 1400-195 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Hospital Garcia de Orta",
+        "address": "Terreiro do Paço, 2805 Almada, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -786,14 +726,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.137453299999999,
-          38.717763999999995
+          -9.1883365,
+          38.6996879
         ]
       },
       "properties": {
-        "name": "Hospital de São José (Centro Hospitalar Universitário de Lisboa Central)",
-        "address": "R. José António Serrano, 1150-199 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Hospital Egas Moniz",
+        "address": "R. da Junqueira 126, 1349-019 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -801,14 +741,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.139270999999999,
-          38.728244
+          -9.1776666,
+          38.673956
         ]
       },
       "properties": {
-        "name": "Dona Estefânia",
-        "address": "R. Jacinta Marto 8A, 1169-045 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Hospital Garcia de Orta - Urgência Geral",
+        "address": "2805 Almada, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -816,14 +756,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1455612,
-          38.7235607
+          -9.1759714,
+          38.6727869
         ]
       },
       "properties": {
-        "name": "Santa Marta Hospital",
-        "address": "R. de Santa Marta 50, 1169-024 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "HGO - Consultas Externas",
+        "address": "Av. Torrado da Silva, 2805-267 Almada, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -831,14 +771,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1416114,
-          38.7223938
+          -9.1783442,
+          38.6748447
         ]
       },
       "properties": {
-        "name": "Centro Hospitalar Universitário de Lisboa Central",
-        "address": "Alameda Santo António dos Capuchos, 1169-050 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Centro de Desenvolvimento da Criança Professor Torrado da Silva",
+        "address": "MRGC+3Q, 2805 Almada, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -846,14 +786,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1415211,
-          38.7087059
+          -9.1769176,
+          38.6733281
         ]
       },
       "properties": {
-        "name": "Hospital da Ordem Terceira Chiado",
-        "address": "R. Serpa Pinto 7D, 1200-484 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "HGO - Urgência Ginecológica e Obstétrica",
+        "address": "2805 Almada, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -861,14 +801,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1442082,
-          38.7194151
+          -9.1765455,
+          38.6739987
         ]
       },
       "properties": {
-        "name": "Alegria Medical Centre",
-        "address": "Av. da Liberdade 144 4E, 1250-146 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "HGO - Urgência Pediátrica",
+        "address": "2805 Almada, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -876,14 +816,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.146761099999999,
-          38.723867999999996
+          -9.189067999999999,
+          38.702526399999996
         ]
       },
       "properties": {
-        "name": "Diatra - Centro de Diagnóstico e Tratamento Médico , Lda.",
-        "address": "R. Alexandre Herculano 9 A, 1150-005 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Júlio do matos",
+        "address": "R. Jau 11, 1300 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -891,14 +831,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1510791,
-          38.7125121
+          -9.1546793,
+          38.6734643
         ]
       },
       "properties": {
-        "name": "Hospital de Jesus Lisboa",
-        "address": "Tv. da Arrochela 2, 1200-032 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Unisana Hospitais - Hospital de Almada",
+        "address": "R. Manuel Febrero 85, 2805-192 Almada, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -906,224 +846,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.141601,
-          38.735831
+          -9.1648894,
+          38.704309099999996
         ]
       },
       "properties": {
-        "name": "AniCura Arco do Cego Hospital Veterinário | Urgências 24h",
-        "address": "R. Dona Filipa de Vilhena 4E 4F, 1000-135 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1631436,
-          38.7131855
-        ]
-      },
-      "properties": {
-        "name": "UCCI Rainha Dona Leonor",
-        "address": "1350-293 Lisbon, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1378334,
-          38.7141997
-        ]
-      },
-      "properties": {
-        "name": "Dolls Hospital",
-        "address": "Praça da Figueira 7, 1100-240 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1419021,
-          38.7252714
-        ]
-      },
-      "properties": {
-        "name": "Hospital Miguel Bombarda",
-        "address": "Rua Júlio Dinis 952, 1150 Porto, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.136862599999999,
-          38.7189161
-        ]
-      },
-      "properties": {
-        "name": "Clínica de São Lázaro",
-        "address": "R. de São Lázaro 102, 1150-241 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.164125799999999,
-          38.7159001
-        ]
-      },
-      "properties": {
-        "name": "Centro de Saúde CUF Campo de Ourique",
-        "address": "R. Ferreira Borges 17C, 1350-133 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1466963,
-          38.7206875
-        ]
-      },
-      "properties": {
-        "name": "Clínica do Coração",
-        "address": "Av. da Liberdade 177, 1250-249 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.146754200000002,
-          38.7172123
-        ]
-      },
-      "properties": {
-        "name": "Clínica AEGER Prima",
-        "address": "R. da Mãe d'Água 15B, 1250-154 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.147568999999999,
-          38.7242373
-        ]
-      },
-      "properties": {
-        "name": "Clínica REPLACE",
-        "address": "R. Rodrigues Sampaio 146 3° Dto, 1150-282 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1466953,
-          38.72402640000001
-        ]
-      },
-      "properties": {
-        "name": "Clínica Pêro",
-        "address": "R. Alexandre Herculano 7 1-Esq, 1150-295 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1447842,
-          38.724364099999995
-        ]
-      },
-      "properties": {
-        "name": "Hospital Santa Marta (entrada da urgência)",
-        "address": "Rua da Sociedade Farmacêutica 1, 1150-299 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1426189,
-          38.7215707
-        ]
-      },
-      "properties": {
-        "name": "Serviço de Gastrenterologia do Hospital Santo António dos Capuchos",
-        "address": "R. do Passadiço 19, 1150-253 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9767197,
-          38.707707
-        ]
-      },
-      "properties": {
-        "name": "Clínica Médica Dr. Rui Manuel Póvoas, Lda.",
-        "address": "Av. 25 de Abril 29, 2870-150 Montijo, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9609195,
-          38.7132539
-        ]
-      },
-      "properties": {
-        "name": "AMBESP",
-        "address": "R:Prof. Luiz Gomes Cruz, 2870-359 Montijo, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9667257,
-          38.7123236
-        ]
-      },
-      "properties": {
-        "name": "Acentuar",
-        "address": "R. da Azinhaga, 2870-010 Montijo, Portugal",
-        "category": "hospital"
+        "name": "Centro Clínico da GNR",
+        "address": "R. Pres. Arriaga 13, 1249-086 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1138,7 +868,7 @@
       "properties": {
         "name": "Soraia Salazar — Doula, Hypnobirthing & Amamentação",
         "address": "2870-000 Montijo, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1146,14 +876,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.374619899999999,
-          38.7606975
+          -9.418142399999999,
+          38.7300091
         ]
       },
       "properties": {
-        "name": "BioHealth by Anne Swart Clinic",
-        "address": "Rua Empresarial Edifício 13 piso 0, loja 2, 2710-444 Sintra, Portugal",
-        "category": "hospital"
+        "name": "Hospital de Cascais Dr. José de Almeida",
+        "address": "Av. Brigadeiro Victor Novais Gonçalves, 2755-009 Alcabideche, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1161,14 +891,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.3672334,
-          38.764753400000004
+          -9.4321744,
+          38.7088426
         ]
       },
       "properties": {
-        "name": "Hospital Lusíadas Beloura",
-        "address": "R. das Sesmarias 3, Q.ta da Beloura, 2710-692 Sintra, Portugal",
-        "category": "hospital"
+        "name": "Hospital CUF Cascais",
+        "address": "R. Fernão Lopes 60, 2750-663 Cascais, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1176,14 +906,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.3481749,
-          38.751463799999996
+          -9.400820999999999,
+          38.733689999999996
         ]
       },
       "properties": {
-        "name": "USF Albasaúde",
-        "address": "Bairro Tabaqueira, 2635-101 Rio de Mouro, Portugal",
-        "category": "hospital"
+        "name": "Centro de Medicina de Reabilitação de Alcoitão",
+        "address": "Rua Conde Barão, 2649-506 Alcabideche, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1191,14 +921,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.3435677,
-          38.7472105
+          -9.4077633,
+          38.7297711
         ]
       },
       "properties": {
-        "name": "Centro Médico Cabra Figa, Lda",
-        "address": "R. São Sebastião 5, 2635-448 Rio de Mouro, Portugal",
-        "category": "hospital"
+        "name": "Unidade de Saúde São Martinho de Alcabideche",
+        "address": "R. Rio das Grades 78, 2645-030 Alcabideche, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1206,14 +936,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.308465,
-          38.763251
+          -9.4054644,
+          38.7074644
         ]
       },
       "properties": {
-        "name": "AniCura Alma Veterinária Hospital Veterinário | Urgências 24 horas",
-        "address": "Estr. Ligeiras 5, 2735-337 Agualva-Cacém, Portugal",
-        "category": "hospital"
+        "name": "CS",
+        "address": "Av. Sabóia 859A, Monte Estoril, 2785-581 Estoril, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1221,14 +951,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.298157,
-          38.768706
+          -9.445816299999999,
+          38.7281021
         ]
       },
       "properties": {
-        "name": "Cintramédica Cacém-Estação",
-        "address": "R. Bartolomeu Dias 10 B, 2735-068 Agualva-Cacém, Portugal",
-        "category": "hospital"
+        "name": "Gpsaúde - Soc. Gestora Centro Medicina Física Reabilitação Sul, S.A",
+        "address": "R. Tomaz da Fonseca, 2750 Aldeia de Juso, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1236,14 +966,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.28152,
-          38.7561457
+          -9.4507145,
+          38.7082684
         ]
       },
       "properties": {
-        "name": "Equipa de Psiquiatria Comunitária do Hospital Fernando Fonseca - Massamá",
-        "address": "R. Dr. António Garcia de Vasconcelos 2745, Massamá, 2745-820 Queluz, Portugal",
-        "category": "hospital"
+        "name": "Clínica De Doentes Pulcdp monares-Lda",
+        "address": "Campo Grande 4.4 º, R. dos Tordos C7, 2750-712 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1251,14 +981,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2973997,
-          38.769810799999995
+          -9.3757185,
+          38.7097155
         ]
       },
       "properties": {
-        "name": "Centro Medico Santa Clara, Lda.",
-        "address": "R. António Nunes Sequeira 32, 2735-056 Agualva-Cacém, Portugal",
-        "category": "hospital"
+        "name": "Clínica Dr Rogério",
+        "address": "R. Pêro da Covilhã, 2765-182 Estoril, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1266,14 +996,104 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.276111199999999,
-          38.7532214
+          -9.3384498,
+          38.723165699999996
         ]
       },
       "properties": {
-        "name": "Ceclima-Centro Medico E De Enfermagem, Lda.",
-        "address": "R. António José de Almeida 1, Massamá, 2745-720 Queluz, Portugal",
-        "category": "hospital"
+        "name": "Igreja Nave",
+        "address": "Av. Salgueiro Maia 978A, 2785-754 São Domingos de Rana, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3105393,
+          38.7068066
+        ]
+      },
+      "properties": {
+        "name": "Medition Info",
+        "address": "R. Raul Indipwo, 2780-384 Oeiras, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.330669499999999,
+          38.7320491
+        ]
+      },
+      "properties": {
+        "name": "Maternar - Sara Pinto Gonçalves",
+        "address": "2785-299 São Domingos de Rana, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.270002999999999,
+          38.70792
+        ]
+      },
+      "properties": {
+        "name": "Hospital Prisional São João Deus",
+        "address": "Largo Murganhal 2760, 2760 Caxias, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2716844,
+          38.7118398
+        ]
+      },
+      "properties": {
+        "name": "Naturidade Laveiras",
+        "address": "Estr. Murganhal, 2760-074 Caxias, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2704869,
+          38.7100657
+        ]
+      },
+      "properties": {
+        "name": "Unidade de Cuidados Médicos",
+        "address": "Estr. Murganhal, Murganhal, 2760 Caxias, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3059729,
+          38.7059334
+        ]
+      },
+      "properties": {
+        "name": "Glamour Daniela Bias",
+        "address": "EST de Oeiras, 2780-374 Oeiras, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1288,7 +1108,7 @@
       "properties": {
         "name": "Hospital Professor Doutor Fernando Fonseca",
         "address": "IC19 276, 2720-276 Amadora, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1296,14 +1116,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.22951,
-          38.748504
+          -9.2182735,
+          38.707084099999996
         ]
       },
       "properties": {
-        "name": "Hospital Lusíadas Amadora",
-        "address": "Av. dos Hospitais Civis de Lisboa 8, 2724-002 Amadora, Portugal",
-        "category": "hospital"
+        "name": "Hospital de São Francisco Xavier",
+        "address": "Estr. Forte do Alto Duque Piso-3, 1449-005 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1311,14 +1131,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2392501,
-          38.7526057
+          -9.233873299999999,
+          38.7269912
         ]
       },
       "properties": {
-        "name": "Unidade de Saúde Tipo II da Amadora (UNS II Amadora)",
-        "address": "Av. Conde Castro Guimarães, 2720-113 Amadora, Portugal",
-        "category": "hospital"
+        "name": "Hospital Santa Cruz",
+        "address": "Av. Prof. Dr. Reinaldo dos Santos, 2790-134 Carnaxide, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1326,14 +1146,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2235993,
-          38.7577968
+          -9.2141784,
+          38.7116719
         ]
       },
       "properties": {
-        "name": "Dental Clinic Medicare",
-        "address": "Av. Eduardo Jorge 55, 2700-314 Amadora, Portugal",
-        "category": "hospital"
+        "name": "Veterinary Hospital Restelo",
+        "address": "R. Gregório Lopes 1513 Loja E, 1400-195 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1341,14 +1161,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2334996,
-          38.7496805
+          -9.2334481,
+          38.7317274
         ]
       },
       "properties": {
-        "name": "Centro Médico D. José I, Lda.",
-        "address": "R. José Afonso 5, 2720-310 Reboleira, Portugal",
-        "category": "hospital"
+        "name": "Instituto S. João de Deus - Carnaxide",
+        "address": "Av. João Paulo II 29, 2790-249 Carnaxide, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1356,14 +1176,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2295804,
-          38.7486931
+          -9.2302868,
+          38.7284742
         ]
       },
       "properties": {
-        "name": "Travessa da esquininha",
-        "address": "Av. dos Hospitais Civis de Lisboa, 2720-275 Reboleira, Portugal",
-        "category": "hospital"
+        "name": "Centro Oncológico Dra. Natália Chaves",
+        "address": "R. Manuel Anastácio Alves 2 2790, 2790 Carnaxide, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.230577199999999,
+          38.7283824
+        ]
+      },
+      "properties": {
+        "name": "clinica quadrantes",
+        "address": "R. Manuel Anastácio Alves, 2790 Carnaxide, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1378,7 +1213,7 @@
       "properties": {
         "name": "Hospital Lusíadas Alfragide",
         "address": "R. Alfredo da Silva 16, 2610-016 Amadora, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1386,14 +1221,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.192490399999999,
-          38.7562
+          -9.172468799999999,
+          38.7036089
         ]
       },
       "properties": {
-        "name": "Hospital da Luz",
-        "address": "Av. Lusíada 100, 1500-650 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "CUF Tejo",
+        "address": "Av. José Manuel de Mello 171, 1350-352 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1401,14 +1236,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.179496,
-          38.749379
+          -9.172454799999999,
+          38.7037208
         ]
       },
       "properties": {
-        "name": "Hospital Lusíadas Lisboa",
-        "address": "R. Abílio Mendes 12, 1500-458 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Centro Gamma Knife - Radiocirurgia, S.A",
+        "address": "Tv. Castro 3, 1350-070 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1416,14 +1251,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.174878999999999,
-          38.7567634
+          -9.173306199999999,
+          38.703883000000005
         ]
       },
       "properties": {
-        "name": "Hospital da Luz Torres de Lisboa",
-        "address": "Rua Tomás da Fonseca Edifícios B, D, E, F e H, 1600-209 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Nephrocare CUF Tejo",
+        "address": "Av. 24 de Julho 171, 1350 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1431,14 +1266,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1827709,
-          38.7642296
+          -9.137453299999999,
+          38.717763999999995
         ]
       },
       "properties": {
-        "name": "CNS - Campus Neurológico",
-        "address": "R. Carlos Alves 5, 1600-515 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Hospital de São José (Centro Hospitalar Universitário de Lisboa Central)",
+        "address": "R. José António Serrano, 1150-199 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1446,14 +1281,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1795526,
-          38.762273799999996
+          -9.139270999999999,
+          38.728244
         ]
       },
       "properties": {
-        "name": "Clínica Cintramédica Telheiras-Lisboa",
-        "address": "R. Padre Américo 20B, 1600-548 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Dona Estefânia",
+        "address": "R. Jacinta Marto 8A, 1169-045 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1461,224 +1296,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.192947,
-          38.756442299999996
+          -9.1613696,
+          38.739725199999995
         ]
       },
       "properties": {
-        "name": "Hospital da Luz - Lisboa - Urgência Pediátrica",
-        "address": "1500-650 Lisbon, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2177691,
-          38.75485090000001
-        ]
-      },
-      "properties": {
-        "name": "Centro de Saúde da Falagueira - Venda Nova",
-        "address": "R. João de Deus 2, 2700-488 Venda Nova, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1758323,
-          38.7494662
-        ]
-      },
-      "properties": {
-        "name": "Hospital dos Lusíadas",
-        "address": "Rua Luiz de Almeida 51, 1500 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1915433,
-          38.755232299999996
-        ]
-      },
-      "properties": {
-        "name": "Estacionamento Hospital da Luz Lisboa (entrada Edifício C)",
-        "address": "R. Aurélio Quintanilha 1500, 1500 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2133883,
-          38.7535148
-        ]
-      },
-      "properties": {
-        "name": "CDP Venda Nova",
-        "address": "Av. Câmara Pestana, 2700-220 Amadora, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.181595399999999,
-          38.7659429
-        ]
-      },
-      "properties": {
-        "name": "Clinica da Luz - Internamento Psiquiátrico",
-        "address": "R. da Horta Nova 2, 1600-813 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1750459,
-          38.756858099999995
-        ]
-      },
-      "properties": {
-        "name": "Tranquilidade Seguros de Saúde",
-        "address": "São Domingos de Benfica, 1600-209 Lisbon, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.178103499999999,
-          38.7639868
-        ]
-      },
-      "properties": {
-        "name": "Cirface Clinica - Cirurgia Maxilo Facial e Medicina Estética",
-        "address": "R. Poe. Bocage 2, 1600-233 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1744722,
-          38.7570585
-        ]
-      },
-      "properties": {
-        "name": "Centro de Imagiologia TDL (MCDT) Hospital da Luz",
-        "address": "Hospital da luz, Torres de, 1600-209 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.198388699999999,
-          38.7530346
-        ]
-      },
-      "properties": {
-        "name": "MINHA CLINICA- Rua Da Republica Boliviana",
-        "address": "Praça Artur Portela 9, 1500-222 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1799245,
-          38.7612162
-        ]
-      },
-      "properties": {
-        "name": "Clínica Spazzio Vita",
-        "address": "R. Padre Américo 9C, 1600-759 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.201120699999999,
-          38.7624979
-        ]
-      },
-      "properties": {
-        "name": "Vital Dent",
-        "address": "Av. dos Bombeiros Voluntários 29, 1675-107 Odivelas, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1766712,
-          38.7620596
-        ]
-      },
-      "properties": {
-        "name": "Clínica Psiquiátrica de São José de Telheiras, Irmãs Hospitaleiras",
-        "address": "Azinhaga da Torre do Fato 8, 1600-774 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.178144999999999,
-          38.764394599999996
-        ]
-      },
-      "properties": {
-        "name": "Consultorio Nações Unidas",
-        "address": "Av. das Nações Unidas 22c, 1600-531 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1606246,
-          38.74843990000001
-        ]
-      },
-      "properties": {
-        "name": "Hospital de Santa Maria",
-        "address": "Av. Prof. Egas Moniz MB, 1649-028 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Oncology Institute Francisco Gentil",
+        "address": "R. Prof. Lima Basto, 1099-023 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1693,7 +1318,7 @@
       "properties": {
         "name": "Hospital Curry Cabral",
         "address": "R. da Beneficência 8, 1069-166 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1701,14 +1326,74 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1582913,
-          38.7650879
+          -9.1455612,
+          38.7235607
         ]
       },
       "properties": {
-        "name": "Hospital Pulido Valente",
-        "address": "Alameda das Linhas de Torres 117, 1769-001 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "Santa Marta Hospital",
+        "address": "R. de Santa Marta 50, 1169-024 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1416114,
+          38.7223938
+        ]
+      },
+      "properties": {
+        "name": "Centro Hospitalar Universitário de Lisboa Central",
+        "address": "Alameda Santo António dos Capuchos, 1169-050 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1415211,
+          38.7087059
+        ]
+      },
+      "properties": {
+        "name": "Hospital da Ordem Terceira Chiado",
+        "address": "R. Serpa Pinto 7D, 1200-484 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1442082,
+          38.7194151
+        ]
+      },
+      "properties": {
+        "name": "Alegria Medical Centre",
+        "address": "Av. da Liberdade 144 4E, 1250-146 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.146761099999999,
+          38.723867999999996
+        ]
+      },
+      "properties": {
+        "name": "Diatra - Centro de Diagnóstico e Tratamento Médico , Lda.",
+        "address": "R. Alexandre Herculano 9 A, 1150-005 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1723,7 +1408,772 @@
       "properties": {
         "name": "United Medical Clinic Lisbon",
         "address": "Av. Defensores de Chaves 73B, 1000-114 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1510791,
+          38.7125121
+        ]
+      },
+      "properties": {
+        "name": "Hospital de Jesus Lisboa",
+        "address": "Tv. da Arrochela 2, 1200-032 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.141601,
+          38.735831
+        ]
+      },
+      "properties": {
+        "name": "AniCura Arco do Cego Hospital Veterinário | Urgências 24h",
+        "address": "R. Dona Filipa de Vilhena 4E 4F, 1000-135 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1631436,
+          38.7131855
+        ]
+      },
+      "properties": {
+        "name": "UCCI Rainha Dona Leonor",
+        "address": "1350-293 Lisbon, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1378334,
+          38.7141997
+        ]
+      },
+      "properties": {
+        "name": "Dolls Hospital",
+        "address": "Praça da Figueira 7, 1100-240 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1419021,
+          38.7252714
+        ]
+      },
+      "properties": {
+        "name": "Hospital Miguel Bombarda",
+        "address": "Rua Júlio Dinis 952, 1150 Porto, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.136862599999999,
+          38.7189161
+        ]
+      },
+      "properties": {
+        "name": "Clínica de São Lázaro",
+        "address": "R. de São Lázaro 102, 1150-241 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.164125799999999,
+          38.7159001
+        ]
+      },
+      "properties": {
+        "name": "Centro de Saúde CUF Campo de Ourique",
+        "address": "R. Ferreira Borges 17C, 1350-133 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1690045,
+          38.7395308
+        ]
+      },
+      "properties": {
+        "name": "Unidade de Saúde Pública Francisco George - ULS Santa Maria",
+        "address": "Centro Saúde Sete Rios, Largo Prof. Arnaldo Sampaio, 1500-559 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1289498,
+          38.7230908
+        ]
+      },
+      "properties": {
+        "name": "Health Centre Mónicas",
+        "address": "Rua da Penha de França 70, 1170-302 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9767197,
+          38.707707
+        ]
+      },
+      "properties": {
+        "name": "Clínica Médica Dr. Rui Manuel Póvoas, Lda.",
+        "address": "Av. 25 de Abril 29, 2870-150 Montijo, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9609195,
+          38.7132539
+        ]
+      },
+      "properties": {
+        "name": "AMBESP",
+        "address": "R:Prof. Luiz Gomes Cruz, 2870-359 Montijo, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9667257,
+          38.7123236
+        ]
+      },
+      "properties": {
+        "name": "Acentuar",
+        "address": "R. da Azinhaga, 2870-010 Montijo, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.374619899999999,
+          38.7606975
+        ]
+      },
+      "properties": {
+        "name": "BioHealth by Anne Swart Clinic",
+        "address": "Rua Empresarial Edifício 13 piso 0, loja 2, 2710-444 Sintra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3672334,
+          38.764753400000004
+        ]
+      },
+      "properties": {
+        "name": "Hospital Lusíadas Beloura",
+        "address": "R. das Sesmarias 3, Q.ta da Beloura, 2710-692 Sintra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.308465,
+          38.763251
+        ]
+      },
+      "properties": {
+        "name": "AniCura Alma Veterinária Hospital Veterinário | Urgências 24 horas",
+        "address": "Estr. Ligeiras 5, 2735-337 Agualva-Cacém, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3481749,
+          38.751463799999996
+        ]
+      },
+      "properties": {
+        "name": "USF Albasaúde",
+        "address": "Bairro Tabaqueira, 2635-101 Rio de Mouro, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3085487,
+          38.7693513
+        ]
+      },
+      "properties": {
+        "name": "USF Flor de Lótus",
+        "address": "R. do Olival 13 15, 2735-304 Agualva-Cacém, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3435677,
+          38.7472105
+        ]
+      },
+      "properties": {
+        "name": "Centro Médico Cabra Figa, Lda",
+        "address": "R. São Sebastião 5, 2635-448 Rio de Mouro, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.298157,
+          38.768706
+        ]
+      },
+      "properties": {
+        "name": "Cintramédica Cacém-Estação",
+        "address": "R. Bartolomeu Dias 10 B, 2735-068 Agualva-Cacém, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.28152,
+          38.7561457
+        ]
+      },
+      "properties": {
+        "name": "Equipa de Psiquiatria Comunitária do Hospital Fernando Fonseca - Massamá",
+        "address": "R. Dr. António Garcia de Vasconcelos 2745, Massamá, 2745-820 Queluz, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2973997,
+          38.769810799999995
+        ]
+      },
+      "properties": {
+        "name": "Centro Medico Santa Clara, Lda.",
+        "address": "R. António Nunes Sequeira 32, 2735-056 Agualva-Cacém, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.276111199999999,
+          38.7532214
+        ]
+      },
+      "properties": {
+        "name": "Ceclima-Centro Medico E De Enfermagem, Lda.",
+        "address": "R. António José de Almeida 1, Massamá, 2745-720 Queluz, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.274855299999999,
+          38.773397599999996
+        ]
+      },
+      "properties": {
+        "name": "Casa de Saúde da Idanha — Instituto das Irmãs Hospitaleiras do Sagrado Coração de Jesus",
+        "address": "R. Bento Menni 8, 2605-077 Belas, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2688995,
+          38.7444591
+        ]
+      },
+      "properties": {
+        "name": "Pivotal",
+        "address": "Rua Prof. J. Mineiro 16-1A, 2730-146 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.22951,
+          38.748504
+        ]
+      },
+      "properties": {
+        "name": "Hospital Lusíadas Amadora",
+        "address": "Av. dos Hospitais Civis de Lisboa 8, 2724-002 Amadora, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2177691,
+          38.75485090000001
+        ]
+      },
+      "properties": {
+        "name": "Centro de Saúde da Falagueira - Venda Nova",
+        "address": "R. João de Deus 2, 2700-488 Venda Nova, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2392501,
+          38.7526057
+        ]
+      },
+      "properties": {
+        "name": "Unidade de Saúde Tipo II da Amadora (UNS II Amadora)",
+        "address": "Av. Conde Castro Guimarães, 2720-113 Amadora, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2133883,
+          38.7535148
+        ]
+      },
+      "properties": {
+        "name": "CDP Venda Nova",
+        "address": "Av. Câmara Pestana, 2700-220 Amadora, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2235993,
+          38.7577968
+        ]
+      },
+      "properties": {
+        "name": "Dental Clinic Medicare",
+        "address": "Av. Eduardo Jorge 55, 2700-314 Amadora, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2334996,
+          38.7496805
+        ]
+      },
+      "properties": {
+        "name": "Centro Médico D. José I, Lda.",
+        "address": "R. José Afonso 5, 2720-310 Reboleira, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2295804,
+          38.7486931
+        ]
+      },
+      "properties": {
+        "name": "Travessa da esquininha",
+        "address": "Av. dos Hospitais Civis de Lisboa, 2720-275 Reboleira, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.192490399999999,
+          38.7562
+        ]
+      },
+      "properties": {
+        "name": "Hospital da Luz",
+        "address": "Av. Lusíada 100, 1500-650 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.179496,
+          38.749379
+        ]
+      },
+      "properties": {
+        "name": "Hospital Lusíadas Lisboa",
+        "address": "R. Abílio Mendes 12, 1500-458 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1753783,
+          38.7670173
+        ]
+      },
+      "properties": {
+        "name": "Hospital das Forças Armadas",
+        "address": "Azinhaga Ulmeiros, 1649-020 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.174878999999999,
+          38.7567634
+        ]
+      },
+      "properties": {
+        "name": "Hospital da Luz Torres de Lisboa",
+        "address": "Rua Tomás da Fonseca Edifícios B, D, E, F e H, 1600-209 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.175283400000001,
+          38.7459863
+        ]
+      },
+      "properties": {
+        "name": "Hospital Cruz Vermelha",
+        "address": "R. Duarte Galvão 54, 1500-048 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1827709,
+          38.7642296
+        ]
+      },
+      "properties": {
+        "name": "CNS - Campus Neurológico",
+        "address": "R. Carlos Alves 5, 1600-515 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1795526,
+          38.762273799999996
+        ]
+      },
+      "properties": {
+        "name": "Clínica Cintramédica Telheiras-Lisboa",
+        "address": "R. Padre Américo 20B, 1600-548 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.192947,
+          38.756442299999996
+        ]
+      },
+      "properties": {
+        "name": "Hospital da Luz - Lisboa - Urgência Pediátrica",
+        "address": "1500-650 Lisbon, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.174908199999999,
+          38.766139599999995
+        ]
+      },
+      "properties": {
+        "name": "Centro de Medicina Aeronáutica",
+        "address": "Azinhaga Ulmeiros, 1600 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1758323,
+          38.7494662
+        ]
+      },
+      "properties": {
+        "name": "Hospital dos Lusíadas",
+        "address": "Rua Luiz de Almeida 51, 1500 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1734654,
+          38.7522745
+        ]
+      },
+      "properties": {
+        "name": "Clínica Cintramédica Laranjeiras-Lisboa",
+        "address": "R. São Tomás de Aquino 4, 1600-203 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1915433,
+          38.755232299999996
+        ]
+      },
+      "properties": {
+        "name": "Estacionamento Hospital da Luz Lisboa (entrada Edifício C)",
+        "address": "R. Aurélio Quintanilha 1500, 1500 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1742176,
+          38.766076999999996
+        ]
+      },
+      "properties": {
+        "name": "Centro de Medicina Subaquática e Hiperbárica",
+        "address": "Azinhaga Ulmeiros, 1649-020 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.181595399999999,
+          38.7659429
+        ]
+      },
+      "properties": {
+        "name": "Clinica da Luz - Internamento Psiquiátrico",
+        "address": "R. da Horta Nova 2, 1600-813 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1763225,
+          38.7469104
+        ]
+      },
+      "properties": {
+        "name": "Acesso Norte ao Hospital Cruz Vermelha",
+        "address": "Alto dos Moinhos 14, 1500-458 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1756989,
+          38.745438
+        ]
+      },
+      "properties": {
+        "name": "Acesso Sul ao Hospital Cruz Vermelha",
+        "address": "R. Duarte Galvão 20, 1500-252 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1754091,
+          38.7660346
+        ]
+      },
+      "properties": {
+        "name": "HFAR Cardiologia",
+        "address": "Azinhaga Ulmeiros, 1600-777 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1750459,
+          38.756858099999995
+        ]
+      },
+      "properties": {
+        "name": "Tranquilidade Seguros de Saúde",
+        "address": "São Domingos de Benfica, 1600-209 Lisbon, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1606246,
+          38.74843990000001
+        ]
+      },
+      "properties": {
+        "name": "Hospital de Santa Maria",
+        "address": "Av. Prof. Egas Moniz MB, 1649-028 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1582913,
+          38.7650879
+        ]
+      },
+      "properties": {
+        "name": "Hospital Pulido Valente",
+        "address": "Alameda das Linhas de Torres 117, 1769-001 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1738,7 +2188,7 @@
       "properties": {
         "name": "Urgências Centrais Hospital de Santa Maria",
         "address": "Av. Prof. Egas Moniz, 1649-035 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1753,7 +2203,7 @@
       "properties": {
         "name": "Parque da Saúde de Lisboa",
         "address": "Av. do Brasil 53 1700, 1700 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1768,7 +2218,7 @@
       "properties": {
         "name": "Urgência Pediátrica Hospital de Santa Maria",
         "address": "Av. Prof. Egas Moniz MB, 1649-028 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1783,7 +2233,7 @@
       "properties": {
         "name": "Centro de Diagnóstico Pneumológico Dr. Ribeiro Sanches",
         "address": "Alameda das Linhas de Torres 115, 1750-147 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1798,7 +2248,7 @@
       "properties": {
         "name": "Infarmed - Pavilhão 17A",
         "address": "1700-111 Lisbon, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1813,157 +2263,7 @@
       "properties": {
         "name": "Clínica da Juventude",
         "address": "R. Murtas 53, 1700 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1478366,
-          38.744232499999995
-        ]
-      },
-      "properties": {
-        "name": "Clinica Sanin",
-        "address": "Av. da República 101 2 andar A, 1050-190 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1477152,
-          38.7438941
-        ]
-      },
-      "properties": {
-        "name": "Imagens Medicas Integradas",
-        "address": "Av. da República 99B, 1050-190 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.155662399999999,
-          38.739550799999996
-        ]
-      },
-      "properties": {
-        "name": "Instituto De Gastroenterologia E Patologia - Comed - Serviços Médicos, Lda",
-        "address": "R. Ten. Espanca 31, 1050-220 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1618687,
-          38.7484566
-        ]
-      },
-      "properties": {
-        "name": "Urgência Obstetrícia/Ginecologia",
-        "address": "Av. Prof. Egas Moniz, 1649-035 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.151112399999999,
-          38.741514699999996
-        ]
-      },
-      "properties": {
-        "name": "Consulta viajante",
-        "address": "R. da Beneficência 8, 1069-166 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.151911499999999,
-          38.741301299999996
-        ]
-      },
-      "properties": {
-        "name": "HCC-CE CRI COLUNA - ORTOPEDIA HOSPITAL CURRY CABRAL",
-        "address": "R. da Beneficência 8, 1050-099 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1400154,
-          38.756196599999996
-        ]
-      },
-      "properties": {
-        "name": "Germano de Sousa - Posto de Alvalade",
-        "address": "Av. Rio de Janeiro 27A, 1700-337 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.151867099999999,
-          38.741689799999996
-        ]
-      },
-      "properties": {
-        "name": "Clinica da Mama",
-        "address": "R. da Beneficência 8, 1069-166 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.162778,
-          38.748242499999996
-        ]
-      },
-      "properties": {
-        "name": "Serviço Radioterapia",
-        "address": "ULS Santa Maria, Av. Prof. Egas Moniz, 1635-049 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.159746499999999,
-          38.7657613
-        ]
-      },
-      "properties": {
-        "name": "Imagiologia Pulido Valente",
-        "address": "1600 Lisbon, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1978,7 +2278,7 @@
       "properties": {
         "name": "Hospital CUF Descobertas",
         "address": "R. Mário Botas S/N, 1998-018 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -1993,7 +2293,7 @@
       "properties": {
         "name": "SAMS Hospital",
         "address": "R. Cidade de Gabela 1, 1849-017 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2008,7 +2308,7 @@
       "properties": {
         "name": "Parque Hospital CUF Descobertas Edifício 1",
         "address": "R. Corsário das Ilhas, 1990-249 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2023,7 +2323,7 @@
       "properties": {
         "name": "Seena Integrative Health Centre",
         "address": "R. das Musas 13A, 1990-165 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2038,7 +2338,7 @@
       "properties": {
         "name": "Hospital Sams Atendimento Permanente",
         "address": "R. Cidade de Nova Lisboa 28, 1800 Lisboa, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2053,397 +2353,7 @@
       "properties": {
         "name": "Dr Marta Beauty Aesthetic Clinic",
         "address": "Av. Dom João II 35, 1990-083 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1214652,
-          38.763227199999996
-        ]
-      },
-      "properties": {
-        "name": "Ecocentro - Centro Medico De Ultrasonografia, Lda",
-        "address": "R. Cidade da Beira 93, 1800-068 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0950837,
-          38.757838899999996
-        ]
-      },
-      "properties": {
-        "name": "Babyoga - Yoga para Bebés - Parque das Nações",
-        "address": "R. Nova dos Mercadores 3, 1990-202 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3814259,
-          38.802376699999996
-        ]
-      },
-      "properties": {
-        "name": "USF Cynthia",
-        "address": "Av. Dr. Desidério Cambournac 4, 2710-573 Sintra, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3438774,
-          38.7953014
-        ]
-      },
-      "properties": {
-        "name": "Unilabs",
-        "address": "Estr. Mem Martins 239 A, 2725-341 Sintra, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3424671,
-          38.796042199999995
-        ]
-      },
-      "properties": {
-        "name": "Clínica Cintramédica Mem Martins",
-        "address": "Estr. Mem Martins 267, 2725-391 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3436135,
-          38.7953535
-        ]
-      },
-      "properties": {
-        "name": "Ministério Da Saúde",
-        "address": "Estr. Mem Martins 247, 2725-079 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3521077,
-          38.7908468
-        ]
-      },
-      "properties": {
-        "name": "Número de utente",
-        "address": "R. Eiras 50, 2725-297 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3286629,
-          38.795180699999996
-        ]
-      },
-      "properties": {
-        "name": "Laboratório de Análises da Terrugem",
-        "address": "R. Fernando Lopes Graça 27, 2725-397 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3275809,
-          38.795853
-        ]
-      },
-      "properties": {
-        "name": "Unidade de Saúde da Tapada das Mercês",
-        "address": "R. Adelino da Palma Carlos, 2725-079 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3382537,
-          38.7948709
-        ]
-      },
-      "properties": {
-        "name": "Dentista",
-        "address": "R. Rio da Azenha 3, 2725-164 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3178301,
-          38.7863993
-        ]
-      },
-      "properties": {
-        "name": "Mouras Pet Shop",
-        "address": "2635-102 Rio de Mouro, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3403444,
-          38.8000501
-        ]
-      },
-      "properties": {
-        "name": "A.S.P.-Comércio De Material Médico E Cirúrgico, Lda.",
-        "address": "Rua dos Morés 8, 2725-079 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3343691,
-          38.7982213
-        ]
-      },
-      "properties": {
-        "name": "Стоматология",
-        "address": "Av. Miguel Torga 84C, 2725-566 Algueirão-Mem Martins, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3027003,
-          38.7811869
-        ]
-      },
-      "properties": {
-        "name": "Cruz Vermelha Portuguesa - Cacém",
-        "address": "Rua 1º de Maio, Villa 445, Mira, 2735-521 Agualva-Cacém, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.182597399999999,
-          38.794860899999996
-        ]
-      },
-      "properties": {
-        "name": "Policlinica Primavera",
-        "address": "Av. Prof. Dr. Augusto Abreu Lopes 45 lj drt, 2675-301 Odivelas, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.175120800000002,
-          38.788651099999996
-        ]
-      },
-      "properties": {
-        "name": "Check-Up Med (Odivelas)",
-        "address": "R. Henrique Manuel Ginja Cardoso 58, 2675-303 Odivelas, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1936573,
-          38.802622299999996
-        ]
-      },
-      "properties": {
-        "name": "Centro Médico da Ramada",
-        "address": "R. Cmte. Sacadura Cabral 47, 2620-289 Ramada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.175734,
-          38.789921
-        ]
-      },
-      "properties": {
-        "name": "Centro Médico e de Enfermagem São Romão",
-        "address": "R. Guilherme Gomes Fernandes n 19 1 Esq, 2675-370 Odivelas, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2105199,
-          38.791449199999995
-        ]
-      },
-      "properties": {
-        "name": "Polar fix industria e comercio de produtos hospitalares",
-        "address": "Rua José António Carvalho 1685, 1685-907 Famões, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.182018099999999,
-          38.7865071
-        ]
-      },
-      "properties": {
-        "name": "Home new",
-        "address": "R. António Enes 1B, 2675-329 Odivelas, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1815341,
-          38.8019944
-        ]
-      },
-      "properties": {
-        "name": "maternidadecomproposito.dozero",
-        "address": "R. Soeiro Pereira Gomes 20, 2620-256 Ramada, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1618641,
-          38.783960799999996
-        ]
-      },
-      "properties": {
-        "name": "Centro De Diagnóstico Cardiológico Professor Armando Pereirinha 2, Lda.",
-        "address": "R. Prof. Barahona Fernandes 4, 1750 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1035683,
-          38.7939824
-        ]
-      },
-      "properties": {
-        "name": "Clínica Lusíadas Oriente",
-        "address": "R. Álvaro Pedro Gomes 13, 2685-141 Sacavém, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0980457,
-          38.8030968
-        ]
-      },
-      "properties": {
-        "name": "Hospital do Mar Cuidados Especializados Lisboa",
-        "address": "R. dos Girassóis 6 e 6A, 2695-458 Bobadela, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.096485999999999,
-          38.78156
-        ]
-      },
-      "properties": {
-        "name": "Veterinary Hospital Vasco da Gama",
-        "address": "Rotunda das Oliveiras 1A, 1990-427 Lisboa, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1103424,
-          38.7930108
-        ]
-      },
-      "properties": {
-        "name": "Sacavém Medical Center",
-        "address": "R. Júlio Bruno da Costa Pereira 13A 1º, 2685-066 Sacavém, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2458,7 +2368,7 @@
       "properties": {
         "name": "Hospital Veterinário do Exército",
         "address": "Praceta das Naus 42 2685, 1800 Portela, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2466,14 +2376,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.111033400000002,
-          38.7829309
+          -9.1214652,
+          38.763227199999996
         ]
       },
       "properties": {
-        "name": "Intercare - Gestão Hospitalar Lda",
-        "address": "Rotunda Nuno Rodrigues dos Santos 1A, 2685-233 Portela, Portugal",
-        "category": "hospital"
+        "name": "Ecocentro - Centro Medico De Ultrasonografia, Lda",
+        "address": "R. Cidade da Beira 93, 1800-068 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2481,14 +2391,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.095034,
-          38.77899
+          -9.1314424,
+          38.7490665
         ]
       },
       "properties": {
-        "name": "Corpaldente",
-        "address": "Alameda dos Oceanos 4, 1990-613 Lisboa, Portugal",
-        "category": "hospital"
+        "name": "PAH - Portugal Advanced Health",
+        "address": "Av. dos Estados Unidos da América 2, 1700-031 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0950837,
+          38.757838899999996
+        ]
+      },
+      "properties": {
+        "name": "Babyoga - Yoga para Bebés - Parque das Nações",
+        "address": "R. Nova dos Mercadores 3, 1990-202 Lisboa, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2503,7 +2428,517 @@
       "properties": {
         "name": "D.C Mazuze",
         "address": "R. Bento de Jesus Caraça 65, 1885-015 Moscavide, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.095034,
+          38.77899
+        ]
+      },
+      "properties": {
+        "name": "Corpaldente",
+        "address": "Alameda dos Oceanos 4, 1990-613 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.353076399999999,
+          38.781095799999996
+        ]
+      },
+      "properties": {
+        "name": "Hospital CUF Sintra",
+        "address": "Av. Raul Solnado 8 e 8A, 2710-204 Sintra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3814259,
+          38.802376699999996
+        ]
+      },
+      "properties": {
+        "name": "USF Cynthia",
+        "address": "Av. Dr. Desidério Cambournac 4, 2710-573 Sintra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3521077,
+          38.7908468
+        ]
+      },
+      "properties": {
+        "name": "Número de utente",
+        "address": "R. Eiras 50, 2725-297 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3539504,
+          38.8087588
+        ]
+      },
+      "properties": {
+        "name": "Hospital de Sintra",
+        "address": "R. Cidade de Loulé, 2725-004 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3438774,
+          38.7953014
+        ]
+      },
+      "properties": {
+        "name": "Unilabs",
+        "address": "Estr. Mem Martins 239 A, 2725-341 Sintra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3424671,
+          38.796042199999995
+        ]
+      },
+      "properties": {
+        "name": "Clínica Cintramédica Mem Martins",
+        "address": "Estr. Mem Martins 267, 2725-391 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3515825,
+          38.8108691
+        ]
+      },
+      "properties": {
+        "name": "Bairro da Cavaleira",
+        "address": "R. Cidade de Loulé 15, 2725-079 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3436135,
+          38.7953535
+        ]
+      },
+      "properties": {
+        "name": "Ministério Da Saúde",
+        "address": "Estr. Mem Martins 247, 2725-079 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3286629,
+          38.795180699999996
+        ]
+      },
+      "properties": {
+        "name": "Laboratório de Análises da Terrugem",
+        "address": "R. Fernando Lopes Graça 27, 2725-397 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3275809,
+          38.795853
+        ]
+      },
+      "properties": {
+        "name": "Unidade de Saúde da Tapada das Mercês",
+        "address": "R. Adelino da Palma Carlos, 2725-079 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3382537,
+          38.7948709
+        ]
+      },
+      "properties": {
+        "name": "Dentista",
+        "address": "R. Rio da Azenha 3, 2725-164 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.353952399999999,
+          38.8083871
+        ]
+      },
+      "properties": {
+        "name": "SUBUNIDADE Hospitais Amadora Sintra",
+        "address": "2725-079 Algueirão–Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3178301,
+          38.7863993
+        ]
+      },
+      "properties": {
+        "name": "Mouras Pet Shop",
+        "address": "2635-102 Rio de Mouro, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3403444,
+          38.8000501
+        ]
+      },
+      "properties": {
+        "name": "A.S.P.-Comércio De Material Médico E Cirúrgico, Lda.",
+        "address": "Rua dos Morés 8, 2725-079 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3343691,
+          38.7982213
+        ]
+      },
+      "properties": {
+        "name": "Стоматология",
+        "address": "Av. Miguel Torga 84C, 2725-566 Algueirão-Mem Martins, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3027003,
+          38.7811869
+        ]
+      },
+      "properties": {
+        "name": "Cruz Vermelha Portuguesa - Cacém",
+        "address": "Rua 1º de Maio, Villa 445, Mira, 2735-521 Agualva-Cacém, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2636389,
+          38.776190799999995
+        ]
+      },
+      "properties": {
+        "name": "Instituto das Irmãs Hospitaleiras do Sagrado Coração de Jesus - Casa de Saúde de Santa Rosa de Lima",
+        "address": "Praça 5 de Outubro 5, 2605-021 Belas, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.219870799999999,
+          38.775304999999996
+        ]
+      },
+      "properties": {
+        "name": "Trofa Saúde Amadora",
+        "address": "Av. Cruzeiro Seixas nºs 5 e 7 fração FU, 2650-504 Amadora, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2105199,
+          38.791449199999995
+        ]
+      },
+      "properties": {
+        "name": "Polar fix industria e comercio de produtos hospitalares",
+        "address": "Rua José António Carvalho 1685, 1685-907 Famões, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.182597399999999,
+          38.794860899999996
+        ]
+      },
+      "properties": {
+        "name": "Policlinica Primavera",
+        "address": "Av. Prof. Dr. Augusto Abreu Lopes 45 lj drt, 2675-301 Odivelas, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.175120800000002,
+          38.788651099999996
+        ]
+      },
+      "properties": {
+        "name": "Check-Up Med (Odivelas)",
+        "address": "R. Henrique Manuel Ginja Cardoso 58, 2675-303 Odivelas, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1936573,
+          38.802622299999996
+        ]
+      },
+      "properties": {
+        "name": "Centro Médico da Ramada",
+        "address": "R. Cmte. Sacadura Cabral 47, 2620-289 Ramada, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.175734,
+          38.789921
+        ]
+      },
+      "properties": {
+        "name": "Centro Médico e de Enfermagem São Romão",
+        "address": "R. Guilherme Gomes Fernandes n 19 1 Esq, 2675-370 Odivelas, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.182018099999999,
+          38.7865071
+        ]
+      },
+      "properties": {
+        "name": "Home new",
+        "address": "R. António Enes 1B, 2675-329 Odivelas, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1815341,
+          38.8019944
+        ]
+      },
+      "properties": {
+        "name": "maternidadecomproposito.dozero",
+        "address": "R. Soeiro Pereira Gomes 20, 2620-256 Ramada, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1618641,
+          38.783960799999996
+        ]
+      },
+      "properties": {
+        "name": "Centro De Diagnóstico Cardiológico Professor Armando Pereirinha 2, Lda.",
+        "address": "R. Prof. Barahona Fernandes 4, 1750 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1035683,
+          38.7939824
+        ]
+      },
+      "properties": {
+        "name": "Clínica Lusíadas Oriente",
+        "address": "R. Álvaro Pedro Gomes 13, 2685-141 Sacavém, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0980457,
+          38.8030968
+        ]
+      },
+      "properties": {
+        "name": "Hospital do Mar Cuidados Especializados Lisboa",
+        "address": "R. dos Girassóis 6 e 6A, 2695-458 Bobadela, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.096485999999999,
+          38.78156
+        ]
+      },
+      "properties": {
+        "name": "Veterinary Hospital Vasco da Gama",
+        "address": "Rotunda das Oliveiras 1A, 1990-427 Lisboa, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1228819,
+          38.8069752
+        ]
+      },
+      "properties": {
+        "name": "Casa de Saúde de Santa Maria",
+        "address": "Alameda Dr. Francisco Sá Carneiro 30, 2680-040 Camarate, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1103424,
+          38.7930108
+        ]
+      },
+      "properties": {
+        "name": "Sacavém Medical Center",
+        "address": "R. Júlio Bruno da Costa Pereira 13A 1º, 2685-066 Sacavém, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1229351,
+          38.8069929
+        ]
+      },
+      "properties": {
+        "name": "Associacao De Apoio A Profissionais Do Hospital Santa Maria",
+        "address": "Alameda Dr. Francisco Sá Carneiro 30, 2680-040 Camarate, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.111033400000002,
+          38.7829309
+        ]
+      },
+      "properties": {
+        "name": "Intercare - Gestão Hospitalar Lda",
+        "address": "Rotunda Nuno Rodrigues dos Santos 1A, 2685-233 Portela, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2518,37 +2953,7 @@
       "properties": {
         "name": "Hospital Beatriz Ângelo",
         "address": "Av. Carlos Teixeira 3, 2674-514 Loures, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1767355,
-          38.821331799999996
-        ]
-      },
-      "properties": {
-        "name": "Momentos de Sol - Hospital Beatriz Ângelo",
-        "address": "Av. Carlos Teixeira 3, 2670-514 Loures, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.156101600000001,
-          38.834105099999995
-        ]
-      },
-      "properties": {
-        "name": "Trofa Saúde Loures",
-        "address": "Centro Comercial Loureshopping, Av. Descobertas 90 Loja, A009, 2670-457 Loures, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2563,7 +2968,7 @@
       "properties": {
         "name": "CM Saúde",
         "address": "R. Barbosa de Rezende 17B, 2670-420 Loures, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2578,7 +2983,37 @@
       "properties": {
         "name": "Cm - Centro Medico Santa Maria, Lda.",
         "address": "Rua da República 116, 2670-421 Loures, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1767355,
+          38.821331799999996
+        ]
+      },
+      "properties": {
+        "name": "Momentos de Sol - Hospital Beatriz Ângelo",
+        "address": "Av. Carlos Teixeira 3, 2670-514 Loures, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.156101600000001,
+          38.834105099999995
+        ]
+      },
+      "properties": {
+        "name": "Trofa Saúde Loures",
+        "address": "Centro Comercial Loureshopping, Av. Descobertas 90 Loja, A009, 2670-457 Loures, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2593,7 +3028,7 @@
       "properties": {
         "name": "Centro Saúde Pero Pinheiro",
         "address": "R. do Alto Pina 37, 2715-311 Pêro Pinheiro, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2601,74 +3036,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.352084,
-          38.94327
+          -9.264628199999999,
+          38.851451499999996
         ]
       },
       "properties": {
-        "name": "Anicura Atlântico Hospital Veterinário | Urgências 24h",
-        "address": "Rua Quintino António Gomes 12, 2640-402 Mafra, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3360303,
-          38.93722460000001
-        ]
-      },
-      "properties": {
-        "name": "Unidade de Saúde Familiar D. João V",
-        "address": "Largo Cel. Brito Gorjão 15, 2640-465 Mafra, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3322741,
-          38.9443264
-        ]
-      },
-      "properties": {
-        "name": "Clinica Encarnação",
-        "address": "R. Azinhaga do Pinheiro 2, 2640-521 Mafra, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.326898199999999,
-          38.9398882
-        ]
-      },
-      "properties": {
-        "name": "Unidade Militar de Medicina Veterinária",
-        "address": "Largo Gen. Conde de São Januário, 2640-530 Mafra, Portugal",
-        "category": "hospital"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.328087,
-          38.94581
-        ]
-      },
-      "properties": {
-        "name": "Paragem",
-        "address": "R. Luís de Camões 38, 2640-501 Mafra, Portugal",
-        "category": "hospital"
+        "name": "Centro de Saúde",
+        "address": "Bpo, 2715-311 Almargem do Bpo., Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2683,7 +3058,97 @@
       "properties": {
         "name": "Obra social do pousal",
         "address": "2665 Malveira, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.352084,
+          38.94327
+        ]
+      },
+      "properties": {
+        "name": "Anicura Atlântico Hospital Veterinário | Urgências 24h",
+        "address": "Rua Quintino António Gomes 12, 2640-402 Mafra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3360303,
+          38.93722460000001
+        ]
+      },
+      "properties": {
+        "name": "Unidade de Saúde Familiar D. João V",
+        "address": "Largo Cel. Brito Gorjão 15, 2640-465 Mafra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3322741,
+          38.9443264
+        ]
+      },
+      "properties": {
+        "name": "Clinica Encarnação",
+        "address": "R. Azinhaga do Pinheiro 2, 2640-521 Mafra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.326898199999999,
+          38.9398882
+        ]
+      },
+      "properties": {
+        "name": "Unidade Militar de Medicina Veterinária",
+        "address": "Largo Gen. Conde de São Januário, 2640-530 Mafra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.328087,
+          38.94581
+        ]
+      },
+      "properties": {
+        "name": "Paragem",
+        "address": "R. Luís de Camões 38, 2640-501 Mafra, Portugal",
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9923191,
+          38.9524219
+        ]
+      },
+      "properties": {
+        "name": "Campus de Saúde",
+        "address": "R. Sousa Martins 17, 2600-267 Vila Franca de Xira, Portugal",
+        "harvest_category": "hospital"
       }
     },
     {
@@ -2698,7 +3163,22 @@
       "properties": {
         "name": "Clínica Villatejo",
         "address": "R. Marquês Rio Maior nº19, 2600-485 Alhandra, Portugal",
-        "category": "hospital"
+        "harvest_category": "hospital"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9922339,
+          38.9530035
+        ]
+      },
+      "properties": {
+        "name": "Rua Dr. Eduardo Granada",
+        "address": "2600-076 Vila Franca de Xira, Portugal",
+        "harvest_category": "hospital"
       }
     }
   ]
