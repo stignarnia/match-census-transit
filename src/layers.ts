@@ -1,5 +1,4 @@
 import {
-    POPULATION_DENSITY_EXPRESSION,
     TILESET_URL_HEATMAP,
     SOURCE_LAYER_HEATMAP,
     TILESET_URL_BGRI,
@@ -170,47 +169,4 @@ export function setupMapLayers(map: mapboxgl.Map, theme: LayerTheme) {
             'text-emissive-strength': 1
         }
     });
-}
-
-export function setMapVisualMode(map: mapboxgl.Map, mode: string, theme: LayerTheme) {
-    // Mode: 'Nothing' (default) or 'Population density'
-
-    if (mode === 'Population density') {
-        // Heatmap: Weight by population
-        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-weight', [
-            'interpolate',
-            ['linear'],
-            ['get', 'N_INDIVIDUOS'],
-            0, 0,
-            1000, 1
-        ]);
-        // Heatmap: Lower intensity
-        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-intensity', [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            0, 0.1,
-            11, 1
-        ]);
-        // Fill: Color by density
-        map.setPaintProperty('bgri-fill', 'fill-color', POPULATION_DENSITY_EXPRESSION);
-
-        return POPULATION_DENSITY_EXPRESSION;
-    } else {
-        // Default: 'Nothing'
-        // Heatmap: Default weight
-        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-weight', 1);
-        // Heatmap: Default intensity
-        map.setPaintProperty('bgri-heatmap-layer', 'heatmap-intensity', [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            0, 1,
-            11, 3
-        ]);
-        // Fill: Default color
-        map.setPaintProperty('bgri-fill', 'fill-color', theme.COLOR_BGRI_FILL);
-
-        return theme.COLOR_BGRI_FILL;
-    }
 }

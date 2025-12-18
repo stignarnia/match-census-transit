@@ -29,6 +29,18 @@ export const POPULATION_DENSITY_EXPRESSION: ExpressionSpecification = [
     0.02, 'rgb(178,24,43)'
 ];
 
+export const OLD_PEOPLE_RATIO_EXPRESSION: ExpressionSpecification = [
+    'interpolate',
+    ['linear'],
+    ['coalesce', ['feature-state', 'old_ratio'], 0],
+    0, 'rgba(33,102,172,0)',
+    0.05, 'rgb(103,169,207)',
+    0.15, 'rgb(209,229,240)',
+    0.25, 'rgb(253,219,199)',
+    0.35, 'rgb(239,138,98)',
+    0.50, 'rgb(178,24,43)'
+];
+
 // Mapbox Tileset Constants
 export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.ka74c554wsq4';
 export const SOURCE_LAYER_HEATMAP = 'c56c767dc457b2f92e75';
