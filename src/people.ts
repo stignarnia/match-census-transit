@@ -16,12 +16,103 @@ export interface PeopleData {
     init(): void;
 }
 
+interface MetricConfig {
+    id: string;
+    calculate?: (props: any) => number | null;
+    stateKey?: string;
+    visualConfig: {
+        fillColor: any;
+        heatmapWeight: any;
+        heatmapIntensity: any;
+    };
+}
+
+const metrics: MetricConfig[] = [
+    {
+        id: 'Nothing',
+        visualConfig: {
+            fillColor: COLOR_BGRI_FILL,
+            heatmapWeight: 1,
+            heatmapIntensity: [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 1,
+                11, 3
+            ]
+        }
+    },
+    {
+        id: 'Population density',
+        stateKey: 'density',
+        calculate: (props: any) => {
+            const individuals = props.N_INDIVIDUOS;
+            const areaM2 = props.AREA_M2;
+            if (
+                individuals !== undefined && individuals !== null &&
+                areaM2 !== undefined && areaM2 !== null && areaM2 > 0
+            ) {
+                return individuals / areaM2;
+            }
+            return null;
+        },
+        visualConfig: {
+            fillColor: POPULATION_DENSITY_EXPRESSION,
+            heatmapWeight: [
+                'interpolate',
+                ['linear'],
+                ['get', 'N_INDIVIDUOS'],
+                0, 0,
+                1000, 1
+            ],
+            heatmapIntensity: [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 0.1,
+                11, 1
+            ]
+        }
+    },
+    {
+        id: 'Old People Ratio',
+        stateKey: 'old_ratio',
+        calculate: (props: any) => {
+            const individuals = props.N_INDIVIDUOS;
+            const individuals65plus = props.N_INDIVIDUOS_65_OU_MAIS;
+            if (
+                individuals !== undefined && individuals !== null && individuals > 0 &&
+                individuals65plus !== undefined && individuals65plus !== null
+            ) {
+                return individuals65plus / individuals;
+            }
+            return null;
+        },
+        visualConfig: {
+            fillColor: OLD_PEOPLE_RATIO_EXPRESSION,
+            heatmapWeight: [
+                'interpolate',
+                ['linear'],
+                ['get', 'N_INDIVIDUOS_65_OU_MAIS'], // Weight by number of old people
+                0, 0,
+                1000, 1 // Adjust max value as needed
+            ],
+            heatmapIntensity: [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 0.1,
+                11, 1
+            ]
+        }
+    }
+];
+
 export default (): PeopleData => ({
     selected: 'Nothing',
-    options: ['Nothing', 'Population density', 'Old People Ratio'],
+    options: metrics.map(m => m.id),
 
     init() {
-        // Calculate density when data is loaded (Always doing this now to support switching)
         let debounceTimer: number | null = null;
         map.on('data', (e) => {
             if (e.dataType !== 'source') return;
@@ -37,31 +128,18 @@ export default (): PeopleData => ({
                 });
 
                 features.forEach((feature) => {
-                    if (!feature.id) return;
-
-                    const individuals = feature.properties?.N_INDIVIDUOS;
-                    const individuals65plus = feature.properties?.N_INDIVIDUOS_65_OU_MAIS;
-                    const areaM2 = feature.properties?.AREA_M2;
+                    if (!feature.id || !feature.properties) return;
 
                     const stateUpdates: any = {};
 
-                    // Calculate Density
-                    if (
-                        individuals !== undefined && individuals !== null &&
-                        areaM2 !== undefined && areaM2 !== null && areaM2 > 0
-                    ) {
-                        const density = individuals / areaM2;
-                        stateUpdates.density = density;
-                    }
-
-                    // Calculate Old People Ratio
-                    if (
-                        individuals !== undefined && individuals !== null && individuals > 0 &&
-                        individuals65plus !== undefined && individuals65plus !== null
-                    ) {
-                        const oldRatio = individuals65plus / individuals;
-                        stateUpdates.old_ratio = oldRatio;
-                    }
+                    metrics.forEach(metric => {
+                        if (metric.calculate && metric.stateKey) {
+                            const val = metric.calculate(feature.properties);
+                            if (val !== null) {
+                                stateUpdates[metric.stateKey] = val;
+                            }
+                        }
+                    });
 
                     if (Object.keys(stateUpdates).length > 0) {
                         // Apply state to the POLYGON source ('bgri') using the shared ID
@@ -77,74 +155,11 @@ export default (): PeopleData => ({
 
     select(option: string) {
         this.selected = option;
+        const metric = metrics.find(m => m.id === option);
 
-        // Visual Configuration Interface
-        interface VisualConfig {
-            fillColor: any;
-            heatmapWeight: any;
-            heatmapIntensity: any;
-        }
+        if (metric) {
+            const config = metric.visualConfig;
 
-        let config: VisualConfig | null = null;
-
-        // Switch based implementation for metric handling
-        switch (option) {
-            case 'Nothing':
-                config = {
-                    fillColor: COLOR_BGRI_FILL,
-                    heatmapWeight: 1,
-                    heatmapIntensity: [
-                        'interpolate',
-                        ['linear'],
-                        ['zoom'],
-                        0, 1,
-                        11, 3
-                    ]
-                };
-                break;
-
-            case 'Population density':
-                config = {
-                    fillColor: POPULATION_DENSITY_EXPRESSION,
-                    heatmapWeight: [
-                        'interpolate',
-                        ['linear'],
-                        ['get', 'N_INDIVIDUOS'],
-                        0, 0,
-                        1000, 1
-                    ],
-                    heatmapIntensity: [
-                        'interpolate',
-                        ['linear'],
-                        ['zoom'],
-                        0, 0.1,
-                        11, 1
-                    ]
-                };
-                break;
-
-            case 'Old People Ratio':
-                config = {
-                    fillColor: OLD_PEOPLE_RATIO_EXPRESSION,
-                    heatmapWeight: [
-                        'interpolate',
-                        ['linear'],
-                        ['get', 'N_INDIVIDUOS_65_OU_MAIS'], // Weight by number of old people
-                        0, 0,
-                        1000, 1 // Adjust max value as needed
-                    ],
-                    heatmapIntensity: [
-                        'interpolate',
-                        ['linear'],
-                        ['zoom'],
-                        0, 0.1,
-                        11, 1
-                    ]
-                };
-                break;
-        }
-
-        if (config) {
             // Apply Heatmap Settings
             map.setPaintProperty('bgri-heatmap-layer', 'heatmap-weight', config.heatmapWeight);
             map.setPaintProperty('bgri-heatmap-layer', 'heatmap-intensity', config.heatmapIntensity);
@@ -156,7 +171,7 @@ export default (): PeopleData => ({
             appState.currentFillColorExpression = config.fillColor;
         }
 
-        // Optionally refresh visuals to ensure consistency if a selection exists
+        // Refresh visuals to ensure consistency if a selection exists
         refreshVisuals();
     }
 });
