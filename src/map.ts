@@ -1,3 +1,4 @@
+import { MAP_CENTER_LNG, MAP_CENTER_LAT } from './constants';
 import mapboxgl from 'mapbox-gl';
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
@@ -16,6 +17,6 @@ export const map = new mapboxgl.Map({
             showLandmarkIconLabels: false
         }
     },
-    center: [-9.15, 38.72],
+    center: [MAP_CENTER_LNG, MAP_CENTER_LAT],
     zoom: 12
 });

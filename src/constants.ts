@@ -34,3 +34,7 @@ export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.ka74c554wsq4';
 export const SOURCE_LAYER_HEATMAP = 'c56c767dc457b2f92e75';
 export const TILESET_URL_BGRI = 'mapbox://stignarnia.fukjd3p5wied';
 export const SOURCE_LAYER_BGRI = '34beff8bae5db5744e8f';
+
+// Map Configuration
+export const MAP_CENTER_LNG = -9.15;
+export const MAP_CENTER_LAT = 38.72;
