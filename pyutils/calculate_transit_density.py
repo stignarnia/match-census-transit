@@ -51,6 +51,31 @@ FEEDS = [
         "name": "CP",
         "url": "https://publico.cp.pt/gtfs/gtfs.zip",
         "dir": "../data/gtfs/CP"
+    },
+    {
+        "name": "MTS",
+        "url": "https://mts.pt/imt/MTS-20240129.zip",
+        "dir": "../data/gtfs/MTS"
+    },
+    {
+        "name": "Fertagus",
+        "url": "https://www.fertagus.pt/GTFSTMLzip/Fertagus_GTFS.zip",
+        "dir": "../data/gtfs/Fertagus"
+    },
+    {
+        "name": "Barreiro",
+        "url": "https://www.tcbarreiro.pt/front/files/sample_gtfs/GTFS-TCB_24.zip",
+        "dir": "../data/gtfs/Barreiro"
+    },
+    {
+        "name": "Cascais",
+        "url": "https://drive.google.com/uc?export=download&id=13ucYiAJRtu-gXsLa02qKJrGOgDjbnUWX",
+        "dir": "../data/gtfs/Cascais"
+    },
+    {
+        "name": "Ferries",
+        "url": "https://api.transtejo.pt/files/GTFS.zip",
+        "dir": "../data/gtfs/Ferries"
     }
 ]
 
@@ -314,6 +339,10 @@ def main():
         
     centroids_gdf = gpd.read_file(CENTROIDS_GEOJSON)
     centroids_gdf['BGRI2021'] = centroids_gdf['BGRI2021'].astype(str)
+    
+    # Drop existing column if present to avoid suffixes during merge
+    if "TRANSIT_STOP_BY_FREQUENCIES" in centroids_gdf.columns:
+        centroids_gdf = centroids_gdf.drop(columns=["TRANSIT_STOP_BY_FREQUENCIES"])
     
     # Merge calculation into centroids
     final_gdf = centroids_gdf.merge(final_stats, on="BGRI2021", how="left")
