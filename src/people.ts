@@ -7,7 +7,8 @@ import {
     SOURCE_LAYER_BGRI,
     POPULATION_DENSITY_EXPRESSION,
     OLD_PEOPLE_RATIO_EXPRESSION,
-    YOUNG_PEOPLE_RATIO_EXPRESSION
+    YOUNG_PEOPLE_RATIO_EXPRESSION,
+    TRANSIT_DENSITY_EXPRESSION
 } from './constants';
 import { createResponsiveState } from './responsiveness';
 
@@ -130,6 +131,38 @@ const metrics: MetricConfig[] = [
                 'interpolate',
                 ['linear'],
                 ['+', ['coalesce', ['get', 'N_INDIVIDUOS_0_14'], 0], ['coalesce', ['get', 'N_INDIVIDUOS_15_24'], 0]],
+                0, 0,
+                1000, 1
+            ],
+            heatmapIntensity: [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 0.1,
+                11, 1
+            ]
+        }
+    },
+    {
+        id: 'Transit Density',
+        stateKey: 'transit_density',
+        calculate: (props: any) => {
+            const val = props.TRANSIT_STOP_BY_FREQUENCIES;
+            const areaM2 = props.AREA_M2;
+            if (
+                val !== undefined && val !== null &&
+                areaM2 !== undefined && areaM2 !== null && areaM2 > 0
+            ) {
+                return val / areaM2;
+            }
+            return null;
+        },
+        visualConfig: {
+            fillColor: TRANSIT_DENSITY_EXPRESSION,
+            heatmapWeight: [
+                'interpolate',
+                ['linear'],
+                ['coalesce', ['get', 'TRANSIT_STOP_BY_FREQUENCIES'], 0],
                 0, 0,
                 1000, 1
             ],

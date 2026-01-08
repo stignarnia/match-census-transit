@@ -53,9 +53,23 @@ export const YOUNG_PEOPLE_RATIO_EXPRESSION: ExpressionSpecification = [
     0.50, 'rgb(178,24,43)'
 ];
 
+export const TRANSIT_DENSITY_EXPRESSION: ExpressionSpecification = [
+    'interpolate',
+    ['linear'],
+    ['coalesce', ['feature-state', 'transit_density'], 0],
+    0, 'rgba(33,102,172,0)',
+    0.0002, 'rgb(103,169,207)',
+    0.001, 'rgb(209,229,240)',
+    0.005, 'rgb(253,219,199)',
+    0.01, 'rgb(239,138,98)',
+    0.02, 'rgb(178,24,43)'
+];
+
 // Mapbox Tileset Constants
-export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.ka74c554wsq4';
-export const SOURCE_LAYER_HEATMAP = 'c56c767dc457b2f92e75';
+// export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.ka74c554wsq4';
+// export const SOURCE_LAYER_HEATMAP = 'c56c767dc457b2f92e75';
+export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.5637f3mmwons';
+export const SOURCE_LAYER_HEATMAP = '2cf6fd796ad147e6c6ec';
 export const TILESET_URL_BGRI = 'mapbox://stignarnia.fukjd3p5wied';
 export const SOURCE_LAYER_BGRI = '34beff8bae5db5744e8f';
 
