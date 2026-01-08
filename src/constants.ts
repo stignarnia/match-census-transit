@@ -62,3 +62,6 @@ export const SOURCE_LAYER_BGRI = '34beff8bae5db5744e8f';
 // Map Configuration
 export const MAP_CENTER_LNG = -9.15;
 export const MAP_CENTER_LAT = 38.72;
+
+// Responsiveness
+export const MOBILE_BREAKPOINT = 768;

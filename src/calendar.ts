@@ -1,4 +1,5 @@
 import { appState } from './state';
+import { createResponsiveState } from './responsiveness';
 
 export interface CalendarDay {
     date: number;
@@ -18,7 +19,10 @@ interface CalendarData {
     showDatePicker: boolean;
     showTimePicker: boolean;
     viewDate: Date;
+    expanded: boolean;
+    initResponsive(): void;
     init(): void;
+    toggle(): void;
     destroy(): void;
     tick(): void;
     readonly displayDate: string;
@@ -39,6 +43,7 @@ interface CalendarData {
 }
 
 export default (): CalendarData => ({
+    ...createResponsiveState(),
     now: new Date(),
     userSelectedDate: null,
     isUserInteraction: false,
@@ -53,6 +58,8 @@ export default (): CalendarData => ({
     viewDate: new Date(), // For browsing months without selecting
 
     init() {
+        this.initResponsive();
+
         this.intervalId = window.setInterval(() => {
             this.tick();
         }, 1000);

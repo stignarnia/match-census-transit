@@ -1,5 +1,8 @@
 import './style.css';
 import Alpine from 'alpinejs';
+import collapse from '@alpinejs/collapse';
+
+Alpine.plugin(collapse);
 import calendar from './calendar';
 import people from './people';
 import places from './places';
@@ -24,13 +27,13 @@ Alpine.data('ui', () => ({
         {
             id: 'people',
             title: 'People',
-            class: 'top-8 left-8',
+            class: 'md:top-8 md:left-8',
             data: people(),
         },
         {
             id: 'places',
             title: 'Places',
-            class: 'top-8 right-8',
+            class: 'md:top-8 md:right-8',
             data: places(),
         }
     ],

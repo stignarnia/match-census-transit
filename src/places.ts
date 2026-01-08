@@ -3,21 +3,28 @@ import hospitalData from './assets/hospital.json';
 import schoolData from './assets/secondary_school.json';
 import googleMapPin from './assets/Google_Maps_pin.png';
 import mapboxgl from 'mapbox-gl';
+import { createResponsiveState } from './responsiveness';
 
 export interface PlacesData {
     selected: string;
     options: string[];
     activePopup: mapboxgl.Popup | null;
+    expanded: boolean;
     select(option: string): void;
+    toggle(): void;
+    initResponsive(): void;
     init(): void;
 }
 
 export default (): PlacesData => ({
+    ...createResponsiveState(),
     selected: 'Nothing',
     options: ['Nothing', 'Hospitals', 'Schools'],
     activePopup: null,
 
     init() {
+        this.initResponsive();
+
         // Handle Map Click for Tooltip
         map.on('click', 'places-layer', (e) => {
             e.preventDefault(); // Prevent map click (selection)

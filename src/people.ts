@@ -9,11 +9,15 @@ import {
     OLD_PEOPLE_RATIO_EXPRESSION,
     YOUNG_PEOPLE_RATIO_EXPRESSION
 } from './constants';
+import { createResponsiveState } from './responsiveness';
 
 export interface PeopleData {
     selected: string;
     options: string[];
+    expanded: boolean;
     select(option: string): void;
+    toggle(): void;
+    initResponsive(): void;
     init(): void;
 }
 
@@ -141,10 +145,13 @@ const metrics: MetricConfig[] = [
 ];
 
 export default (): PeopleData => ({
+    ...createResponsiveState(),
     selected: 'Nothing',
     options: metrics.map(m => m.id),
 
     init() {
+        this.initResponsive();
+
         let debounceTimer: number | null = null;
         map.on('data', (e) => {
             if (e.dataType !== 'source') return;

@@ -12,197 +12,219 @@
 <body>
   <div id="map"></div>
 
-  <!-- Unified UI Panels -->
-  <div x-data="ui">
-    <template x-for="panel in panels" :key="panel.id">
-      <div x-data="panel.data"
-        class="fixed z-50 bg-zinc-900/90 backdrop-blur-md border border-zinc-700 p-4 rounded-2xl shadow-2xl text-white font-sans w-64 transition-all duration-300 hover:border-zinc-500 group select-none"
-        :class="panel.class">
+  <div class="fixed inset-x-0 bottom-0 z-50 p-4 flex flex-col-reverse gap-3 pointer-events-none md:contents">\
 
-        <div class="mb-3 pl-1">
+    <div x-data="calendar"
+      class="pointer-events-auto w-full bg-zinc-900/90 backdrop-blur-md border border-zinc-700 p-0 rounded-2xl shadow-2xl text-white font-sans transition-all duration-300 hover:border-zinc-500 group select-none flex flex-col gap-0 relative z-50 md:fixed md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:w-[24rem] md:p-5 md:gap-4 md:z-50"
+      :class="expanded ? 'bg-zinc-900 border-zinc-500' : ''">
+
+      <div @click="toggle()" class="flex items-center justify-between p-4 md:p-0 cursor-pointer md:cursor-default">
+        <div class="flex items-center gap-2">
+          <div class="h-2 w-2 rounded-full transition-colors duration-500"
+            :class="isUserInteraction ? 'bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]'">
+          </div>
           <h2
-            class="text-xs font-bold uppercase tracking-widest text-zinc-400 group-hover:text-zinc-200 transition-colors"
-            x-text="panel.title">
+            class="text-xs font-bold uppercase tracking-widest text-zinc-400 group-hover:text-zinc-200 transition-colors">
+            <span x-text="isUserInteraction ? 'Time Travel' : 'Live Clock'"></span>
           </h2>
         </div>
 
-        <div class="space-y-1">
-          <template x-for="option in options">
-            <button @click="select(option)"
-              class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-sm transition-all border border-transparent"
-              :class="selected === option ? 'bg-zinc-800 border-zinc-700 text-white' : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300'">
+        <button class="md:hidden text-zinc-500">
+          <svg class="w-5 h-5 transition-transform duration-300" :class="expanded ? 'rotate-180' : ''" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
 
-              <!-- Radio Indicator -->
-              <div class="w-4 h-4 rounded-full border flex items-center justify-center transition-colors"
-                :class="selected === option ? 'border-emerald-500 bg-emerald-500/20' : 'border-zinc-600 group-hover:border-zinc-500'">
-                <div class="w-2 h-2 rounded-full bg-emerald-500 transition-transform duration-200"
-                  :class="selected === option ? 'scale-100' : 'scale-0'"></div>
+        <button @click.stop="reset()"
+          class="hidden md:block text-[10px] bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 px-2 py-1 rounded-full border border-amber-500/20 transition-colors uppercase font-bold tracking-wider"
+          :class="isUserInteraction ? '' : 'invisible'">
+          Reset
+        </button>
+      </div>
+
+      <div x-show="expanded" x-collapse.duration.300ms
+        class="md:!block md:!h-auto px-4 pb-4 md:p-0 border-t border-zinc-800 md:border-0">
+        <div class="md:hidden mb-2 mt-3 flex justify-end" :class="isUserInteraction ? '' : 'invisible'">
+          <button @click="reset()"
+            class="text-[10px] bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 px-2 py-1 rounded-full border border-amber-500/20 transition-colors uppercase font-bold tracking-wider">
+            Reset
+          </button>
+        </div>
+
+        <div class="flex gap-6 items-center">
+          <div class="relative group/time flex flex-col justify-center min-w-[7rem]">
+            <div
+              class="text-5xl font-black tracking-tighter font-mono tabular-nums leading-none text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-400"
+              x-text="displayTime"></div>
+            <div class="text-sm text-zinc-500 func-medium tracking-wide mt-1 pl-1" x-text="displayDate"></div>
+          </div>
+
+          <div class="flex-1 space-y-3 bg-zinc-950/50 p-2 rounded-xl border border-zinc-800/50 relative">
+
+            <div class="relative">
+              <button @click="showDatePicker = !showDatePicker; showTimePicker = false"
+                class="w-full flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-300 hover:bg-zinc-800 hover:border-zinc-700 transition-all group/date">
+                <span x-text="displayDate" class="font-medium"></span>
+                <svg class="w-3 h-3 text-zinc-500 group-hover/date:text-zinc-400" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </button>
+
+              <div x-show="showDatePicker" @click.outside="showDatePicker = false"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 translate-y-2 scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                x-transition:leave-end="opacity-0 translate-y-2 scale-95"
+                class="absolute bottom-full right-0 mb-2 w-64 bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-xl shadow-2xl p-4 z-50">
+
+                <div class="flex items-center justify-between mb-4">
+                  <button @click="prevMonth()"
+                    class="p-1 hover:bg-zinc-800 rounded-md text-zinc-400 hover:text-white transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                  </button>
+                  <span class="text-xs font-bold text-zinc-200" x-text="monthName"></span>
+                  <button @click="nextMonth()"
+                    class="p-1 hover:bg-zinc-800 rounded-md text-zinc-400 hover:text-white transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-7 gap-1 text-center mb-2">
+                  <template x-for="day in ['Su','Mo','Tu','We','Th','Fr','Sa']">
+                    <div class="text-[10px] font-bold text-zinc-500 uppercase" x-text="day"></div>
+                  </template>
+                </div>
+                <div class="grid grid-cols-7 gap-1">
+                  <template x-for="day in days">
+                    <button @click="selectDate(day)" :disabled="day.isDisabled"
+                      class="h-7 w-7 rounded-md flex items-center justify-center text-xs transition-colors relative"
+                      :class="{
+                                          'text-zinc-600 cursor-not-allowed': day.isDisabled,
+                                          'text-zinc-500': !day.isCurrentMonth && !day.isDisabled,
+                                          'text-zinc-300 hover:bg-zinc-800 hover:text-white': day.isCurrentMonth && !day.isSelected && !day.isToday && !day.isDisabled,
+                                          'bg-emerald-500 text-white font-bold shadow-lg shadow-emerald-500/20': day.isSelected,
+                                          'border border-emerald-500/30 text-emerald-400': day.isToday && !day.isSelected
+                                      }">
+                      <span x-text="day.date"></span>
+                    </button>
+                  </template>
+                </div>
               </div>
+            </div>
 
-              <span x-text="option" class="font-medium"></span>
-            </button>
-          </template>
+            <div class="relative">
+              <button @click="showTimePicker = !showTimePicker; showDatePicker = false"
+                class="w-full flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-300 hover:bg-zinc-800 hover:border-zinc-700 transition-all group/time">
+                <span x-text="displayTime" class="font-medium"></span>
+                <svg class="w-3 h-3 text-zinc-500 group-hover/time:text-zinc-400" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </button>
+
+              <div x-show="showTimePicker" @click.outside="showTimePicker = false"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 translate-y-2 scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                x-transition:leave-end="opacity-0 translate-y-2 scale-95"
+                class="absolute bottom-full right-0 mb-2 w-48 bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-xl shadow-2xl p-3 z-50 flex gap-2 h-48">
+
+                <div
+                  class="flex-1 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
+                  <div
+                    class="text-[10px] font-bold text-zinc-500 uppercase mb-2 text-center sticky top-0 bg-zinc-900/95 backdrop-blur-sm py-1 z-10">
+                    Hr</div>
+                  <template x-for="h in hours">
+                    <button @click="selectHour(h)"
+                      class="w-full text-center py-1 rounded text-xs mb-1 transition-colors"
+                      :class="isSelectedHour(h) ? 'bg-emerald-500 text-white font-bold' : 'text-zinc-400 hover:bg-zinc-800 hover:text-white'">
+                      <span x-text="String(h).padStart(2, '0')"></span>
+                    </button>
+                  </template>
+                </div>
+
+                <div class="w-px bg-zinc-800 my-2"></div>
+
+                <div
+                  class="flex-1 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
+                  <div
+                    class="text-[10px] font-bold text-zinc-500 uppercase mb-2 text-center sticky top-0 bg-zinc-900/95 backdrop-blur-sm py-1 z-10">
+                    Min</div>
+                  <template x-for="m in minutes">
+                    <button @click="selectMinute(m)"
+                      class="w-full text-center py-1 rounded text-xs mb-1 transition-colors"
+                      :class="isSelectedMinute(m) ? 'bg-emerald-500 text-white font-bold' : 'text-zinc-400 hover:bg-zinc-800 hover:text-white'">
+                      <span x-text="String(m).padStart(2, '0')"></span>
+                    </button>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </template>
-  </div>
 
-  <!-- Calendar UI -->
-  <div x-data="calendar"
-    class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-zinc-900/90 backdrop-blur-md border border-zinc-700 p-5 rounded-2xl shadow-2xl text-white font-sans w-[24rem] transition-all duration-300 hover:border-zinc-500 group select-none flex flex-col gap-4">
-
-    <div class="flex items-center justify-between h-6">
-      <div class="flex items-center gap-2">
-        <div class="h-2 w-2 rounded-full transition-colors duration-500"
-          :class="isUserInteraction ? 'bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]'">
-        </div>
-        <h2
-          class="text-xs font-bold uppercase tracking-widest text-zinc-400 group-hover:text-zinc-200 transition-colors">
-          <span x-text="isUserInteraction ? 'Time Travel' : 'Live Clock'"></span>
-        </h2>
-      </div>
-      <button @click="reset()" x-show="isUserInteraction" x-transition.opacity
-        class="text-[10px] bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 px-2 py-1 rounded-full border border-amber-500/20 transition-colors uppercase font-bold tracking-wider">
-        Reset
-      </button>
-    </div>
-
-    <div class="flex gap-6 items-center">
-      <!-- Left: Big Time Display -->
-      <div class="relative group/time flex flex-col justify-center min-w-[7rem]">
         <div
-          class="text-5xl font-black tracking-tighter font-mono tabular-nums leading-none text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-400"
-          x-text="displayTime"></div>
-        <div class="text-sm text-zinc-500 func-medium tracking-wide mt-1 pl-1" x-text="displayDate"></div>
-      </div>
-
-      <!-- Right: Custom Date/Time Triggers -->
-      <div class="flex-1 space-y-3 bg-zinc-950/50 p-2 rounded-xl border border-zinc-800/50 relative">
-
-        <!-- Date Trigger -->
-        <div class="relative">
-          <button @click="showDatePicker = !showDatePicker; showTimePicker = false"
-            class="w-full flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-300 hover:bg-zinc-800 hover:border-zinc-700 transition-all group/date">
-            <span x-text="displayDate" class="font-medium"></span>
-            <svg class="w-3 h-3 text-zinc-500 group-hover/date:text-zinc-400" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </button>
-
-          <!-- Custom Date Dropdown -->
-          <div x-show="showDatePicker" @click.outside="showDatePicker = false"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 translate-y-2 scale-95"
-            x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-            x-transition:leave-end="opacity-0 translate-y-2 scale-95"
-            class="absolute bottom-full right-0 mb-2 w-64 bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-xl shadow-2xl p-4 z-50">
-
-            <!-- Header -->
-            <div class="flex items-center justify-between mb-4">
-              <button @click="prevMonth()"
-                class="p-1 hover:bg-zinc-800 rounded-md text-zinc-400 hover:text-white transition-colors">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </button>
-              <span class="text-xs font-bold text-zinc-200" x-text="monthName"></span>
-              <button @click="nextMonth()"
-                class="p-1 hover:bg-zinc-800 rounded-md text-zinc-400 hover:text-white transition-colors">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-
-            <!-- Grid -->
-            <div class="grid grid-cols-7 gap-1 text-center mb-2">
-              <template x-for="day in ['Su','Mo','Tu','We','Th','Fr','Sa']">
-                <div class="text-[10px] font-bold text-zinc-500 uppercase" x-text="day"></div>
-              </template>
-            </div>
-            <div class="grid grid-cols-7 gap-1">
-              <template x-for="day in days">
-                <button @click="selectDate(day)" :disabled="day.isDisabled"
-                  class="h-7 w-7 rounded-md flex items-center justify-center text-xs transition-colors relative" :class="{
-                                      'text-zinc-600 cursor-not-allowed': day.isDisabled,
-                                      'text-zinc-500': !day.isCurrentMonth && !day.isDisabled,
-                                      'text-zinc-300 hover:bg-zinc-800 hover:text-white': day.isCurrentMonth && !day.isSelected && !day.isToday && !day.isDisabled,
-                                      'bg-emerald-500 text-white font-bold shadow-lg shadow-emerald-500/20': day.isSelected,
-                                      'border border-emerald-500/30 text-emerald-400': day.isToday && !day.isSelected
-                                  }">
-                  <span x-text="day.date"></span>
-                </button>
-              </template>
-            </div>
-          </div>
-        </div>
-
-        <!-- Time Trigger -->
-        <div class="relative">
-          <button @click="showTimePicker = !showTimePicker; showDatePicker = false"
-            class="w-full flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-300 hover:bg-zinc-800 hover:border-zinc-700 transition-all group/time">
-            <span x-text="displayTime" class="font-medium"></span>
-            <svg class="w-3 h-3 text-zinc-500 group-hover/time:text-zinc-400" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </button>
-
-          <!-- Custom Time Dropdown -->
-          <div x-show="showTimePicker" @click.outside="showTimePicker = false"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 translate-y-2 scale-95"
-            x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-            x-transition:leave-end="opacity-0 translate-y-2 scale-95"
-            class="absolute bottom-full right-0 mb-2 w-48 bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-xl shadow-2xl p-3 z-50 flex gap-2 h-48">
-
-            <!-- Hours -->
-            <div
-              class="flex-1 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
-              <div
-                class="text-[10px] font-bold text-zinc-500 uppercase mb-2 text-center sticky top-0 bg-zinc-900/95 backdrop-blur-sm py-1 z-10">
-                Hr</div>
-              <template x-for="h in hours">
-                <button @click="selectHour(h)" class="w-full text-center py-1 rounded text-xs mb-1 transition-colors"
-                  :class="isSelectedHour(h) ? 'bg-emerald-500 text-white font-bold' : 'text-zinc-400 hover:bg-zinc-800 hover:text-white'">
-                  <span x-text="String(h).padStart(2, '0')"></span>
-                </button>
-              </template>
-            </div>
-
-            <!-- Separator -->
-            <div class="w-px bg-zinc-800 my-2"></div>
-
-            <!-- Minutes -->
-            <div
-              class="flex-1 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
-              <div
-                class="text-[10px] font-bold text-zinc-500 uppercase mb-2 text-center sticky top-0 bg-zinc-900/95 backdrop-blur-sm py-1 z-10">
-                Min</div>
-              <template x-for="m in minutes">
-                <button @click="selectMinute(m)" class="w-full text-center py-1 rounded text-xs mb-1 transition-colors"
-                  :class="isSelectedMinute(m) ? 'bg-emerald-500 text-white font-bold' : 'text-zinc-400 hover:bg-zinc-800 hover:text-white'">
-                  <span x-text="String(m).padStart(2, '0')"></span>
-                </button>
-              </template>
-            </div>
-          </div>
+          class="h-10 flex items-center justify-center text-[10px] text-zinc-600 font-medium leading-tight shrink-0 mt-2 md:mt-0">
+          <span x-show="!isUserInteraction">Displaying current system time.</span>
+          <span x-show="isUserInteraction" class="text-amber-500/80 text-center">Future simulation active.
+            <br>Auto-resets
+            if time is reached.</span>
         </div>
       </div>
     </div>
 
-    <!-- Footer: Fixed Height Message -->
-    <div class="h-10 flex items-center justify-center text-[10px] text-zinc-600 font-medium leading-tight shrink-0">
-      <span x-show="!isUserInteraction">Displaying current system time.</span>
-      <span x-show="isUserInteraction" class="text-amber-500/80 text-center">Future simulation active. <br>Auto-resets
-        if time is reached.</span>
+    <div x-data="ui" class="contents">
+      <template x-for="panel in panels" :key="panel.id">
+        <div x-data="panel.data"
+          class="pointer-events-auto bg-zinc-900/90 backdrop-blur-md border border-zinc-700 rounded-2xl shadow-2xl text-white font-sans transition-all duration-300 hover:border-zinc-500 group select-none w-full md:fixed md:w-64 md:z-50"
+          :class="[panel.class, expanded ? 'bg-zinc-900 border-zinc-500' : '']">
+
+          <div @click="toggle()" class="flex items-center justify-between p-4 cursor-pointer md:cursor-default">
+            <h2
+              class="text-xs font-bold uppercase tracking-widest text-zinc-400 group-hover:text-zinc-200 transition-colors"
+              x-text="panel.title">
+            </h2>
+            <button class="md:hidden text-zinc-500">
+              <svg class="w-5 h-5 transition-transform duration-300" :class="expanded ? 'rotate-180' : ''" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
+          <div x-show="expanded" x-collapse.duration.300ms
+            class="md:!block md:!h-auto px-4 pb-4 md:px-4 md:pb-4 md:pt-0">
+            <div class="space-y-1">
+              <template x-for="option in options">
+                <button @click="select(option)"
+                  class="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-sm transition-all border border-transparent"
+                  :class="selected === option ? 'bg-zinc-800 border-zinc-700 text-white' : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300'">
+
+                  <div class="w-4 h-4 rounded-full border flex items-center justify-center transition-colors"
+                    :class="selected === option ? 'border-emerald-500 bg-emerald-500/20' : 'border-zinc-600 group-hover:border-zinc-500'">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 transition-transform duration-200"
+                      :class="selected === option ? 'scale-100' : 'scale-0'"></div>
+                  </div>
+
+                  <span x-text="option" class="font-medium"></span>
+                </button>
+              </template>
+            </div>
+          </div>
+        </div>
+      </template>
     </div>
   </div>
 
