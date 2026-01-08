@@ -8,7 +8,7 @@ import pyogrio
 gpd.options.io_engine = "pyogrio"
 
 # Paths
-data_dir = r"../census"
+data_dir = r"../data/census"
 zip_path = os.path.join(data_dir, "BGRI21_LISBOA.zip")
 gpkg_path = os.path.join(data_dir, "BGRI21_LISBOA.gpkg")
 output_dir = os.path.join(data_dir, "geojson")

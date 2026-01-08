@@ -54,8 +54,8 @@ FEEDS = [
     }
 ]
 
-AREAS_GEOJSON = "../census/geojson/BGRI21_LISBOA_wgs84.geojson"
-OUTPUT_GEOJSON = "../census/geojson/BGRI21_LISBOA_transit_density.geojson"
+AREAS_GEOJSON = "../data/census/geojson/BGRI21_LISBOA_wgs84.geojson"
+CENTROIDS_GEOJSON = "../data/census/geojson/BGRI21_LISBOA_centroids_wgs84.geojson"
 
 def download_and_unzip(feed_config):
     """Download and unzip GTFS for a specific feed, with caching."""
@@ -263,8 +263,7 @@ def process_feed(feed_config, areas_gdf):
     
     # Aggregate
     agg = joined.groupby("BGRI2021").agg(
-        transit_density=("avg_daily_freq", "sum"),
-        stop_count=("stop_id", "count")
+        TRANSIT_STOP_BY_FREQUENCIES=("avg_daily_freq", "sum")
     ).reset_index()
 
     print(f"  Matched {len(agg)} areas.")
@@ -307,21 +306,29 @@ def main():
     # Sum by BGRI2021
     final_stats = combined_df.groupby("BGRI2021").sum().reset_index()
     
-    # Merge back to geometry
-    final_gdf = areas_gdf.merge(final_stats, on="BGRI2021", how="left")
+    # Load Centroids
+    print(f"Loading Centroids from {CENTROIDS_GEOJSON}...")
+    if not os.path.exists(CENTROIDS_GEOJSON):
+        print("Error: Centroids GeoJSON not found.")
+        sys.exit(1)
+        
+    centroids_gdf = gpd.read_file(CENTROIDS_GEOJSON)
+    centroids_gdf['BGRI2021'] = centroids_gdf['BGRI2021'].astype(str)
+    
+    # Merge calculation into centroids
+    final_gdf = centroids_gdf.merge(final_stats, on="BGRI2021", how="left")
     
     # Fill zeros
-    final_gdf["transit_density"] = final_gdf["transit_density"].fillna(0)
-    final_gdf["stop_count"] = final_gdf["stop_count"].fillna(0)
+    final_gdf["TRANSIT_STOP_BY_FREQUENCIES"] = final_gdf["TRANSIT_STOP_BY_FREQUENCIES"].fillna(0)
     
     # Save
-    print(f"Saving to {OUTPUT_GEOJSON}...")
-    final_gdf.to_file(OUTPUT_GEOJSON, driver="GeoJSON")
+    print(f"Updating {CENTROIDS_GEOJSON}...")
+    final_gdf.to_file(CENTROIDS_GEOJSON, driver="GeoJSON")
     
     print("\nFinal Summary:")
-    print(f"  Max Density: {final_gdf['transit_density'].max():.2f}")
-    print(f"  Mean Density: {final_gdf['transit_density'].mean():.2f}")
-    print(f"  Areas with Service: {len(final_gdf[final_gdf['transit_density'] > 0])}")
+    print(f"  Max Density: {final_gdf['TRANSIT_STOP_BY_FREQUENCIES'].max():.2f}")
+    print(f"  Mean Density: {final_gdf['TRANSIT_STOP_BY_FREQUENCIES'].mean():.2f}")
+    print(f"  Areas with Service: {len(final_gdf[final_gdf['TRANSIT_STOP_BY_FREQUENCIES'] > 0])}")
 
 if __name__ == "__main__":
     main()
