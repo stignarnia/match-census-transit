@@ -19,8 +19,7 @@ An interactive map to visualize the relationship between population density and 
 - **Node.js**
 - **uv** (Fast Python package installer and resolver)
 - **Mapbox Account** (for hosting tilesets)
-- **Google Maps API Key** (for harvesting new places & routing)
-
+- **Google Maps `Places API (New)` Key** (for harvesting new places & routing)
 
 To generate the data, run the scripts in the following order using `uv run`.
 
@@ -83,9 +82,12 @@ This project relies on Mapbox Tilesets for performance. If you update the data (
     *   Upload `BGRI21_LISBOA_wgs84.geojson` (The Polygons).
     *   Repeat the steps above.
 4.  **Copy the Tileset IDs** (in the home page of the Data Manager (v2) click the three dots) and **Sources** (the ones you noted before).
-5.  **Update your `.env` file**:
+5.  **Get your default public token** from the top right part of the Mapbox Studio homepage.
+6.  **Update your `.env` file**:
 
 ```
+VITE_MAPBOX_ACCESS_TOKEN=defaultpublictoken
+VITE_GOOGLE_MAPS_API_KEY=googlemapsplacesnewapikey
 VITE_TILESET_URL_HEATMAP=mapbox://mapboxusername.tilesetid1
 VITE_SOURCE_LAYER_HEATMAP=source1
 VITE_TILESET_URL_BGRI=mapbox://mapboxusername.tilesetid2
