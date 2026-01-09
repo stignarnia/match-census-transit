@@ -66,12 +66,10 @@ export const TRANSIT_DENSITY_EXPRESSION: ExpressionSpecification = [
 ];
 
 // Mapbox Tileset Constants
-// export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.ka74c554wsq4';
-// export const SOURCE_LAYER_HEATMAP = 'c56c767dc457b2f92e75';
-export const TILESET_URL_HEATMAP = 'mapbox://stignarnia.5637f3mmwons';
-export const SOURCE_LAYER_HEATMAP = 'd05d6232ef395829fb83';
-export const TILESET_URL_BGRI = 'mapbox://stignarnia.fukjd3p5wied';
-export const SOURCE_LAYER_BGRI = '34beff8bae5db5744e8f';
+export const TILESET_URL_HEATMAP = import.meta.env.VITE_TILESET_URL_HEATMAP || '';
+export const SOURCE_LAYER_HEATMAP = import.meta.env.VITE_SOURCE_LAYER_HEATMAP || '';
+export const TILESET_URL_BGRI = import.meta.env.VITE_TILESET_URL_BGRI || '';
+export const SOURCE_LAYER_BGRI = import.meta.env.VITE_SOURCE_LAYER_BGRI || '';
 
 // Map Configuration
 export const MAP_CENTER_LNG = -9.15;

@@ -223,30 +223,26 @@ def process_feed(feed_config, areas_gdf):
                 print(f"  Found GTFS root in subdirectory: {item}")
                 break
 
+    # BUGFIX: Force string dtypes to prevent truncation of leading zeros
+    gtfs_dtypes = {'stop_id': str, 'trip_id': str, 'service_id': str}
+
     try:
-        stops = pd.read_csv(os.path.join(feed_dir, "stops.txt"))
-        trips = pd.read_csv(os.path.join(feed_dir, "trips.txt"))
-        stop_times = pd.read_csv(os.path.join(feed_dir, "stop_times.txt"), dtype={'stop_id': str})
-        
-        # Ensure ID columns are strings to match
-        stops['stop_id'] = stops['stop_id'].astype(str)
-        trips['trip_id'] = trips['trip_id'].astype(str)
-        trips['service_id'] = trips['service_id'].astype(str)
-        stop_times['trip_id'] = stop_times['trip_id'].astype(str)
+        stops = pd.read_csv(os.path.join(feed_dir, "stops.txt"), dtype=gtfs_dtypes)
+        trips = pd.read_csv(os.path.join(feed_dir, "trips.txt"), dtype=gtfs_dtypes)
+        stop_times = pd.read_csv(os.path.join(feed_dir, "stop_times.txt"), dtype=gtfs_dtypes)
         
         calendar = None
         if os.path.exists(os.path.join(feed_dir, "calendar.txt")):
-            calendar = pd.read_csv(os.path.join(feed_dir, "calendar.txt"), dtype={'service_id': str})
+            calendar = pd.read_csv(os.path.join(feed_dir, "calendar.txt"), dtype=gtfs_dtypes)
 
         calendar_dates = pd.DataFrame(columns=['service_id', 'date', 'exception_type'])
         if os.path.exists(os.path.join(feed_dir, "calendar_dates.txt")):
-            calendar_dates = pd.read_csv(os.path.join(feed_dir, "calendar_dates.txt"), dtype={'service_id': str})
+            calendar_dates = pd.read_csv(os.path.join(feed_dir, "calendar_dates.txt"), dtype=gtfs_dtypes)
     
     except Exception as e:
         print(f"  ✗ Error loading GTFS CSVs: {e}")
         return pd.DataFrame()
 
-    # Calculate frequencies
     service_day_counts, total_feed_days = get_service_active_days(calendar, calendar_dates)
     
     if total_feed_days <= 0:
@@ -270,7 +266,10 @@ def process_feed(feed_config, areas_gdf):
     stop_total = stop_total[stop_total['avg_daily_freq'] > 0]
     print(f"  {len(stop_total)} active stops found.")
     
-    # Merge to Geometry
+    # Target stop check (Almada terminal)
+    if "020005" in stop_total['stop_id'].values:
+        print(f"  DEBUG: Stop 020005 (Terminal) calculated successfully. Freq: {stop_total[stop_total['stop_id']=='020005']['avg_daily_freq'].iloc[0]:.4f}")
+
     stops_gdf = gpd.GeoDataFrame(
         stops,
         geometry=gpd.points_from_xy(stops.stop_lon, stops.stop_lat),
@@ -278,20 +277,25 @@ def process_feed(feed_config, areas_gdf):
     )
     stops_gdf = stops_gdf.merge(stop_total[['stop_id', 'avg_daily_freq']], on='stop_id', how='inner')
     
-    # Spatial Join
-    print("  Spatial join to areas (using EPSG:3763 for distance calculation)...")
-    # Project to EPSG:3763 (meters) for accurate nearest neighbor distance
+    print("  Spatial join to areas (using EPSG:3763)...")
     stops_proj = stops_gdf.to_crs(epsg=3763)
     areas_proj = areas_gdf.to_crs(epsg=3763)
         
-    joined = gpd.sjoin_nearest(stops_proj, areas_proj[['BGRI2021', 'geometry']], how="inner", distance_col="dist")
+    joined = gpd.sjoin_nearest(stops_proj, areas_proj[['BGRI2021', 'geometry']], how="inner")
     
-    # Aggregate
+    # DEBUG: Correct label check. Almada uses prefix 1503 in BGRI2021.
+    bgri_col = joined['BGRI2021'].astype(str)
+    almada_matches = joined[bgri_col.str.startswith("1503")]
+    print(f"  DEBUG: Total matches for Almada (1503): {len(almada_matches)}")
+    
+    if len(almada_matches) > 0:
+        print(f"  DEBUG: Sample Almada IDs found: {almada_matches['BGRI2021'].head(10).tolist()}")
+
     agg = joined.groupby("BGRI2021").agg(
         TRANSIT_STOP_BY_FREQUENCIES=("avg_daily_freq", "sum")
     ).reset_index()
 
-    print(f"  Matched {len(agg)} areas.")
+    print(f"  Matched {len(agg)} total areas.")
     return agg
 
 
