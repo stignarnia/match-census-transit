@@ -3,29 +3,31 @@ import sys
 import json
 import math
 import requests
+import argparse
 from dotenv import load_dotenv
 
 # 1. Configuration & Paths
 load_dotenv('../.env')
-API_KEY = os.getenv('VITE_GOOGLE_MAPS_API_KEY')
+API_KEY = os.environ['VITE_GOOGLE_MAPS_API_KEY']
 API_URL = 'https://places.googleapis.com/v1/places:searchNearby'
 
-CENTER_LAT = 38.72
-CENTER_LNG = -9.15
-TOTAL_SQUARE_KM = 50
-LENS_SIZE_KM = 4 
+CENTER_LAT = float(os.environ['CENTER_LAT'])
+CENTER_LNG = float(os.environ['CENTER_LNG'])
+TOTAL_SQUARE_KM = float(os.environ['TOTAL_SQUARE_KM'])
+LENS_SIZE_KM = float(os.environ['LENS_SIZE_KM'])
 
 if not API_KEY:
     print("Error: VITE_GOOGLE_MAPS_API_KEY not found in ../.env")
     sys.exit(1)
 
-if len(sys.argv) < 2:
-    print("Usage: python harvest.py <cat1> <cat2> ...")
-    sys.exit(1)
+parser = argparse.ArgumentParser(description="Harvest Google Places into a GeoJSON file.")
+parser.add_argument('categories', nargs='+', help='One or more place categories to harvest')
+parser.add_argument('-o', '--output', dest='output_path', default='../src/assets', help='Output directory path (default: ../src/assets)')
+args = parser.parse_args()
 
-CATEGORIES = sys.argv[1:]
-OUTPUT_FILENAME = f"{CATEGORIES[0]}.json"
-OUTPUT_PATH = f'../src/assets/{OUTPUT_FILENAME}'
+CATEGORIES = args.categories
+OUTPUT_FILENAME = f"{CATEGORIES[0]}_google_places.json"
+OUTPUT_PATH = os.path.join(args.output_path, OUTPUT_FILENAME)
 
 # 2. Grid Logic
 lat_step = LENS_SIZE_KM / 111.0

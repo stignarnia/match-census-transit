@@ -73,6 +73,9 @@ export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: F
 
     const coords = firstPoint.geometry.coordinates; // TS knows this is Position (number[])
     const clickedCentroid = { lng: coords[0], lat: coords[1] };
+    
+    // Use properties from the heatmap point feature
+    const demographicProperties = firstPoint.properties;
 
     const selectingNewFirst =
         !appState.firstSelection ||
@@ -81,18 +84,29 @@ export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: F
     if (selectingNewFirst) {
         appState.firstSelection = id;
         appState.firstSelectionCentroid = clickedCentroid;
+        appState.firstSelectionProperties = demographicProperties;
         appState.secondSelection = null;
         appState.secondSelectionCentroid = null;
+        appState.secondSelectionProperties = null;
         resetConnectionLine(map);
         refreshVisuals();
+        // Update demographics panel
+        if ((window as any).demographicsComponent) {
+            (window as any).demographicsComponent.updateDemographics();
+        }
         return;
     }
 
     if (!appState.secondSelection && id !== appState.firstSelection) {
         appState.secondSelection = id;
         appState.secondSelectionCentroid = clickedCentroid;
+        appState.secondSelectionProperties = demographicProperties;
 
         refreshVisuals();
+        // Update demographics panel
+        if ((window as any).demographicsComponent) {
+            (window as any).demographicsComponent.updateDemographics();
+        }
 
         if (appState.firstSelectionCentroid) {
             const results = await fetchRouteData(
@@ -158,17 +172,29 @@ export async function handleGridClick(e: mapboxgl.MapMouseEvent & { features?: F
     // Replace first selection when clicking another cell
     appState.firstSelection = id;
     appState.firstSelectionCentroid = clickedCentroid;
+    appState.firstSelectionProperties = demographicProperties;
     appState.secondSelection = null;
     appState.secondSelectionCentroid = null;
+    appState.secondSelectionProperties = null;
     resetConnectionLine(map);
     refreshVisuals();
+    // Update demographics panel
+    if ((window as any).demographicsComponent) {
+        (window as any).demographicsComponent.updateDemographics();
+    }
 }
 
 export function resetSelection() {
     appState.firstSelection = null;
     appState.firstSelectionCentroid = null;
+    appState.firstSelectionProperties = null;
     appState.secondSelection = null;
     appState.secondSelectionCentroid = null;
+    appState.secondSelectionProperties = null;
     resetConnectionLine(map);
     refreshVisuals();
+    // Update demographics panel
+    if ((window as any).demographicsComponent) {
+        (window as any).demographicsComponent.updateDemographics();
+    }
 }

@@ -7,7 +7,9 @@ import {
     SOURCE_LAYER_BGRI,
     POPULATION_DENSITY_EXPRESSION,
     OLD_PEOPLE_RATIO_EXPRESSION,
-    YOUNG_PEOPLE_RATIO_EXPRESSION,
+    YOUNG_PEOPLE_0_14_RATIO_EXPRESSION,
+    YOUNG_PEOPLE_15_24_RATIO_EXPRESSION,
+    YOUNG_PEOPLE_0_24_RATIO_EXPRESSION,
     TRANSIT_DENSITY_EXPRESSION
 } from './constants';
 import { createResponsiveState } from './responsiveness';
@@ -16,8 +18,10 @@ export interface PeopleData {
     selected: string;
     options: string[];
     expanded: boolean;
+    weightByDensity: boolean;
     select(option: string): void;
     toggle(): void;
+    toggleWeightByDensity(): void;
     initResponsive(): void;
     init(): void;
 }
@@ -113,11 +117,11 @@ const metrics: MetricConfig[] = [
         }
     },
     {
-        id: 'Young People Ratio',
-        stateKey: 'young_ratio',
+        id: 'Ages 0-14 Ratio',
+        stateKey: 'young_0_14_ratio',
         calculate: (props: any) => {
             const individuals = props.N_INDIVIDUOS;
-            const youngPeople = (props.N_INDIVIDUOS_0_14 || 0) + (props.N_INDIVIDUOS_15_24 || 0);
+            const youngPeople = props.N_INDIVIDUOS_0_14 || 0;
             if (
                 individuals !== undefined && individuals !== null && individuals > 0
             ) {
@@ -126,13 +130,77 @@ const metrics: MetricConfig[] = [
             return null;
         },
         visualConfig: {
-            fillColor: YOUNG_PEOPLE_RATIO_EXPRESSION,
+            fillColor: YOUNG_PEOPLE_0_14_RATIO_EXPRESSION,
             heatmapWeight: [
                 'interpolate',
                 ['linear'],
-                ['+', ['coalesce', ['get', 'N_INDIVIDUOS_0_14'], 0], ['coalesce', ['get', 'N_INDIVIDUOS_15_24'], 0]],
+                ['coalesce', ['get', 'N_INDIVIDUOS_0_14'], 0],
                 0, 0,
                 1000, 1
+            ],
+            heatmapIntensity: [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 0.1,
+                11, 1
+            ]
+        }
+    },
+    {
+        id: 'Ages 15-24 Ratio',
+        stateKey: 'young_15_24_ratio',
+        calculate: (props: any) => {
+            const individuals = props.N_INDIVIDUOS;
+            const youngPeople = props.N_INDIVIDUOS_15_24 || 0;
+            if (
+                individuals !== undefined && individuals !== null && individuals > 0
+            ) {
+                return youngPeople / individuals;
+            }
+            return null;
+        },
+        visualConfig: {
+            fillColor: YOUNG_PEOPLE_15_24_RATIO_EXPRESSION,
+            heatmapWeight: [
+                'interpolate',
+                ['linear'],
+                ['coalesce', ['get', 'N_INDIVIDUOS_15_24'], 0],
+                0, 0,
+                1000, 1
+            ],
+            heatmapIntensity: [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                0, 0.1,
+                11, 1
+            ]
+        }
+    },
+    {
+        id: 'Ages 0-24 Ratio',
+        stateKey: 'young_0_24_ratio',
+        calculate: (props: any) => {
+            const individuals = props.N_INDIVIDUOS;
+            const young0_14 = props.N_INDIVIDUOS_0_14 || 0;
+            const young15_24 = props.N_INDIVIDUOS_15_24 || 0;
+            const youngTotal = young0_14 + young15_24;
+            if (
+                individuals !== undefined && individuals !== null && individuals > 0
+            ) {
+                return youngTotal / individuals;
+            }
+            return null;
+        },
+        visualConfig: {
+            fillColor: YOUNG_PEOPLE_0_24_RATIO_EXPRESSION,
+            heatmapWeight: [
+                'interpolate',
+                ['linear'],
+                ['get', 'N_INDIVIDUOS_0_14'],
+                0, 0,
+                1000, 0.5
             ],
             heatmapIntensity: [
                 'interpolate',
@@ -180,7 +248,14 @@ const metrics: MetricConfig[] = [
 export default (): PeopleData => ({
     ...createResponsiveState(),
     selected: 'Nothing',
+    weightByDensity: false,
     options: metrics.map(m => m.id),
+
+    toggleWeightByDensity() {
+        this.weightByDensity = !this.weightByDensity;
+        // Reapply the current selection to update visuals with new weighting
+        this.select(this.selected);
+    },
 
     init() {
         this.initResponsive();
@@ -230,17 +305,49 @@ export default (): PeopleData => ({
         const metric = metrics.find(m => m.id === option);
 
         if (metric) {
-            const config = metric.visualConfig;
+            let config = metric.visualConfig;
+
+            // If weight by density is enabled and this is a ratio metric, weight the fill color by density
+            if (this.weightByDensity && metric.stateKey && (
+                metric.stateKey.includes('ratio') || metric.stateKey === 'old_ratio'
+            )) {
+                // Apply density-weighted fill color expression
+                // This multiplies the ratio by a density factor to reduce outliers in low-population areas
+                const densityWeightedFillColor: any = [
+                    'interpolate',
+                    ['linear'],
+                    [
+                        '*',
+                        ['coalesce', ['feature-state', metric.stateKey], 0],
+                        [
+                            'interpolate',
+                            ['linear'],
+                            ['coalesce', ['feature-state', 'density'], 0],
+                            0, 0,
+                            0.001, 0.3,
+                            0.01, 1
+                        ]
+                    ],
+                    0, 'rgba(33,102,172,0)',
+                    0.01, 'rgb(103,169,207)',
+                    0.04, 'rgb(209,229,240)',
+                    0.08, 'rgb(253,219,199)',
+                    0.12, 'rgb(239,138,98)',
+                    0.20, 'rgb(178,24,43)'
+                ];
+                
+                // Apply Fill Color with density weighting
+                map.setPaintProperty('bgri-fill', 'fill-color', densityWeightedFillColor);
+                appState.currentFillColorExpression = densityWeightedFillColor;
+            } else {
+                // Apply standard fill color
+                map.setPaintProperty('bgri-fill', 'fill-color', config.fillColor);
+                appState.currentFillColorExpression = config.fillColor;
+            }
 
             // Apply Heatmap Settings
             map.setPaintProperty('bgri-heatmap-layer', 'heatmap-weight', config.heatmapWeight);
             map.setPaintProperty('bgri-heatmap-layer', 'heatmap-intensity', config.heatmapIntensity);
-
-            // Apply Fill Color
-            map.setPaintProperty('bgri-fill', 'fill-color', config.fillColor);
-
-            // Update state so interactions use the correct fill logic
-            appState.currentFillColorExpression = config.fillColor;
         }
 
         // Refresh visuals to ensure consistency if a selection exists

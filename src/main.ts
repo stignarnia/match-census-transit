@@ -4,6 +4,7 @@ import collapse from '@alpinejs/collapse';
 
 Alpine.plugin(collapse);
 import calendar from './calendar';
+import demographics from './demographics';
 import people from './people';
 import places from './places';
 import { map } from './map';
@@ -22,6 +23,7 @@ import {
 } from './constants';
 
 Alpine.data('calendar', calendar);
+Alpine.data('demographics', demographics);
 Alpine.data('ui', () => ({
     panels: [
         {

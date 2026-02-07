@@ -1,6 +1,7 @@
 import { map } from './map';
-import hospitalData from './assets/hospital.json';
-import schoolData from './assets/secondary_school.json';
+import hospitalData from './assets/hospital_google_places.json';
+import secondarySchoolData from './assets/secondary_school.json';
+import primarySchoolData from './assets/primary_school.json';
 import googleMapPin from './assets/Google_Maps_pin.png';
 import mapboxgl from 'mapbox-gl';
 import { createResponsiveState } from './responsiveness';
@@ -19,7 +20,7 @@ export interface PlacesData {
 export default (): PlacesData => ({
     ...createResponsiveState(),
     selected: 'Nothing',
-    options: ['Nothing', 'Hospitals', 'Schools'],
+    options: ['Nothing', 'Hospitals', 'Primary Schools', 'Secondary Schools'],
     activePopup: null,
 
     init() {
@@ -138,8 +139,11 @@ export default (): PlacesData => ({
             case 'Hospitals':
                 data = hospitalData;
                 break;
-            case 'Schools':
-                data = schoolData;
+            case 'Primary Schools':
+                data = primarySchoolData;
+                break;
+            case 'Secondary Schools':
+                data = secondarySchoolData;
                 break;
         }
 

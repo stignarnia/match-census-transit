@@ -92,6 +92,10 @@ VITE_TILESET_URL_HEATMAP=mapbox://mapboxusername.tilesetid1
 VITE_SOURCE_LAYER_HEATMAP=source1
 VITE_TILESET_URL_BGRI=mapbox://mapboxusername.tilesetid2
 VITE_SOURCE_LAYER_BGRI=source2
+CENTER_LAT=38.72
+CENTER_LNG=-9.15
+TOTAL_SQUARE_KM=50
+LENS_SIZE_KM=4
 ```
 
 ## Running the App

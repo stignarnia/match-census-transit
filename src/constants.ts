@@ -53,6 +53,42 @@ export const YOUNG_PEOPLE_RATIO_EXPRESSION: ExpressionSpecification = [
     0.50, 'rgb(178,24,43)'
 ];
 
+export const YOUNG_PEOPLE_0_14_RATIO_EXPRESSION: ExpressionSpecification = [
+    'interpolate',
+    ['linear'],
+    ['coalesce', ['feature-state', 'young_0_14_ratio'], 0],
+    0, 'rgba(33,102,172,0)',
+    0.05, 'rgb(103,169,207)',
+    0.15, 'rgb(209,229,240)',
+    0.25, 'rgb(253,219,199)',
+    0.35, 'rgb(239,138,98)',
+    0.50, 'rgb(178,24,43)'
+];
+
+export const YOUNG_PEOPLE_15_24_RATIO_EXPRESSION: ExpressionSpecification = [
+    'interpolate',
+    ['linear'],
+    ['coalesce', ['feature-state', 'young_15_24_ratio'], 0],
+    0, 'rgba(33,102,172,0)',
+    0.05, 'rgb(103,169,207)',
+    0.15, 'rgb(209,229,240)',
+    0.25, 'rgb(253,219,199)',
+    0.35, 'rgb(239,138,98)',
+    0.50, 'rgb(178,24,43)'
+];
+
+export const YOUNG_PEOPLE_0_24_RATIO_EXPRESSION: ExpressionSpecification = [
+    'interpolate',
+    ['linear'],
+    ['coalesce', ['feature-state', 'young_0_24_ratio'], 0],
+    0, 'rgba(33,102,172,0)',
+    0.05, 'rgb(103,169,207)',
+    0.15, 'rgb(209,229,240)',
+    0.25, 'rgb(253,219,199)',
+    0.35, 'rgb(239,138,98)',
+    0.50, 'rgb(178,24,43)'
+];
+
 export const TRANSIT_DENSITY_EXPRESSION: ExpressionSpecification = [
     'interpolate',
     ['linear'],
