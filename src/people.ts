@@ -19,6 +19,7 @@ export interface PeopleData {
     options: string[];
     expanded: boolean;
     weightByDensity: boolean;
+    densityAvailable: boolean;
     select(option: string): void;
     toggle(): void;
     toggleWeightByDensity(): void;
@@ -85,7 +86,7 @@ const metrics: MetricConfig[] = [
         }
     },
     {
-        id: 'Old People Ratio',
+        id: 'Ages 65+ Ratio',
         stateKey: 'old_ratio',
         calculate: (props: any) => {
             const individuals = props.N_INDIVIDUOS;
@@ -251,7 +252,13 @@ export default (): PeopleData => ({
     weightByDensity: false,
     options: metrics.map(m => m.id),
 
+    get densityAvailable(): boolean {
+        const metric = metrics.find(m => m.id === this.selected);
+        return !!(metric?.stateKey?.includes('ratio'));
+    },
+
     toggleWeightByDensity() {
+        if (!this.densityAvailable) return;
         this.weightByDensity = !this.weightByDensity;
         // Reapply the current selection to update visuals with new weighting
         this.select(this.selected);
@@ -304,13 +311,16 @@ export default (): PeopleData => ({
         this.selected = option;
         const metric = metrics.find(m => m.id === option);
 
+        // Disable density weighting if the selected metric doesn't support it
+        if (!metric?.stateKey?.includes('ratio')) {
+            this.weightByDensity = false;
+        }
+
         if (metric) {
             let config = metric.visualConfig;
 
             // If weight by density is enabled and this is a ratio metric, weight the fill color by density
-            if (this.weightByDensity && metric.stateKey && (
-                metric.stateKey.includes('ratio') || metric.stateKey === 'old_ratio'
-            )) {
+            if (this.weightByDensity && metric.stateKey && metric.stateKey.includes('ratio')) {
                 // Apply density-weighted fill color expression
                 // This multiplies the ratio by a density factor to reduce outliers in low-population areas
                 const densityWeightedFillColor: any = [
