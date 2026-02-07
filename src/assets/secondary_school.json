@@ -16,9 +16,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089000"
       }
     },
     {
@@ -36,9 +37,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.053026599999999,
+          38.645480899999995
+        ]
+      },
+      "properties": {
+        "name": "Agrupamento Escolas Santo André do Barreiro",
+        "address": "R. Dr. Ferreira Soares, 2830-118 Barreiro, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089003"
       }
     },
     {
@@ -56,9 +79,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089005"
       }
     },
     {
@@ -79,8 +103,12 @@
           "point_of_interest",
           "establishment"
         ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-02-07T19:04:14.089007"
       }
     },
     {
@@ -98,29 +126,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2387965,
-          38.7683726
-        ]
-      },
-      "properties": {
-        "name": "Agrupamento de Escolas Cardoso Lopes",
-        "address": "Av. António Ribeiro Chiado 6, 2700 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": 4.2,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089008"
       }
     },
     {
@@ -138,9 +147,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089010"
       }
     },
     {
@@ -158,9 +168,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089012"
       }
     },
     {
@@ -178,29 +189,10 @@
         "school_type": "secondary",
         "rating": 3.4,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1656023,
-          38.7136099
-        ]
-      },
-      "properties": {
-        "name": "Agrupamento de Escolas Padre Bartolomeu Gusmão",
-        "address": "R. Cel. Ribeiro Viana, 1350-298 Lisboa, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089013"
       }
     },
     {
@@ -218,9 +210,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089015"
       }
     },
     {
@@ -236,11 +229,12 @@
         "name": "Agrupamento de Escolas de Santo António",
         "address": "R. António Aleixo, 2835 Santo António da Charneca, Portugal",
         "school_type": "secondary",
-        "rating": 3.9,
+        "rating": 3.8,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089017"
       }
     },
     {
@@ -258,9 +252,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089018"
       }
     },
     {
@@ -268,19 +263,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.4208793,
-          38.697033499999996
+          -9.4365793,
+          38.720731799999996
         ]
       },
       "properties": {
-        "name": "Brave Generation Academy - Cascais Baia 01 and 02",
-        "address": "Praça 5 de Outubro 45, 2750-642 Cascais, Portugal",
+        "name": "Aprendizes",
+        "address": "R. Depósitos da Água 2750, 2750-561 Cascais, Portugal",
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089020"
       }
     },
     {
@@ -288,21 +284,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1846592,
-          38.702791
+          -8.9823942,
+          38.7100098
         ]
       },
       "properties": {
-        "name": "CINEL (Entrada parque de estacionamento)",
-        "address": "Calçada Santo Amaro, 1300-516 Lisboa, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
+        "name": "Associação de Estudantes da Escola Secundária Jorge Peixinho",
+        "address": "Av. José Silva Leite 72, 2870-271 Montijo, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
         ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089022"
       }
     },
     {
@@ -320,9 +315,10 @@
         "school_type": "secondary",
         "rating": 4.9,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089023"
       }
     },
     {
@@ -340,29 +336,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1911879,
-          38.8409985
-        ]
-      },
-      "properties": {
-        "name": "Centro Escolar da Fonte Santa",
-        "address": "Praceta Nossa Sra. Assunção 7, 2670-377 Loures, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089025"
       }
     },
     {
@@ -380,49 +357,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0965066,
-          38.5980235
-        ]
-      },
-      "properties": {
-        "name": "Colégio Atlântico",
-        "address": "Av. da Ponte 356 A, 2840-167 Arrentela, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9679086,
-          38.711273
-        ]
-      },
-      "properties": {
-        "name": "Colégio Cantinho Das Descobertas",
-        "address": "R. Beatriz Cassus 313, 2870-010 Montijo, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089027"
       }
     },
     {
@@ -440,9 +378,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089029"
       }
     },
     {
@@ -460,9 +399,73 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089031"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0662658,
+          38.65774
+        ]
+      },
+      "properties": {
+        "name": "Colégio Minerva - Espaço D. Manuel de Mello",
+        "address": "Praça Paulo VI 1, 2830 Barreiro, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089032"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.376192,
+          38.797739
+        ]
+      },
+      "properties": {
+        "name": "Colégio Misericórdia de Sintra",
+        "address": "R. Vergílio Ferreira 8, 2710 Sintra, Portugal",
+        "school_type": "secondary",
+        "rating": 5,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089034"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.094176,
+          38.6227786
+        ]
+      },
+      "properties": {
+        "name": "Colégio O Pequeno Polegar",
+        "address": "R. Júlio Augusto Henriques 53 Loja 1 e 2, 2840-212 Seixal, Portugal",
+        "school_type": "secondary",
+        "rating": 4.2,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089036"
       }
     },
     {
@@ -480,9 +483,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089037"
       }
     },
     {
@@ -500,29 +504,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3724554,
-          38.7867435
-        ]
-      },
-      "properties": {
-        "name": "Colégio São José - Ramalhão",
-        "address": "Quinta do Ramalhão, R. Elias Garcia 2, 2710 Sintra, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089039"
       }
     },
     {
@@ -540,9 +525,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089041"
       }
     },
     {
@@ -560,9 +546,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089042"
       }
     },
     {
@@ -580,9 +567,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089044"
       }
     },
     {
@@ -600,9 +588,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089046"
       }
     },
     {
@@ -620,9 +609,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089048"
       }
     },
     {
@@ -630,19 +620,41 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1702044,
-          38.717486
+          -8.967502699999999,
+          38.7043517
         ]
       },
       "properties": {
-        "name": "EB 2,3 Manuel da Maia",
-        "address": "R. Freitas Gazul 6, 1350-149 Lisboa, Portugal",
+        "name": "Daynellys bailon",
+        "address": "R. António Rodrigues Pimentel 36, 2870-459 Montijo, Portugal",
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089049"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.037128599999999,
+          38.6324087
+        ]
+      },
+      "properties": {
+        "name": "EB 2,3 Secundária de Santo Antonio Da Charneca",
+        "address": "R. António Aleixo 1, 2835-691 Santo António da Charneca, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089051"
       }
     },
     {
@@ -660,29 +672,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2313372,
-          38.7694579
-        ]
-      },
-      "properties": {
-        "name": "EB 2/3 José Cardoso Pires",
-        "address": "R. António Nobre 1, 2700-080 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089053"
       }
     },
     {
@@ -700,9 +693,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089054"
       }
     },
     {
@@ -720,9 +714,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089056"
       }
     },
     {
@@ -730,19 +725,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.135005699999999,
-          38.744380899999996
+          -9.071747199999999,
+          38.6522668
         ]
       },
       "properties": {
-        "name": "EB Luís de Camões",
-        "address": "Av. Padre Manuel da Nóbrega 15, 1000 Lisboa, Portugal",
+        "name": "EB N.º 7 Barreiro",
+        "address": "R. Armindo de Almeida E, 2830 Barreiro, Portugal",
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089058"
       }
     },
     {
@@ -760,9 +756,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089059"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3673866,
+          38.782585399999995
+        ]
+      },
+      "properties": {
+        "name": "EB Ranholas",
+        "address": "R. Dr. Luciano Henrique Barata 6, 2710 Sintra, Portugal",
+        "school_type": "secondary",
+        "rating": 4.5,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089067"
       }
     },
     {
@@ -780,9 +798,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089069"
       }
     },
     {
@@ -800,9 +819,10 @@
         "school_type": "secondary",
         "rating": 4.5,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089071"
       }
     },
     {
@@ -820,9 +840,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089072"
       }
     },
     {
@@ -840,9 +861,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089074"
       }
     },
     {
@@ -860,9 +882,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089076"
       }
     },
     {
@@ -880,29 +903,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2158244,
-          38.764074799999996
-        ]
-      },
-      "properties": {
-        "name": "ES Fernando Namora",
-        "address": "R. Luís Vaz de Camões 86, 2650-197 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089078"
       }
     },
     {
@@ -917,92 +921,17 @@
       "properties": {
         "name": "ES Gil Vicente",
         "address": "Rua da Verónica 37, 1170-384 Lisboa, Portugal",
-        "school_type": "secondary",
+        "types": [
+          "school",
+          "point_of_interest",
+          "establishment"
+        ],
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3369413,
-          38.7837867
-        ]
-      },
-      "properties": {
-        "name": "ES Mem Martins / Agrupamento de Escolas de Mem Martins",
-        "address": "R. São Francisco Xavier 87, 2635-195 Rio de Mouro, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.891700199999999,
-          38.527338
-        ]
-      },
-      "properties": {
-        "name": "ES Sebastião da Gama",
-        "address": "R. Escola Técnica, 2900-354 Setúbal, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2771768,
-          38.7588844
-        ]
-      },
-      "properties": {
-        "name": "ES Stuart Carvalhais",
-        "address": "R. Jasmins, Massamá, 2745-796 Queluz, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3839168,
-          38.702248
-        ]
-      },
-      "properties": {
-        "name": "ES São João do Estoril",
-        "address": "R. Brito Camacho 401, 2769-501 Estoril, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "medium",
+        "last_updated": "2026-02-07T19:04:14.089079"
       }
     },
     {
@@ -1020,9 +949,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089081"
       }
     },
     {
@@ -1040,29 +970,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1274637,
-          38.7362849
-        ]
-      },
-      "properties": {
-        "name": "Escola Artística António Arroio",
-        "address": "R. Cel. Ferreira do Amaral, 1900-165 Lisboa, Portugal",
-        "school_type": "secondary",
-        "rating": 4.6,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089083"
       }
     },
     {
@@ -1080,9 +991,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089085"
       }
     },
     {
@@ -1090,59 +1002,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2689951,
-          38.7559274
+          -9.099333699999999,
+          38.6393476
         ]
       },
       "properties": {
-        "name": "Escola Básica 2,3 D. Pedro IV",
-        "address": "da, R. Tascoa 2, Monte Abraão, 2745-001 Queluz, Portugal",
+        "name": "Escola Básica Bairro Novo",
+        "address": "R. São Pedro C, 2840-399 Seixal, Portugal",
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1480367,
-          38.6467223
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica 2,3 de Corroios",
-        "address": "R. Sebastião da Gama, 2855-247 Corroios, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2145833,
-          38.7337845
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica Almeida Garrett",
-        "address": "Lgo Rotary Club da Amadora, 2610-298 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089087"
       }
     },
     {
@@ -1160,9 +1033,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089088"
       }
     },
     {
@@ -1180,9 +1054,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089090"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3034915,
+          38.7811473
+        ]
+      },
+      "properties": {
+        "name": "Escola Básica D. Domingos Jardo",
+        "address": "R. Primeiro de Maio 51, 2735-521 Agualva-Cacém, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089092"
       }
     },
     {
@@ -1200,9 +1096,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089094"
       }
     },
     {
@@ -1220,49 +1117,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.226947599999999,
-          38.7690726
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica EB 2,3 de Miguel Torga-Agrupamento de Escolas de Miguel Torga",
-        "address": "Praceta Padre Álvaro Proença 10, 2650 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1711416,
-          38.709226799999996
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica Fernanda de Castro",
-        "address": "1350-063 Lisboa, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089096"
       }
     },
     {
@@ -1280,9 +1138,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089097"
       }
     },
     {
@@ -1300,9 +1159,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089099"
       }
     },
     {
@@ -1320,29 +1180,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1009656,
-          38.6296372
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica Nun'Álvares",
-        "address": "R. Paulo da Gama 8, 2840 Arrentela, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089101"
       }
     },
     {
@@ -1360,29 +1201,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0566256,
-          38.6573655
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica Padre Abílio Mendes",
-        "address": "R. Maria Lamas, 2830-088 Barreiro, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089102"
       }
     },
     {
@@ -1400,49 +1222,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0621793,
-          38.6511085
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica Quinta Nova da Telha",
-        "address": "R. Bento da Silva Fernandes, 2830-149 Barreiro, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2331381,
-          38.7537928
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica Roque Gameiro",
-        "address": "Av. da Aviação Portuguesa, 2720-059 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089104"
       }
     },
     {
@@ -1460,9 +1243,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089106"
       }
     },
     {
@@ -1480,9 +1264,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089107"
       }
     },
     {
@@ -1500,29 +1285,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1104621,
-          38.614673599999996
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica de 1.º CEB do Fogueteiro",
-        "address": "Rua da Escola Primária, 2845-156 Seixal, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089109"
       }
     },
     {
@@ -1540,9 +1306,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089111"
       }
     },
     {
@@ -1560,9 +1327,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089112"
       }
     },
     {
@@ -1580,9 +1348,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089114"
       }
     },
     {
@@ -1600,9 +1369,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089116"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3805625,
+          38.7917679
+        ]
+      },
+      "properties": {
+        "name": "Escola Básica de São Pedro de Sintra",
+        "address": "Calçada de São Pedro 43, 2710-510 Sintra, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089118"
       }
     },
     {
@@ -1620,29 +1411,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.351087399999999,
-          38.8012053
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica e Secundária Mestre Domingos Saraiva",
-        "address": "Rua Doutor Coutinho Pais 14 Algueirão - Mem Martins, 2725-043 Sintra, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089119"
       }
     },
     {
@@ -1658,33 +1430,12 @@
         "name": "Escola Básica e Secundária Ordem de Sant'Iago",
         "address": "Av. Bela Vista, 2910-421 Setúbal, Portugal",
         "school_type": "secondary",
-        "rating": 3.9,
+        "rating": 4,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.252673,
-          38.7544693
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica e Secundária Padre Alberto Neto",
-        "address": "Av. Cmte. Paiva Couceiro, 2745-190 Queluz, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089121"
       }
     },
     {
@@ -1702,29 +1453,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1474723,
-          38.65145820000001
-        ]
-      },
-      "properties": {
-        "name": "Escola Básica e Secundária Professor Ruy Luís Gomes",
-        "address": "Av. Prof. Rui Luís Gomes 1A, 2814-504 Laranjeiro, Portugal",
-        "school_type": "secondary",
-        "rating": 4.1,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089123"
       }
     },
     {
@@ -1742,9 +1474,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089125"
       }
     },
     {
@@ -1762,9 +1495,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089127"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0769398,
+          38.6646437
+        ]
+      },
+      "properties": {
+        "name": "Escola Conde de Ferreira Barreiro",
+        "address": "R. Conselheiro Joaquim António D'Aguiar 307 313, 2830-333 Barreiro, Portugal",
+        "school_type": "secondary",
+        "rating": 4.5,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089128"
       }
     },
     {
@@ -1782,9 +1537,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089130"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.3272523,
+          38.6943063
+        ]
+      },
+      "properties": {
+        "name": "Escola EB1/JI Sá de Miranda",
+        "address": "R. Sá de Miranda, 2780-115 Oeiras, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089131"
       }
     },
     {
@@ -1802,9 +1579,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089133"
       }
     },
     {
@@ -1822,9 +1600,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089135"
       }
     },
     {
@@ -1842,9 +1621,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089136"
       }
     },
     {
@@ -1860,11 +1640,12 @@
         "name": "Escola Profissional Bento de Jesus Caraça - Barreiro",
         "address": "R. Stinville 14, 2830-302 Barreiro, Portugal",
         "school_type": "secondary",
-        "rating": 4.6,
+        "rating": 4.7,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089138"
       }
     },
     {
@@ -1882,71 +1663,10 @@
         "school_type": "secondary",
         "rating": 3.6,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0710289,
-          38.6569724
-        ]
-      },
-      "properties": {
-        "name": "Escola Profissional Bento de Jesus Caraça - Serviços Centrais",
-        "address": "Largo Q.ta Grande 11, 2830-349 Barreiro, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2359022,
-          38.757041799999996
-        ]
-      },
-      "properties": {
-        "name": "Escola Profissional Gustave Eiffel Amadora Centro",
-        "address": "R. Luís de Camões 4 e 6, 2700-535 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": 4.2,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.230153600000001,
-          38.9289625
-        ]
-      },
-      "properties": {
-        "name": "Escola Profissional Santo Ouen",
-        "address": "Casal das Andorinhas, R. Q.ta Dos Estrangeiros, 2665-601 Venda do Pinheiro, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089140"
       }
     },
     {
@@ -1964,9 +1684,10 @@
         "school_type": "secondary",
         "rating": 3.9,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089142"
       }
     },
     {
@@ -1984,9 +1705,10 @@
         "school_type": "secondary",
         "rating": 3.8,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089143"
       }
     },
     {
@@ -2004,9 +1726,10 @@
         "school_type": "secondary",
         "rating": 4.6,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089145"
       }
     },
     {
@@ -2024,9 +1747,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089147"
       }
     },
     {
@@ -2034,19 +1758,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2241277,
-          38.7610634
+          -9.181294399999999,
+          38.6393627
         ]
       },
       "properties": {
-        "name": "Escola Secundaria da Amadora",
-        "address": "Av. Octávio Pato, 2700-064 Amadora, Portugal",
-        "school_type": "secondary",
+        "name": "Escola Secundária 3º Ciclo Daniel Sampaio",
+        "address": "R. Dr. Alberto de Araújo, 2815-811 Sobreda, Portugal",
+        "types": [
+          "secondary_school",
+          "school",
+          "point_of_interest",
+          "establishment"
+        ],
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "medium",
+        "last_updated": "2026-02-07T19:04:14.089149"
       }
     },
     {
@@ -2064,9 +1794,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089150"
       }
     },
     {
@@ -2084,9 +1815,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089152"
       }
     },
     {
@@ -2104,73 +1836,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.114702099999999,
-          38.7864042
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Arco-Íris (Portela)",
-        "address": "Av. das Escolas 20, 2685-202 Portela, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.058774699999999,
-          38.6578257
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Augusto Cabrita",
-        "address": "R. Maria Lamas 4A, 2830-088 Barreiro, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2462222,
-          38.7217336
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Camilo Castelo Branco",
-        "address": "R. Luz Veloso 5A, 2790-406 Carnaxide, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089154"
       }
     },
     {
@@ -2188,30 +1857,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.402169899999999,
-          41.3617299
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária D. Afonso Henriques",
-        "address": "R. Dom Afonso Henriques 11, 4795-058 Vila das Aves, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089155"
       }
     },
     {
@@ -2229,9 +1878,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089157"
       }
     },
     {
@@ -2249,69 +1899,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1631216,
-          38.7417879
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária D. Pedro V",
-        "address": "Estrada das Laranjeiras 122, 1600-136 Lisboa, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.857770799999999,
-          38.5225855
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Dom Manuel Martins",
-        "address": "Av. António Sérgio, 2910-053 Setúbal, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2274373,
-          38.7460308
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Doutor Azevedo Neves",
-        "address": "Av. João Paulo II, Damaia, 2720-001 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089159"
       }
     },
     {
@@ -2329,9 +1920,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089161"
       }
     },
     {
@@ -2349,9 +1941,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089163"
       }
     },
     {
@@ -2369,30 +1962,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3525245,
-          38.6966196
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Fernando Lopes Graça",
-        "address": "Av. Cmte. Gilberto Duarte e Duarte 470, 2775-200 São Domingos de Rana, Portugal",
-        "types": [
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089164"
       }
     },
     {
@@ -2410,9 +1983,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089166"
       }
     },
     {
@@ -2430,30 +2004,10 @@
         "school_type": "secondary",
         "rating": 3.8,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.057668999999999,
-          38.875105999999995
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Forte Da Casa",
-        "address": "R. da República 92, 2625-454 Forte da Casa, Portugal",
-        "types": [
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089168"
       }
     },
     {
@@ -2471,29 +2025,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3139021,
-          38.771119899999995
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Gama Barros",
-        "address": "R. da Esperança nº12, 2735-473 Agualva-Cacém, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089170"
       }
     },
     {
@@ -2511,9 +2046,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089172"
       }
     },
     {
@@ -2531,9 +2067,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089173"
       }
     },
     {
@@ -2551,52 +2088,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.175285299999999,
-          38.8117191
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária José Cardoso Pires",
-        "address": "R. Vergílio Ferreira, 2660-350 Santo António dos Cavaleiros, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.648394699999999,
-          40.637601
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária José Estêvão",
-        "address": "Av. 25 de Abril, 3811-901 Aveiro, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089175"
       }
     },
     {
@@ -2614,31 +2109,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3359116,
-          38.9418122
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária José Saramago",
-        "address": "Av. Cidade de Leimen 1, 2640-470 Mafra, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089177"
       }
     },
     {
@@ -2656,9 +2130,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089178"
       }
     },
     {
@@ -2676,9 +2151,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089180"
       }
     },
     {
@@ -2696,9 +2172,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089182"
       }
     },
     {
@@ -2716,9 +2193,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089183"
       }
     },
     {
@@ -2736,9 +2214,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089185"
       }
     },
     {
@@ -2756,9 +2235,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089187"
       }
     },
     {
@@ -2776,9 +2256,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089188"
       }
     },
     {
@@ -2796,29 +2277,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2246806,
-          38.763691699999995
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Mães D'Água",
-        "address": "R. da Q.ta da Bolacha, 2700-689 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089190"
       }
     },
     {
@@ -2836,9 +2298,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089192"
       }
     },
     {
@@ -2856,9 +2319,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089193"
       }
     },
     {
@@ -2876,9 +2340,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089195"
       }
     },
     {
@@ -2896,29 +2361,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.236519,
-          38.7119454
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Professor José Augusto Lucas",
-        "address": "Av. Carolina Michaelis 18A, 2795-051 Linda-a-Velha, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089197"
       }
     },
     {
@@ -2936,9 +2382,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089198"
       }
     },
     {
@@ -2956,9 +2403,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089200"
       }
     },
     {
@@ -2976,9 +2424,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089202"
       }
     },
     {
@@ -2996,29 +2445,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2470632,
-          38.7600875
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária Seomara da Costa Primo",
-        "address": "R. Elias Garcia 329, 2700-323 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089203"
       }
     },
     {
@@ -3036,9 +2466,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089205"
       }
     },
     {
@@ -3056,9 +2487,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089207"
       }
     },
     {
@@ -3076,29 +2508,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2311075,
-          38.7552464
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária da Amadora",
-        "address": "Av. Alexandre Salles 12, 2720-012 Amadora, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089208"
       }
     },
     {
@@ -3116,50 +2529,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9863237,
-          38.6588133
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária da Moita",
-        "address": "Largo da Juventude, 2864-005 Moita, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.247901299999999,
-          37.0942825
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária de Albufeira",
-        "address": "R. das Escolas, 8200-126 Albufeira, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089210"
       }
     },
     {
@@ -3174,14 +2547,13 @@
       "properties": {
         "name": "Escola Secundária de Alcochete",
         "address": "R. da Escola Secundária 272, 2890-006 Alcochete, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
         ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089212"
       }
     },
     {
@@ -3199,9 +2571,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089213"
       }
     },
     {
@@ -3219,9 +2592,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089215"
       }
     },
     {
@@ -3239,53 +2613,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.234060999999999,
-          38.8096026
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária de Caneças",
-        "address": "R. Vítor Hugo 1685, 1685 Caneças, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.3365342,
-          38.6986766
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária de Carcavelos",
-        "address": "R. da Escola Secundária de Carcavelos 93, 2775 Carcavelos, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089217"
       }
     },
     {
@@ -3303,9 +2634,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089218"
       }
     },
     {
@@ -3323,9 +2655,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089220"
       }
     },
     {
@@ -3333,21 +2666,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.0365571,
-          38.8908655
+          -9.1876173,
+          38.7017211
         ]
       },
       "properties": {
-        "name": "Escola Secundária de Gago Coutinho",
-        "address": "Rua Heróis da Aviação 2615-205 no 3, 2615 Alverca do Ribatejo, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
+        "name": "Escola Secundária de Fonseca Benevides",
+        "address": "Rua Jau, Pólo de Educação e Formação D. João de Castro, 1300-312 Lisboa, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
         ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089222"
       }
     },
     {
@@ -3365,9 +2697,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089223"
       }
     },
     {
@@ -3385,9 +2718,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089225"
       }
     },
     {
@@ -3395,41 +2729,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.9122389,
-          38.637286599999996
+          -9.0946043,
+          38.4724384
         ]
       },
       "properties": {
-        "name": "Escola Secundária de Pinhal Novo",
-        "address": "R. Prof. Henrique de Barros, 2955-090 Pinhal Novo, Portugal",
+        "name": "Escola Secundária de Sampaio",
+        "address": "R. dos Casais Ricos 2970-577, 2970-999, Portugal",
         "types": [
+          "secondary_school",
           "school",
           "point_of_interest",
           "establishment"
         ],
-        "primary_type": "school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.105899100000002,
-          38.7882313
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária de Sacavém",
-        "address": "R. Sport Grupo Sacavenense 28, 2685-011 Sacavém, Portugal",
-        "types": [
-          "school",
-          "point_of_interest",
-          "establishment"
+        "rating": null,
+        "sources": [
+          "google_api"
         ],
-        "primary_type": "school",
-        "rating": null
+        "confidence": "medium",
+        "last_updated": "2026-02-07T19:04:14.089227"
       }
     },
     {
@@ -3447,9 +2765,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089229"
       }
     },
     {
@@ -3467,30 +2786,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0931874,
-          38.8233055
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária de São João da Talha",
-        "address": "R. Dep. Pedro Botelho Neves, 2695-722 São João da Talha, Portugal",
-        "types": [
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089230"
       }
     },
     {
@@ -3508,29 +2807,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1971739,
-          38.661048
-        ]
-      },
-      "properties": {
-        "name": "Escola Secundária do Monte de Caparica",
-        "address": "R. Projectada V à Rua da Urraca, 2825-105 Monte de Caparica, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089232"
       }
     },
     {
@@ -3548,9 +2828,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089233"
       }
     },
     {
@@ -3568,31 +2849,10 @@
         "school_type": "secondary",
         "rating": 4.6,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.377438099999999,
-          39.0075724
-        ]
-      },
-      "properties": {
-        "name": "Escola Técnica e Profissional de Mafra - Pólo Santo Isidoro",
-        "address": "Estr. Casal da Cruz, 2460-064 Santo Isidoro, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089235"
       }
     },
     {
@@ -3610,29 +2870,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1633397,
-          38.7158649
-        ]
-      },
-      "properties": {
-        "name": "Escola de Pedro Nunes",
-        "address": "R. Saraiva de Carvalho 216, 1250-245 Lisboa, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089237"
       }
     },
     {
@@ -3650,9 +2891,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089239"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.155007999999999,
+          38.6799937
+        ]
+      },
+      "properties": {
+        "name": "Exterato Frei Luís de Sousa",
+        "address": "Praça Movimento das Forças Armadas 13, 2800-171 Almada, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089240"
       }
     },
     {
@@ -3670,9 +2933,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089242"
       }
     },
     {
@@ -3690,29 +2954,10 @@
         "school_type": "secondary",
         "rating": 3.8,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.059802399999999,
-          38.64664940000001
-        ]
-      },
-      "properties": {
-        "name": "HSA - High School Academy",
-        "address": "R. Cap. Ten. Oliveira e Carmo 10 H, 2830-163 Barreiro, Portugal",
-        "school_type": "secondary",
-        "rating": 3.9,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089244"
       }
     },
     {
@@ -3730,9 +2975,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089246"
       }
     },
     {
@@ -3750,9 +2996,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089249"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.307203,
+          38.740184
+        ]
+      },
+      "properties": {
+        "name": "International Sharing School - Taguspark",
+        "address": "Av. Dr. Mário Soares 14, 2740-119 Porto Salvo, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089250"
       }
     },
     {
@@ -3770,9 +3038,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089253"
       }
     },
     {
@@ -3790,9 +3059,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089254"
       }
     },
     {
@@ -3810,52 +3080,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.989013,
-          38.9549771
-        ]
-      },
-      "properties": {
-        "name": "LARGO HERÓS DA AVIAÇÃO",
-        "address": "carlos.soares@cm, 2600-131 vfxira, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1629094,
-          38.7242906
-        ]
-      },
-      "properties": {
-        "name": "Liceu Francês Charles Lepierre",
-        "address": "Av. Eng. Duarte Pacheco 32, 1070-112 Lisboa, Portugal",
-        "types": [
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089256"
       }
     },
     {
@@ -3873,9 +3101,10 @@
         "school_type": "secondary",
         "rating": 5,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089258"
       }
     },
     {
@@ -3893,9 +3122,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089260"
       }
     },
     {
@@ -3903,41 +3133,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.2247317,
-          38.7348062
+          -9.21605,
+          38.708321999999995
         ]
       },
       "properties": {
-        "name": "PaRK International School | Alfragide | Senior School",
-        "address": "Estr. de Alfragide 94, 2610-015 Amadora, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "school",
-        "rating": 1
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1143735,
-          38.614404799999996
-        ]
-      },
-      "properties": {
-        "name": "Pavilhão Escola Secundária Manuel Cargaleiro",
-        "address": "R. do Roque 17, 2845-146 Amora, Portugal",
+        "name": "PaRK International School (Restelo)",
+        "address": "Av. das Descobertas 21, 1400-091 Lisboa, Portugal",
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089261"
       }
     },
     {
@@ -3945,64 +3154,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.992337,
-          38.9578731
+          -9.1618008,
+          38.738524399999996
         ]
       },
       "properties": {
-        "name": "Pavilion High School Alves Redol",
-        "address": "R. Q.ta do Bolhão 10, 2600-081 Vila Franca de Xira, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
+        "name": "PaRK International School | Praça de Espanha",
+        "address": "Av. Columbano Bordalo Pinheiro 52, 1500 Lisboa, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
         ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.895113799999999,
-          38.5388845
-        ]
-      },
-      "properties": {
-        "name": "Peach Club - Liceu",
-        "address": "Av. Dr. António Rodrigues Manito 111A, 2900-068 Setúbal, Portugal",
-        "types": [
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.304616099999999,
-          38.733880299999996
-        ]
-      },
-      "properties": {
-        "name": "Porto salvo",
-        "address": "Av. Domingos Vandelli, 2740-123 Porto Salvo, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089264"
       }
     },
     {
@@ -4020,9 +3185,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089266"
       }
     },
     {
@@ -4030,61 +3196,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.1665967,
-          38.7191034
+          -9.1720392,
+          38.7731304
         ]
       },
       "properties": {
-        "name": "Redbridge International School Lisbon",
-        "address": "R. Francisco Metrass 97, 1350-164 Lisboa, Portugal",
-        "school_type": "secondary",
-        "rating": 4.5,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9628387,
-          38.7484527
-        ]
-      },
-      "properties": {
-        "name": "Rua da Escola Secundária",
-        "address": "R. da Escola Secundária, 2890 Alcochete, Portugal",
+        "name": "Real Colégio de Portugal",
+        "address": "R. Direita 5, 1600-549 Lisboa, Portugal",
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1592218,
-          38.7822101
-        ]
-      },
-      "properties": {
-        "name": "Santa Cecilia Music Academy",
-        "address": "Largo do Min. 9, 1750-200 Lisboa, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089268"
       }
     },
     {
@@ -4102,185 +3227,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.2016989,
-          38.7677899
-        ]
-      },
-      "properties": {
-        "name": "School Braamcamp Freire",
-        "address": "R. Dr. Gama Barros 2, 1675-175 Odivelas, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.181294399999999,
-          38.6393627
-        ]
-      },
-      "properties": {
-        "name": "School Daniel Sampaio",
-        "address": "R. Dr. Alberto de Araújo, 2815-811 Sobreda, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1840396,
-          38.8026623
-        ]
-      },
-      "properties": {
-        "name": "School Ramada",
-        "address": "Avenida Projectada A Est.Nacional 205, Ramada, Lisboa, 2620-414 Ramada, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.9983749,
-          39.0450446
-        ]
-      },
-      "properties": {
-        "name": "Secondary School Damião de Goes",
-        "address": "Av. Dr. Teófilo Carvalho dos Santos 12, 2580-355 Alenquer, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1876173,
-          38.7017211
-        ]
-      },
-      "properties": {
-        "name": "Secondary School Fonseca Benevides",
-        "address": "Rua Jau, Pólo de Educação e Formação D. João de Castro, 1300-312 Lisboa, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "government_office",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "government_office",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.0946043,
-          38.4724384
-        ]
-      },
-      "properties": {
-        "name": "Secondary School Sampaio",
-        "address": "R. dos Casais Ricos 2970-577, 2970-999, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.1430863,
-          38.7923811
-        ]
-      },
-      "properties": {
-        "name": "Secondary school Camarate",
-        "address": "R. Heróis de Mucaba 165, 2680-048 Camarate, Portugal",
-        "types": [
-          "secondary_school",
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "secondary_school",
-        "rating": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.909196099999999,
-          38.5711922
-        ]
-      },
-      "properties": {
-        "name": "Secondary school Palmela",
-        "address": "Av. do Palmelense Futebol Clube, 2950-288 Palmela, Portugal",
-        "types": [
-          "school",
-          "point_of_interest",
-          "establishment"
-        ],
-        "primary_type": "school",
-        "rating": null
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089269"
       }
     },
     {
@@ -4298,9 +3248,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089271"
       }
     },
     {
@@ -4318,29 +3269,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.328141,
-          38.7236936
-        ]
-      },
-      "properties": {
-        "name": "Sintra International Christian Academy",
-        "address": "Parque Industrial Meramar | Estrada de Polima № 673, Bloco C, 2785-543 São Domingos de Rana, Portugal",
-        "school_type": "secondary",
-        "rating": null,
-        "sources": [
-          "google_places_api"
-        ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089273"
       }
     },
     {
@@ -4358,9 +3290,10 @@
         "school_type": "secondary",
         "rating": 4.5,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089274"
       }
     },
     {
@@ -4378,9 +3311,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089276"
       }
     },
     {
@@ -4398,9 +3332,10 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089278"
       }
     },
     {
@@ -4418,9 +3353,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089279"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.887211299999999,
+          38.5796749
+        ]
+      },
+      "properties": {
+        "name": "St. Peter's International School",
+        "address": "Quinta dos Barreleiros CCI 3952, 2950-420 Palmela, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089281"
       }
     },
     {
@@ -4438,9 +3395,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089284"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1464723,
+          38.7083334
+        ]
+      },
+      "properties": {
+        "name": "The British School of Lisbon",
+        "address": "Rua de S. Paulo 89, 1200-427 Lisboa, Portugal",
+        "school_type": "secondary",
+        "rating": null,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089285"
       }
     },
     {
@@ -4458,9 +3437,31 @@
         "school_type": "secondary",
         "rating": null,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089287"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0697796,
+          38.6552395
+        ]
+      },
+      "properties": {
+        "name": "The School",
+        "address": "R. Prof. Joaquim Vicente França 85, 2830-267 Barreiro, Portugal",
+        "school_type": "secondary",
+        "rating": 5,
+        "sources": [
+          "google_api"
+        ],
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089289"
       }
     },
     {
@@ -4478,17 +3479,20 @@
         "school_type": "secondary",
         "rating": 3.9,
         "sources": [
-          "google_places_api"
+          "google_api"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "last_updated": "2026-02-07T19:04:14.089290"
       }
     }
   ],
   "metadata": {
-    "description": "Secondary schools in Lisbon Metropolitan Area",
-    "source": "Google Places API - Geographic + Targeted Search",
-    "count": 221,
-    "generated": "2026-01-20",
-    "method": "Comprehensive geographic search + targeted numbered/neighborhood searches"
+    "description": "Secondary schools – validated",
+    "sources": [
+      "osm",
+      "google"
+    ],
+    "count": 165,
+    "generated": "2026-02-07T19:04:14.094451"
   }
 }
