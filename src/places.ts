@@ -20,7 +20,7 @@ export interface PlacesData {
 export default (): PlacesData => ({
     ...createResponsiveState(),
     selected: 'Nothing',
-    options: ['Nothing', 'Hospitals', 'Primary Schools', 'Secondary Schools'],
+    options: ['Nothing', 'Hospitals', 'Health Centers', 'Primary Schools', 'Secondary Schools'],
     activePopup: null,
 
     init() {
@@ -63,7 +63,8 @@ export default (): PlacesData => ({
 
             const category = document.createElement('div');
             category.className = 'text-[10px] font-bold uppercase tracking-widest text-emerald-500 mb-0.5';
-            category.innerText = (props.harvest_category || 'Place').replace(/_/g, ' ');
+            const categoryName = (this.selected === 'Health Centers' ? 'Health Center' : (props.harvest_category || 'Place')).replace(/_/g, ' ');
+            category.innerText = categoryName;
             header.appendChild(category);
 
             const title = document.createElement('div');
@@ -132,12 +133,71 @@ export default (): PlacesData => ({
 
         clearMap();
 
+        const healthCenterKeywords = [
+            'centro de saúde',
+            'usf', // Unidade de Saúde Familiar
+            'ucsp', // Unidade de Cuidados de Saúde Personalizados
+            'unidade de cuidados de saúde personalizados',
+            'aces', // Agrupamento de Centros de Saúde
+            'agrupamento de centros de saúde',
+            'clínica',
+            'unidade de saúde',
+            'posto de socorros',
+            'extensão de saúde',
+            'health center',
+            'health centre', // British spelling
+            'clinic',
+            'cdp',
+            'check-up',
+            'diagnóstico',
+            'centro médico',
+            'casa de saúde'
+        ];
+
+        const hospitalKeywords = [
+            'hospital',
+            'centro hospitalar'
+        ];
+
+        const excludedKeywords = [
+            'veterinaria',
+            'veterinária',
+            'veterinário',
+            'veterinary',
+            'estacionamento',
+            'parking',
+            'tranquilidade',
+            'industria',
+            'yoga',
+            'gestão',
+            'parque'
+        ];
+
         let data: any = null;
         switch (option) {
             case 'Nothing':
                 break;
             case 'Hospitals':
-                data = hospitalData;
+                // Include ONLY Hospitals AND Exclude Excluded Keywords
+                data = {
+                    ...hospitalData,
+                    features: hospitalData.features.filter((f: any) => {
+                        const name = (f.properties.name || '').toLowerCase();
+                        if (excludedKeywords.some(keyword => name.includes(keyword))) return false;
+                        return hospitalKeywords.some(keyword => name.includes(keyword));
+                    })
+                };
+                break;
+            case 'Health Centers':
+                // Include ONLY Health Centers AND Exclude Excluded Keywords
+                data = {
+                    ...hospitalData,
+                    features: hospitalData.features.filter((f: any) => {
+                        const name = (f.properties.name || '').toLowerCase();
+                        if (excludedKeywords.some(keyword => name.includes(keyword))) return false;
+                        return healthCenterKeywords.some(keyword => name.includes(keyword));
+                    })
+                };
                 break;
             case 'Primary Schools':
                 data = primarySchoolData;
